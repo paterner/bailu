@@ -2467,4 +2467,33 @@ table .tl{text-align: left;text-indent: 10px;}
 .filterBox .tab_right{float: right;}
 
 
-
+/*33*/
+.projecttest h2{font-size: 18px;margin-bottom: 10px}
+.projecttest h1{font-size: 24px;margin-bottom: 10px}
+.projecttest .bs-docs-grid{  margin-left: 20px; margin-right: 20px;}
+.projecttest .bs-docs-grid *{box-sizing:border-box;}
+.projecttest.content{min-height: 0 !important;}
+.projecttest .projectuplaod {width: 850px;height: 500px;border:1px solid #333;margin:0 auto;line-height: 500px}
+.projecttest table tr td{text-align: left;}
+.projecttest .tabelouter{width: 940px;margin:0 auto;}
+.projecttest .tabelouter input.score{float: none;margin-right: 0}
+.projec-comment .mywork-result-list-head{background-color: #f7f8f8;border: none;padding-left:10px;padding-right:10px;line-height: 45px;height: 45px}
+.projec-comment .icomment.b_blue{background-color: #35c5ea}
+.projecttest .b_lgray{background-color: #f7f8f8}
+.projecttest .b_dgray{background-color: #e6e6e6}
+.projecttest .b_blue{background-color: #35c5ea}
+.projecttest .c_blue{color: #35c5ea}
+.projecttest .projecttest .c_green{color:#2f801f;}
+.projecttest .c_red{color:#f35455;}
+.projecttest .c_black{color:#000;}
+.pr{position: relative;}
+.pa{position: absolute;}
+.left{left: 0px}
+.right{right: 0px}
+.tr{text-align: right;}
+.marginauto{margin: 0 auto}
+.mb25{margin-bottom: 25px}
+.mb20{margin-bottom: 20px}
+.pt20 {padding-top: 20px}
+.pb20{padding-bottom: 20px}
+p.lh30{line-height: 30px}

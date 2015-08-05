@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>工作-项目管理-项目查看-项目讨论</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./static/js/unslider.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="contentheader">
+            <div class="logo">
+                <ul>
+                    <li><img src="./static/img/logo1.png" ></li>
+                    <li><img src="./static/img/logo2.png" ></li>
+                    <li>企业中文名称企业<br><font class="black">B</font><font class="red11">I</font><font class="black">M</font>设计协同平台</li>
+                </ul>
+            </div>
+            <div class="m-nav">
+                <ul>
+                    <li><div class="checked"><span>工作</span> Co-task</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                    <li><a href="#"><span>工具</span> Tools</a></li>
+                    <li><a href="#"><span>知识</span> Knowledge</a></li>
+                    <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+                <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+                <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                <div class="userbox_quit">退出</div>
+            </div>
+            <div class="userinfo">目前在线人数为 9999 <span>打招呼</span></div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="content">
+        <!--路径导航开始-->
+        <ol class="breadcrumb">
+            <li><a href="#">工作</a></li>
+            <li><a href="#">项目管理</a></li>
+            <li><a href="#">项目查看</a></li>
+            <li class="active">项目讨论</li>
+        </ol>
+        <!--路径导航结束-->
+
+        <!--左侧内容开始-->
+        <div class="p37-left-box">
+            <div class="p37-left-title">
+                <div class="p37-left-tab pic on" data-type="pic">图片</div>
+                <div class="p37-left-tab file" data-type="file">文件</div>
+            </div>
+            <div class="p37-left-content" id="p37_list_pic">
+                <ul class="p37-left-list">
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="p37-left-list-title">
+                            <span class="c_green">2015/03/10</span>
+                            <span class="ml10">陈明唱</span>
+                        </h5>
+                        <div class="p37-left-list-content clearfix">
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                            <div class="p37-left-list-pic"><img src="static/img/p37img.png" alt=""></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="p37-left-content" id="p37_list_file" style="display:none;">
+                <ul class="p37-left-filelist">
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="filelist-left-img">
+                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                        </div>
+                        <div class="filelist-right-text ml10">
+                            <p>文件名名名.doc(39.15KB)</p>
+                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--左侧内容结束-->
+
+        <!--右侧内容开始-->
+        <div class="rightContent">
+           <div class="filtrationResult"><div class="fr mar-fr15"><a class="u-btn">发起讨论</a></div><li class="filtrationTitle">项目标题项目标题项目标题项目标题项目标题项目标题</li></div>
+           <div class="mywork-result-comment-main nopadding mt10">
+            <ul>
+                <li class="clearfix">
+                    <div class="fl pre_25">
+                        <dl class="clearfix">
+                          <dt class="fl mr10"><img src="./static/img/48comment.png" alt=""></dt>
+                          <dd class="fl icon_focus">
+                            <p>王迪</p>
+                            <p class="c_gray">[进度中岗位]</p>
+                            <p class="c_hgreen">2013/09/13 09：10</p>
+                            <div class="mt20">
+                                <div class="fl mr15">
+                                    <a href="###" class="u-btn4"></a>
+                                    <p class="tc">(10)</p>
+                                    <div class="comment-list-pic">
+                                        <div class="comment-list-pic-content">
+                                            <div class="comment-list-pic-box">
+                                                <div class="comment-list-pic-title">
+                                                    <label><input type="checkbox"> 全选</label>
+                                                    <label class="ml10"><input type="checkbox"> 全不选</label>
+                                                </div>
+                                                <ul class="list-pic clearfix">
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox">
+                                                        <img src="static/img/p37img.png" alt="" class="list-pic-img">
+                                                        <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                    </li>
+                                                </ul>
+                                                <div class="comment-list-pic-bottombtn mt10">
+                                                    <div class="comment-bottom-btn">下载选中项</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fl mr15">
+                                    <a href="###" class="u-btn5"></a>
+                                    <p class="tc">(12)</p>
+                                    <div class="comment-list-pic">
+                                        <div class="comment-list-pic-content">
+                                            <div class="comment-list-pic-box">
+                                                <div class="comment-list-pic-title">
+                                                    <label><input type="checkbox"> 全选</label>
+                                                    <label class="ml10"><input type="checkbox"> 全不选</label>
+                                                </div>
+                                                <ul class="list-file clearfix">
+                                                    <li class="clearfix">
+                                                        <div class="filelist-left-checkbox">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="filelist-left-img">
+                                                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                                                        </div>
+                                                        <div class="filelist-right-text ml10">
+                                                            <p>文件名名名文件名名名文件名名名.doc(39.15KB)</p>
+                                                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                                                        </div>
+                                                        <div class="filelist-right-down">
+                                                            <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <div class="filelist-left-checkbox">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="filelist-left-img">
+                                                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                                                        </div>
+                                                        <div class="filelist-right-text ml10">
+                                                            <p>文件名名名文件名名名文件名名名.doc(39.15KB)</p>
+                                                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                                                        </div>
+                                                        <div class="filelist-right-down">
+                                                            <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <div class="filelist-left-checkbox">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="filelist-left-img">
+                                                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                                                        </div>
+                                                        <div class="filelist-right-text ml10">
+                                                            <p>文件名名名文件名名名文件名名名.doc(39.15KB)</p>
+                                                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                                                        </div>
+                                                        <div class="filelist-right-down">
+                                                            <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <div class="filelist-left-checkbox">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="filelist-left-img">
+                                                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                                                        </div>
+                                                        <div class="filelist-right-text ml10">
+                                                            <p>文件名名名文件名名名文件名名名.doc(39.15KB)</p>
+                                                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                                                        </div>
+                                                        <div class="filelist-right-down">
+                                                            <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <div class="filelist-left-checkbox">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="filelist-left-img">
+                                                            <img src="static/img/p37iconfile.png" alt="" width="100%">
+                                                        </div>
+                                                        <div class="filelist-right-text ml10">
+                                                            <p>文件名名名文件名名名文件名名名.doc(39.15KB)</p>
+                                                            <p class="c_gray"><span>2015/04/09</span><span class="ml10">朱文笔</span></p>
+                                                        </div>
+                                                        <div class="filelist-right-down">
+                                                            <img class="down-icon" src="static/img/p37downloadicon.png">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="comment-list-pic-bottombtn mt10">
+                                                    <div class="comment-bottom-btn">下载选中项</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </dd>
+                       </dl>
+                    </div>
+                    <div class="fl pre_75">
+                        <p>大家新年好！默认两行距离默认两行距离默认两行距离默认两行距离默认两行距离默认两行距离默认两行距 离默认两行距离默认两行距离默认 拷贝 8</p>
+                        <div class="comment_reply">
+                            <p class="c_gray">王迪  [进度中岗位] <span class="c_hgreen">2013/09/13 09：10</span></p>
+                            <p>同乐同乐</p>
+                        </div>
+                    </div>
+                     <div class="fr comment_agree">
+                         <a href="###">赞<span class="c_hgreen mr20">10</span> |</a>
+                         <a href="###" class="icon_replay">回复</a>
+                     </div>
+
+                </li>
+            </ul>
+        </div>
+       </div>
+        <!--右侧内容结束-->
+    </div>
+    <!-- 右侧固定 -->
+    <div class="fixright">
+        <a href="" class="seach_fix"></a>
+        <a href="" class="weixin_fix"></a>
+    </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+</div>
+
+    <script>//左侧菜单调出js
+    $(window).resize(function(){
+        public.resetMargin(".tbox", ".conone");
+        public.resetMargin(".text", ".xinxi");
+    });
+    window.onload = function(){
+        public.createLeftNavi(leftNavCode);
+        public.resetMargin(".tbox", ".conone");
+        public.resetMargin(".text", ".xinxi");
+    }
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+<script type="text/javascript">
+    <!--
+    function show(op){
+        document.getElementById(op).style.display="block";
+    }
+    function hide(op){
+        document.getElementById(op).style.display="none";
+    }
+    //查看成果
+    $(".m-title2 h3").click(function()
+    {
+        var oI = $(this).find("i");
+        var oTb = $(this).parent().next(".m-tb");
+        if(oI.hasClass("open"))
+        {
+            oI.removeClass("open");
+            oTb.addClass("f-dn");
+        }
+        else
+        {
+            oI.addClass("open");
+            oTb.removeClass("f-dn");
+        }
+    });
+
+    $('.fixright').find('a').hover(function(){
+        if($(this).hasClass('seach_fix')){
+            $(this).removeClass('seach_fix').html('查找')
+        }else if($(this).hasClass('weixin_fix')){
+            $(this).removeClass('weixin_fix').html('讨论')
+        }
+    },function(){
+        if($(this).html()=='查找'){
+            $(this).addClass('seach_fix').html('');
+        }else if($(this).html()=='讨论'){
+            $(this).addClass('weixin_fix').html('');
+        }
+    })
+
+    //左侧tab切换
+    $('.p37-left-tab').click(function() {
+        if(!$(this).hasClass('on')) {
+            var type = $(this).attr('data-type');
+            $(this).addClass('on').siblings('.p37-left-tab').removeClass('on');
+            $('.p37-left-content').hide();
+            $('#p37_list_' + type).show();
+        }
+    });
+</script>
+
+</body>
+</html>

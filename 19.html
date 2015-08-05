@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>工作-项目管理</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./static/js/unslider.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="contentheader">
+            <div class="logo">
+                <ul>
+                    <li><img src="./static/img/logo1.png" ></li>
+                    <li><img src="./static/img/logo2.png" ></li>
+                    <li>企业中文名称企业<br><font class="black">B</font><font class="red11">I</font><font class="black">M</font>设计协同平台</li>
+                </ul>
+            </div>
+            <div class="m-nav">
+                <ul>
+                    <li><div class="checked"><span>工作</span> Co-task</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                    <li><a href="#"><span>工具</span> Tools</a></li>
+                    <li><a href="#"><span>知识</span> Knowledge</a></li>
+                    <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+                <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+                <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                <div class="userbox_quit">退出</div>
+            </div>
+            <div class="userinfo">目前在线人数为 9999 <span>打招呼</span></div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="content">
+        <!--左侧菜单开始-->
+        <div class="leftNav"></div>
+        <!--左侧菜单结束-->
+        <!--右侧内容开始-->
+        <div class="rightContent">
+            <!--路径导航开始-->
+            <ol class="breadcrumb">
+                <li><a href="#">工作</a></li>
+                <li class="active">项目管理</li>
+            </ol>
+            <!--路径导航结束-->
+            <div class="clear"></div>
+            <!-- Nav tabs -->
+            <ul role="tablist" class="nav nav-tabs tab_back">
+                <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#tab1" aria-expanded="true">正在进行</a></li>
+                <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="profile" href="#tab2" aria-expanded="false">等待审批</a></li>
+                <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="profile" href="#tab3" aria-expanded="false">已经结束</a></li>
+                <div class="titlefr">
+                    <div class="pageBox bottompageBox bottompageBox_mar">
+                        <li class="sum">共<span>216</span>个</li>
+                        <li class="pageCut"><span>1</span>/  9</li>
+                        <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                        <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+                    </div>
+                    <div class="searchBox">
+                        <input type="text" class="searchInput">
+                        <div class="searchBtn"><span class="fa fa-search"></span></div>
+                    </div>
+                </div>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane active" role="tabpanel">
+                    <div class="resultContent3">
+                        <div class="filterBox">
+                            <li class="filterBoxTitle">类型：</li>
+                            <li class="chip1"><input type="radio" checked="true" id="type_all" name="filterBox"><label for="type_all">全部</label></li>
+                            <li class="chip1"><input type="radio" id="type_week" name="filterBox"><label for="type_week">本周</label></li>
+                            <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">本月</label></li>
+                            <li class="chip1"><input type="radio" id="type_other" name="filterBox"><label for="type_other">自定义</label></li>
+                            <li class="otherInfo">自<span class="fontu">2014/07/14</span>至<span class="fontu">2015/01/03</span></li>
+                        </div>
+                        <div class="tbox1">
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment nomaright"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 0%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 0%;"></button>
+
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment nomaright"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 31%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 0%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="进行" style="left: 31%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment nomaright"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 64%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 0%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="进行" style="left: 31%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="用印" style="left: 64%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment nomaright"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 98%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 0%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="进行" style="left: 31%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="用印" style="left: 64%;"></button>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="归档" style="left: 98%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 20%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 20%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 20%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 20%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 20%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 20%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                            <div class="conone">
+                                <div class="inbox">
+                                    <div class="zwtp"><img src="./static/img/zwtp.png" ></div>
+                                    <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                                    <div class="time fl">开始：<font class="green">2014/09/10</font></div>
+                                    <div class="time fr">结束：<font class="green">2014/09/10</font></div>
+                                    <div class="clear"></div>
+                                    <div class="jd">
+                                        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider" aria-disabled="false">
+                                            <!--<div role="tooltip" class="tooltip top">
+                                                <div class="tooltip-arrow"></div>
+                                                <div class="tooltip-inner">
+                                                    启动
+                                                </div>
+                                            </div>-->
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-segment"></div>
+                                            <div class="ui-slider-range ui-widget-header ui-slider-range-min" style="width: 20%;"></div>
+                                            <button type="button" class="ui-slider-handle ui-state-default ui-corner-all" data-toggle="tooltip" data-placement="top" title="启动" style="left: 20%;"></button>
+                                            <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 20%;"></a>-->
+                                        </div>
+                                        进度：
+                                    </div>
+                                    <div class="tubiao">
+                                        <span class="number green2">1261</span>
+                                        <span class="download green2">1261</span>
+                                    </div>
+                                </div>
+                                <div class="timeBox"><span class="fa fa-clock-o"></span>还剩 <span class="tianxs">99</span> 天 <span class="tianxs">18</span> 小时</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pageBox bottompageBox bottompageBox_mar">
+                        <li class="sum">共<span>216</span>个</li>
+                        <li class="pageCut"><span>1</span>/  9</li>
+                        <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                        <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane pad20" role="tabpanel">2</div>
+                <div id="tab3" class="tab-pane pad20" role="tabpanel">3</div>
+            </div>
+
+        </div>
+        <!--右侧内容结束-->
+    </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+
+</div>
+</div>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script>//左侧菜单调出js
+$(window).resize(function(){
+    public.resetMargin(".tbox1", ".conone");
+    public.resetMargin(".text", ".xinxi");
+});
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+    public.resetMargin(".tbox1", ".conone");
+    public.resetMargin(".text", ".xinxi");
+}
+
+</script>
+</body>
+</html>

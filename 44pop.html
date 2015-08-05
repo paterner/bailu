@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>44弹窗</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="static/css/font-awesome.css">
+    <link rel="stylesheet" href="static/css/access.css"/>
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <style rel="stylesheet" type="text/css">
+
+        .nav{ background-color: #ededed;}
+        .nav>li>a:focus {
+            background-color:transparent;
+        }
+
+        a:focus {
+            color : #333;
+        }
+
+        .nav li{border-right: solid 1px #ccc;}
+
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+            border : none;
+            background : #fff;
+            position: relative;
+            bottom: -2px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="popBoxty">
+    <div class="closeBtn"><span class="fa fa-close"></span></div>
+    <div class="minBtn"><span class="fa fa-minus"></span></div>
+    <div class="popBoxty_title">人员编辑器</div>
+    <div class="clear"></div>
+
+    <div class="contentBoxty">
+        <div class="pr">
+            <ul role="tablist" class="nav nav-tabs" id="tablist" >
+                <li class="active" role="presentation"><a href="#tab1" data-toggle="tab">可选人员</a></li>
+                <li role="presentation"><a href="#tab2" data-toggle="tab">部门筛选</a></li>
+                <li role="presentation"><a href="#tab3" data-toggle="tab">分组筛选</a></li>
+            </ul>
+            <div class="p44pop_search">
+                <input type="text" placeholder="">
+                <div class="p44pop_search_icon"></div>
+            </div>
+        </div>
+        
+
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane active p44" role="tabpanel">
+                <div class="tab-select clearfix">
+                    <div class="tab-select-left">
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                        <label class="p44-checkbox-inline"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label>
+                    </div>
+                    <div class="tab-select-right">
+                        <h5>已选人员：</h5>
+                        <div class="tab-select-right-centent">
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p44-bottom-btn">
+                    <a href="#">确定</a><a href="#">清除</a>
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane p44" role="tabpanel">
+                <div class="tab-select clearfix">
+                    <div class="tab-select-left">
+                        <div class="tree">
+                            <ul>
+                                <li><a>一级企业-中国建筑设计院有限公司</a>
+                                    <ul>
+                                        <li>
+                                            <a>二级单位1-BIM设计研究中心</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门2-研发室</a>
+                                                    <ul>
+                                                        <li><a>四级组1-开发组</a>
+                                                            <ul>
+                                                                <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                                <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                                <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                            </ul>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门3-结构室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门1-机电室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a>二级单位2</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a>二级单位3</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-select-right">
+                        <h5>已选人员：</h5>
+                        <div class="tab-select-right-centent">
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-pane p44" role="tabpanel">
+                <div class="tab-select clearfix">
+                    <div class="tab-select-left">
+                        <div class="tree">
+                            <ul>
+                                <li><a>分组三</a>
+                                    <ul>
+                                        <li>
+                                            <a>二级单位1-BIM设计研究中心</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门2-研发室</a>
+                                                    <ul>
+                                                        <li><a>四级组1-开发组</a>
+                                                            <ul>
+                                                                <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                                <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                                <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                            </ul>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门3-结构室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>三级部门1-机电室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a>二级单位2</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a>二级单位3</a>
+                                            <ul>
+                                                <li>
+                                                    <a>三级部门1-建筑室</a>
+                                                    <ul>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree c_red"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                        <li><label class="p44-checkbox-inline tree"><input type="checkbox" value="option1" id="inlineCheckbox1">&nbsp;&nbsp;某个人姓名</label></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-select-right">
+                        <h5>已选人员：</h5>
+                        <div class="tab-select-right-centent">
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                            <label class="p44-select-right-del">某个人姓名<i>x</i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+
+    </div>
+</div>
+<script>
+    $( document ).ready( function( ) {
+        $( '.tree li' ).each( function() {
+            if( $( this ).children( 'ul' ).length > 0 ) {
+                $( this ).addClass( 'parent' );
+            }
+        });
+        $( '.tree li.parent > a' ).click( function( ) {
+            $( this ).parent().toggleClass( 'active' );
+            $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
+        });
+        $( '#all' ).click( function() {
+            $( '.tree li' ).each( function() {
+                $( this ).toggleClass( 'active' );
+                $( this ).children( 'ul' ).slideToggle( 'fast' );
+            });
+        });
+    });
+</script>
+</body>
+</html>

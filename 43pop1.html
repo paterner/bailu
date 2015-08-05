@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>43-事件编辑器</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+</head>
+<body>
+<style>
+    .pop1{margin: 100px auto 0 auto; width: 1030px; height: 455px; background: rgb(9, 164, 221); overflow: hidden;}
+    .title{ text-align: left; text-indent: 20px; line-height: 50px; color: rgb(255, 255, 255); float: left; width: 100%; height: 50px; overflow: hidden; }
+    .pop1_btn_close,.pop1_btn_min{ cursor: pointer; text-indent: 0; float: right; width: 25px; height: 25px; line-height: 25px; text-align: center; }
+    .pop1_btn_close:hover{ background: rgb(255, 100, 100); }
+    .pop1_btn_min:hover{ background: rgb(24, 119, 201); }
+    .tab_title td{text-align: center;}
+    .tab{ margin: 0 3px 3px 3px; padding: 10px; float: left; width: 1004px; height: 382px; overflow: hidden; background: rgb(255, 255, 255); }
+    .t1{ float: left; width: 100%; border-color: rgb(237, 237, 237); }
+    .tab_cont td div{float: left; width: 100%; height: 100%; overflow: hidden; overflow-y: auto;}
+    .tab_cont td div li{ float: left; text-align: center; width: 100%; height: 40px; line-height: 40px; list-style: none; overflow: hidden; }
+    .tab_cont td div li label[checked=true]{color: red;}
+    .more{ float: left; width: 100%; height: 50px; overflow: hidden; line-height: 50px; text-align: left; }
+    .more input[type="text"]{ width: 200px; }
+    .more div{ cursor: pointer; background: rgb(255, 100, 100); width: 50px; height: 30px; line-height: 30px; text-align: center; float: right; margin: 10px 3px 0 0; color: rgb(255, 255, 255);}
+</style>
+
+<div class="pop1">
+    <div class="title">
+        <div class="pop1_title_left">
+            事件编辑器
+            <div class="pop1_btn_close"><span class="fa fa-close"></span></div>
+            <div class="pop1_btn_min"><span class="fa fa-minus"></span></div>
+        </div>
+    </div>
+    <div class="tab">
+        <table border="1" cellpadding="0" cellspacing="0" class="t1">
+            <tr class="tab_title">
+                <td width="14%" height="40px">输入相关</td>
+                <td width="14%">模型相关</td>
+                <td width="14%">计算相关</td>
+                <td width="14%">出图相关</td>
+                <td width="14%">校审相关</td>
+                <td width="14%">配合相关</td>
+                <td width="14%">交付相关</td>
+            </tr>
+            <tr class="tab_cont">
+                <td height="292px">
+                    <div>
+                        <li><input type="radio" name="b1" id="b11"/><label for="b11">专业协调会</label></li>
+                        <li><input type="radio" name="b1" id="b12"/><label for="b12">项目启动会</label></li>
+                        <li><input type="radio" name="b1" id="b13"/><label for="b13">方案讨论会</label></li>
+                        <li><input type="radio" name="b1" id="b14"/><label for="b14">施工交底会</label></li>
+                        <li><input type="radio" name="b1" id="b15"/><label for="b15">方案评审会</label></li>
+                        <li><input type="radio" name="b1" id="b16"/><label for="b16">技术论证会</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b2" id="b21"/><label for="b21">作业模型</label></li>
+                        <li><input type="radio" name="b2" id="b22"/><label for="b22">管综模型</label></li>
+                        <li><input type="radio" name="b2" id="b23"/><label for="b23">计算模型</label></li>
+                        <li><input type="radio" name="b2" id="b24"/><label for="b24">算量模型</label></li>
+                        <li><input type="radio" name="b2" id="b25"/><label for="b25">拆分模型</label></li>
+                        <li><input type="radio" name="b2" id="b26"/><label for="b26">演示模型</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b3" id="b31"/><label for="b31">结构计算</label></li>
+                        <li><input type="radio" name="b3" id="b32"/><label for="b32">节能计算</label></li>
+                        <li><input type="radio" name="b3" id="b33"/><label for="b33">负荷计算</label></li>
+                        <li><input type="radio" name="b3" id="b34"/><label for="b34">日照计算</label></li>
+                        <li><input type="radio" name="b3" id="b35"/><label for="b35">工程量计算</label></li>
+                        <li><input type="radio" name="b3" id="b36"/><label for="b36">管径计算</label></li>
+                        <li><input type="radio" name="b3" id="b37"/><label for="b37">估算</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b3" id="b41"/><label for="b41">内审出图</label></li>
+                        <li><input type="radio" name="b4" id="b42"/><label for="b42">外审出图</label></li>
+                        <li><input type="radio" name="b4" id="b43"/><label for="b43">节点出图</label></li>
+                        <li><input type="radio" name="b4" id="b44"/><label for="b44">报人防出图</label></li>
+                        <li><input type="radio" name="b4" id="b45"/><label for="b45">报复函出图</label></li>
+                        <li><input type="radio" name="b4" id="b46"/><label for="b46">招标出图</label></li>
+                        <li><input type="radio" name="b4" id="b47"/><label for="b47">报消防出图</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b5" id="b51"/><label for="b51">方案校审</label></li>
+                        <li><input type="radio" name="b5" id="b52"/><label for="b52">初步设计校审</label></li>
+                        <li><input type="radio" name="b5" id="b53"/><label for="b53">施工图校审</label></li>
+                        <li><input type="radio" name="b5" id="b54"/><label for="b54">模型校审</label></li>
+                        <li><input type="radio" name="b5" id="b55"/><label for="b55">管综校审</label></li>
+                        <li><input type="radio" name="b5" id="b56"/><label for="b56">节点校审</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b6" id="b61"/><label for="b61">专业间协同</label></li>
+                        <li><input type="radio" name="b6" id="b62"/><label for="b62">专业内协同</label></li>
+                        <li><input type="radio" name="b6" id="b63"/><label for="b63">施工配合</label></li>
+                        <li><input type="radio" name="b6" id="b64"/><label for="b64">设备选型配合</label></li>
+                        <li><input type="radio" name="b6" id="b65"/><label for="b65">报规配合</label></li>
+                        <li><input type="radio" name="b6" id="b66"/><label for="b66">选材配合</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="radio" name="b7" id="b71"/><label for="b71">清理模型</label></li>
+                        <li><input type="radio" name="b7" id="b72"/><label for="b72">成果归档</label></li>
+                        <li><input type="radio" name="b7" id="b73"/><label for="b73">成果交付</label></li>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="more">
+            <input type="checkbox" id="moreCheckbox"/>
+            自定义事件名称：<input type="text"/>
+            事件归类：<input type="text"/>
+            <font color="red">！提示信息：请选择事件归类</font>
+            <div>添加</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

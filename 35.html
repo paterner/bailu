@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>工作-项目管理-项目查看-成果查看</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./static/js/unslider.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="contentheader">
+            <div class="logo">
+                <ul>
+                    <li><img src="./static/img/logo1.png" ></li>
+                    <li><img src="./static/img/logo2.png" ></li>
+                    <li>企业中文名称企业<br><font class="black">B</font><font class="red11">I</font><font class="black">M</font>设计协同平台</li>
+                </ul>
+            </div>
+            <div class="m-nav">
+                <ul>
+                    <li><div class="checked"><span>工作</span> Co-task</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                    <li><a href="#"><span>工具</span> Tools</a></li>
+                    <li><a href="#"><span>知识</span> Knowledge</a></li>
+                    <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+                <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+                <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                <div class="userbox_quit">退出</div>
+            </div>
+            <div class="userinfo">目前在线人数为 9999 <span>打招呼</span></div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="content">
+        <!--左侧菜单开始-->
+        <div class="leftNav"></div>
+        <!--左侧菜单结束-->
+        <!--右侧内容开始-->
+        <div class="rightContent">
+            <!--路径导航开始-->
+            <ol class="breadcrumb">
+                <li><a href="#">工作</a></li>
+                <li><a href="#">项目管理</a></li>
+                <li class="active">项目查看</li>
+            </ol>
+            <!--路径导航结束-->
+            <div class="clear"></div>
+            <!--上传步骤开始-->
+            <div class="step" style="width: 800px;">
+                <div class="stepId nowThis">
+                    <div class="out">
+                        <div class="in">1</div>
+                    </div>
+                </div>
+                <div class="jiange nowThis">
+                    <div class="line1"></div>
+                </div>
+                <div class="stepId nowThis">
+                    <div class="out">
+                        <div class="in">2</div>
+                    </div>
+                </div>
+                <div class="jiange nowThis">
+                    <div class="line1"></div>
+                </div>
+                <div class="stepId">
+                    <div class="out">
+                        <div class="in">3</div>
+                    </div>
+                </div>
+                <div class="jiange">
+                    <div class="line1"></div>
+                </div>
+                <div class="stepId">
+                    <div class="out">
+                        <div class="in">4</div>
+                    </div>
+                </div>
+                <div class="jiange">
+                    <div class="line1"></div>
+                </div>
+                <div class="stepId">
+                    <div class="out">
+                        <div class="in">5</div>
+                    </div>
+                </div>
+                <div style="float: left; width: 100%;">
+                    <div class="tit tit1 nowThis">项目启动</div>
+                    <div class="jiangeTmp"></div>
+                    <div class="tit tit2">项目进行</div>
+                    <div class="jiangeTmp"></div>
+                    <div class="tit tit2">出图用印</div>
+                    <div class="jiangeTmp"></div>
+                    <div class="tit tit2">项目归档</div>
+                    <div class="jiangeTmp"></div>
+                    <div class="tit tit2">后期配合</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!--上传步骤结束-->
+            <div class="filtrationResult"><div class="fr mar-fr15"><a class="u-btn mar-fr15">编辑修改</a><a class="u-btn">人员变更</a></div><li class="filtrationTitle">项目进度名称</li></div>
+
+            <div class="m-tab topmar13">
+                <ul role="tablist" class="tab-nav" id="tablist" >
+                    <li role="presentation"><a href="#tab1" data-toggle="tab">项目<br>信息</a></li>
+                    <li role="presentation"><a href="#tab2" data-toggle="tab">进度<br>查看</a></li>
+                    <li role="presentation"><a href="#tab3" data-toggle="tab">人员<br>查看</a></li>
+                    <li class="active" role="presentation"><a href="#tab4" data-toggle="tab">成果<br>查看</a></li>
+                    <li role="presentation"><a href="#tab5" data-toggle="tab">共享<br>资源</a></li>
+                    <li role="presentation"><a href="#tab6" data-toggle="tab">项目<br>讨论</a></li>
+                    <li role="presentation"><a href="#tab7" data-toggle="tab">项目<br>统计</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane" id="tab1">111</div>
+                    <div class="tab-pane" id="tab2">222</div>
+                    <div class="tab-pane" id="tab3">
+                        <table class="m-ryck">
+                            <tr>
+                                <td>专业分工</td>
+                                <td>岗位职责</td>
+                                <td>人员</td>
+                                <td>岗位职责</td>
+                                <td>人员</td>
+                                <td>主控人员</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">PM - 管理</td>
+                                <td>项目经理</td>
+                                <td><span class="red">于洁</span>  <span class="blue">王玉清</span></td>
+                                <td>项目助理</td>
+                                <td><span class="blue">武诗然</span></td>
+                                <td>于洁</td>
+                            </tr>
+                            <tr>
+                                <td>设计主持人</td>
+                                <td><span class="blue">王玉清</span>  <span class="red">郭晓明</span></td>
+                                <td>设计副主持人</td>
+                                <td><span class="blue">石磊</span></td>
+                                <td>郭晓明</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">M - 总图</td>
+                                <td>专业负责人</td>
+                                <td><span class="red">石磊</span>  <span class="blue">万红士</span></td>
+                                <td>设计人</td>
+                                <td><span class="blue">某个人</span></td>
+                                <td>石磊</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">A - 建筑</td>
+                                <td>专业负责人</td>
+                                <td><div class="f-lh20"><span class="blue">石磊</span>  <span class="blue">万红士</span>   <span class="red">杜杰</span>  <span class="blue">余丹</span><br>
+                                    <span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></div></td>
+                                <td>设计人</td>
+                                <td><div class="f-lh20"><span class="blue">石磊</span>  <span class="blue">万红士</span>   <span class="red">杜杰</span>  <span class="blue">余丹</span><br>
+                                    <span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></div></td>
+                                <td>杜杰</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>设计人</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">S - 结构</td>
+                                <td>专业负责人</td>
+                                <td><span class="red">石磊</span>  <span class="blue">万红士</span></td>
+                                <td>设计人</td>
+                                <td><div class="f-lh20"><span class="blue">石磊</span>  <span class="blue">万红士</span>   <span class="red">杜杰</span>  <span class="blue">余丹</span><br>
+                                    <span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></div></td>
+                                <td>某个人</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">PD - 给排水</td>
+                                <td>专业负责人</td>
+                                <td><span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></td>
+                                <td>设计人</td>
+                                <td>待定</td>
+                                <td>某个人</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">HV - 暖通</td>
+                                <td>专业负责人</td>
+                                <td><span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></td>
+                                <td>设计人</td>
+                                <td>待定</td>
+                                <td>某个人</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">ET - 电气</td>
+                                <td>专业负责人</td>
+                                <td><span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></td>
+                                <td>设计人</td>
+                                <td>待定</td>
+                                <td>某个人</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">IB - 智能化</td>
+                                <td>专业负责人</td>
+                                <td><span class="blue">某个人</span>   <span class="blue">某个人</span>   <span class="blue">某人</span></td>
+                                <td>设计人</td>
+                                <td>待定</td>
+                                <td>某个人</td>
+                            </tr>
+                            <tr>
+                                <td>审核</td>
+                                <td>&nbsp;</td>
+                                <td>审定</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        <div class="clear"></div>
+                        <div class="submit">提交</div>
+                    </div>
+                    <div class="tab-pane active" id="tab4">
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom open"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom open"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                        <div class="m-title2">
+                            <h3><i class="glyphicon glyphicon-triangle-bottom"></i>截止时间：2014/08/15    事件名称：立项 </h3>
+                        </div>
+                        <table class="m-tb f-dn">
+                            <thead>
+                            <tr>
+                                <th>成果名称</th>
+                                <th>包含附件</th>
+                                <th>审查要求</th>
+                                <th>执行人</th>
+                                <th>执行状态</th>
+                                <th>完成时间</th>
+                                <th>审查人</th>
+                                <th>审查状态</th>
+                                <th>审查时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing grayicon" type="button" data-original-title="通过"><i class="glyphicon glyphicon-ok"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>
+                                    <span class="cz f-dn"><a class="u-goon"></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图<br>• 经济技术指标</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td>完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing redicon" type="button" data-original-title="已审，未通过哦！"><i class="fa fa-exclamation fa-lg"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            <tr>
+                                <td>建筑<br>报规文本</td>
+                                <td>• A3报规文本<br>• 总平面图</td>
+                                <td>数据完整</td>
+                                <td>某个人</td>
+                                <td class="red">未完成</td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td>某个人</td>
+                                <td><button title="" data-placement="top" data-toggle="tooltip" class="tixing" type="button" data-original-title="没审，提醒一下吧！"><i class="glyphicon glyphicon-hourglass green"></i></button></td>
+                                <td class="green">2014/08/15<br>15:16</td>
+                                <td><span class="cz f-dn"><a class="u-goon"></a></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+
+                    </div>
+                    <div class="tab-pane" id="tab5">555</div>
+                    <div class="tab-pane" id="tab6">666</div>
+                    <div class="tab-pane" id="tab7">777</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="f-pl44">
+                <div class="m-title">
+                    <h3><i class="glyphicon glyphicon-triangle-bottom"></i>项目信息维护日志</h3>
+                    <div class="pageBox bottompageBox_mar">
+                        <li class="sum">共<span>216</span>个</li>
+                        <li class="pageCut"><span>1</span>/  9</li>
+                        <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                        <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+                    </div>
+                </div>
+                <div class="m-box">
+                    <div class="filterBox">
+                        <li class="filterBoxTitle">类型：</li>
+                        <li class="chip1"><input type="radio" checked="true" id="type_all" name="filterBox"><label for="type_all">全部</label></li>
+                        <li class="chip1"><input type="radio" id="type_week" name="filterBox"><label for="type_week">本周</label></li>
+                        <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">本月</label></li>
+                        <li class="chip1"><input type="radio" id="type_other" name="filterBox"><label for="type_other">自定义</label></li>
+                        <li class="otherInfo">自<span class="fontu">2014/07/14</span>至<span class="fontu">2015/01/03</span></li>
+                        <div class="searchBox">
+                            <input type="text" class="searchInput">
+                            <div class="searchBtn"><span class="fa fa-search"></span></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="resultContent1">
+                        <div class="ttitleBox2">
+                            <div class="cols1">维护时间</div>
+                            <div class="cols2">操作人</div>
+                            <div class="cols3">维护内容描述</div>
+                        </div>
+                        <div class="tChip3">
+                            <div class="cols1 green">2015/05/05 15:15</div>
+                            <div class="cols2">数据管理员</div>
+                            <div class="cols3">修改计划开始日期</div>
+                        </div>
+                        <div class="tChip3">
+                            <div class="cols1 green">2015/05/05 15:15</div>
+                            <div class="cols2">数据管理员</div>
+                            <div class="cols3">修改计划开始日期</div>
+                        </div>
+                        <div class="tChip3">
+                            <div class="cols1 green">2015/05/05 15:15</div>
+                            <div class="cols2">数据管理员</div>
+                            <div class="cols3">修改计划开始日期</div>
+                        </div>
+                        <div class="tChip3">
+                            <div class="cols1 green">2015/05/05 15:15</div>
+                            <div class="cols2">数据管理员</div>
+                            <div class="cols3">“创建”权限分组“建筑一室员工类”</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageBox">
+                <ol class="sum">共<span>216</span>个</ol>
+                <ol class="pageCut"><span>1</span>/  9</ol>
+                <ol class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></ol>
+                <ol class="turnRight"><span class="fa fa-angle-right fa-lg"></span></ol>
+            </div>
+            </div>
+            <!--右侧内容结束-->
+        </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+</div>
+
+    <script>//左侧菜单调出js
+    $(window).resize(function(){
+        public.resetMargin(".tbox", ".conone");
+        public.resetMargin(".text", ".xinxi");
+    });
+    window.onload = function(){
+        public.createLeftNavi(leftNavCode);
+        public.resetMargin(".tbox", ".conone");
+        public.resetMargin(".text", ".xinxi");
+    }
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+<script type="text/javascript">
+    <!--
+    function show(op){
+        document.getElementById(op).style.display="block";
+    }
+    function hide(op){
+        document.getElementById(op).style.display="none";
+    }
+    //查看成果
+    $(".m-title2").click(function()
+    {
+        var oI = $(this).find("i");
+        var oTb = $(this).next(".m-tb");
+        if(oI.hasClass("open"))
+        {
+            oI.removeClass("open");
+            oTb.addClass("f-dn");
+        }
+        else
+        {
+            oI.addClass("open");
+            oTb.removeClass("f-dn");
+        }
+    });
+</script>
+
+</body>
+</html>

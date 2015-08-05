@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>子系统配置-进度模板设置</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./static/js/unslider.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="contentheader">
+            <div class="logo">
+                <ul>
+                    <li><img src="./static/img/logo1.png" ></li>
+                    <li><img src="./static/img/logo2.png" ></li>
+                    <li>企业中文名称企业<br><font class="black">B</font><font class="red11">I</font><font class="black">M</font>设计协同平台</li>
+                </ul>
+            </div>
+            <div class="m-nav">
+                <ul>
+                    <li><div class="checked"><span>工作</span> Co-task</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                    <li><a href="#"><span>工具</span> Tools</a></li>
+                    <li><a href="#"><span>知识</span> Knowledge</a></li>
+                    <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+                <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+                <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                <div class="userbox_quit">退出</div>
+            </div>
+            <div class="userinfo">目前在线人数为 9999 <span>打招呼</span></div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="content">
+        <!--左侧菜单开始-->
+        <div class="leftNav"></div>
+        <!--左侧菜单结束-->
+        <!--右侧内容开始-->
+        <div class="rightContent">
+            <!--路径导航开始-->
+            <ol class="breadcrumb">
+                <li><a href="#">工作</a></li>
+                <li class="active">子系统配置</li>
+                <li class="active">进度模板管理</li>
+                <li class="active">进度模板设置</li>
+                <div class="fr message">
+                    <!--<div class="p42_search_box"><input type="text"/><div class="p42_search_box_btn"></div></div>-->
+                    <div class="bigmenu"><a style="padding: 0 15px;">由进度创建</a></div>
+                </div>
+            </ol>
+            <!--路径导航结束-->
+            <div class="clear"></div>
+
+            <div class="title">进度设定</div>
+            <div class="clear"></div>
+            <table class="p43_t1" cellpadding="0" cellspacing="0" border="1">
+                <tr>
+                    <td width="15%">模板名称</td>
+                    <td width="35%"><input type="text"/></td>
+                    <td width="15%">备注说明</td>
+                    <td width="35%"><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>创建人</td>
+                    <td><font color="#57b6e4">默认为编辑者</font></td>
+                    <td>创建日期</td>
+                    <td><font color="#57b6e4">默认为编辑日期</font></td>
+                </tr>
+                <tr>
+                    <td>适用阶段</td>
+                    <td colspan="3">
+                        <div><input type="checkbox" id="p43_t1_checkbox11"/><label for="p43_t1_checkbox11">前期准备阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox12"/><label for="p43_t1_checkbox12">投标设计阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox13"/><label for="p43_t1_checkbox13">方案设计阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox14"/><label for="p43_t1_checkbox14">初步设计阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox15"/><label for="p43_t1_checkbox15">施工图设计阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox16"/><label for="p43_t1_checkbox16">转向设计阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox17"/><label for="p43_t1_checkbox17">施工配合阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox18"/><label for="p43_t1_checkbox18">预制生产阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox19"/><label for="p43_t1_checkbox19">安装施工阶段</label></div>
+                        <div><input type="checkbox" id="p43_t1_checkbox110"/><label for="p43_t1_checkbox110">运营维护阶段</label></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+
+            <div class="title">进度编辑</div>
+
+            <div class="clear"></div>
+
+            <table border="1" cellpadding="0" cellspacing="0" class="p43_t2">
+                <tr>
+                    <td width="18%">时间设置</td>
+                    <td width="18%">事件设置</td>
+                    <td width="18%">成果设置</td>
+                    <td width="18%">责任岗设置</td>
+                    <td width="18%">执行岗设置</td>
+                    <td width="10%">操作</td>
+                </tr>
+                <tr>
+                    <td class="t43_t2_cont_1">
+                        <div class="t43_t2_cont_1_l" style="padding: 1px 0 0 0;"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r" style="padding: 1px 0 0 0;">开始时间x<input type="text"/> %结束时间</div>
+                        <div class="t43_t2_cont_1_l"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r">开始时间+<input type="text"/>天</div>
+                        <div class="t43_t2_cont_1_l"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r">开始时间-<input type="text"/>天</div>
+                    </td>
+                    <td>事件设置 <span class="fa fa-plus"></span> </td>
+                    <td>成果设置 <span class="fa fa-plus"></span> </td>
+                    <td>责任岗设置 <span class="fa fa-plus"></span> </td>
+                    <td>执行岗设置 <span class="fa fa-plus"></span> </td>
+                    <td>
+                        <span class="fa-stack fa-lg"> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-minus fa-stack-1x"></i> </span>
+                        <span class="fa-stack fa-lg"> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-plus fa-stack-1x"></i> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <div class="t43_t2_cont_1_l" style="padding: 1px 0 0 0;"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r" style="padding: 1px 0 0 0;">开始时间x<input type="text"/> %结束时间</div>
+                        <div class="t43_t2_cont_1_l"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r">开始时间+<input type="text"/>天</div>
+                        <div class="t43_t2_cont_1_l"><span class="fa fa-circle-thin"></span></div>
+                        <div class="t43_t2_cont_1_r">开始时间-<input type="text"/>天</div>
+                    </td>
+                    <td>事件设置 <span class="fa fa-plus"></span> <br/> <span class="p43_t2_btn">同上</span></td>
+                    <td>成果设置 <span class="fa fa-plus"></span> <br/> <span class="p43_t2_btn">同上</span></td>
+                    <td>责任岗设置 <span class="fa fa-plus"></span> <br/> <span class="p43_t2_btn">同上</span></td>
+                    <td>执行岗设置 <span class="fa fa-plus"></span> <br/> <span class="p43_t2_btn">同上</span></td>
+                    <td>
+                        <span class="fa-stack fa-lg"> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-minus fa-stack-1x"></i> </span>
+                        <span class="fa-stack fa-lg"> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-plus fa-stack-1x"></i> </span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="clear"></div>
+
+            <div class="submit">保存</div>
+            <div class="submit">预览</div>
+            <!--右侧内容结束-->
+        </div>
+        <!--尾部开始-->
+        <div class="footer">
+            ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+        </div>
+        <!--尾部结束-->
+
+    </div>
+    <script>
+
+        window.onload = function(){
+            $('[data-toggle="tooltip"]').tooltip()
+            $('.banner').unslider({
+                speed: 500,
+                delay: 3000,
+                keys: true,
+                dots: true,
+                fluid: false
+            });
+            public.createLeftNavi(leftNavCode);
+
+            $(document)
+                    .on("click", ".t43_t2_cont_1_l .fa", function(){
+//                        console.log($(this).parent().parent().children(".t43_t2_cont_1_l"));
+                        $(this).parent().parent().children(".t43_t2_cont_1_l").children(".fa").removeClass("fa-circle").addClass("fa-circle-thin");
+                        if((/fa-circle-thin/gi).test($(this).attr("class"))){
+                            $(this).removeClass("fa-circle-thin").addClass("fa-circle")
+                        }else{
+                            $(this).removeClass("fa-circle").addClass("fa-circle-thin")
+                        }
+                    })
+        }
+    </script>
+</body>
+
+</html>

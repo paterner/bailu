@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>工作-委托打印审批表</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./static/js/unslider.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="contentheader">
+            <div class="logo">
+                <ul>
+                    <li><img src="./static/img/logo1.png" ></li>
+                    <li><img src="./static/img/logo2.png" ></li>
+                    <li>企业中文名称企业<br><font class="black">B</font><font class="red11">I</font><font class="black">M</font>设计协同平台</li>
+                </ul>
+            </div>
+            <div class="m-nav">
+                <ul>
+                    <li><div class="checked"><span>工作</span> Co-task</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                    <li><a href="#"><span>工具</span> Tools</a></li>
+                    <li><a href="#"><span>知识</span> Knowledge</a></li>
+                    <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+                <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+                <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                <div class="userbox_quit">退出</div>
+            </div>
+            <div class="userinfo">目前在线人数为 9999 <span>打招呼</span></div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="content">
+        <!--左侧菜单开始-->
+        <div class="leftNav"></div>
+        <!--左侧菜单结束-->
+        <!--右侧内容开始-->
+        <div class="rightContent">
+            <!--路径导航开始-->
+            <ol class="breadcrumb">
+                <li><a href="#">工作</a></li>
+                <li><a href="#">我的工作</a></li>
+                <li><a href="#">我要申请</a></li>
+                <li class="active">委托打印审批表</li>
+            </ol>
+            <!--路径导航结束-->
+            <div class="clear"></div>
+            <!--上传步骤开始-->
+            <div class="step">
+                <div class="stepId nowThis">
+                    <div class="out">
+                        <div class="in">1</div>
+                    </div>
+                </div>
+                <div class="jiange nowThis">
+                    <div class="line1"></div>
+                </div>
+                <div class="stepId">
+                    <div class="out">
+                        <div class="in">2</div>
+                    </div>
+                </div>
+                <div style="float: left; width: 100%;">
+                    <div class="tit tit1 nowThis">填写申请表</div>
+                    <div class="jiangeTmp"></div>
+                    <div class="tit tit2">提交审批</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!--上传步骤结束-->
+            <div class="title">
+                <div class="fr mar-fr15 font14"><span class="mar-fr15">填写人：<font class="blue">于洁</font></span><span>填写日期：<font class="green">2015/03/18</font></span></div>
+                委托打印审批表：
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table12 table13">
+                <tr>
+                    <td width="15%">委托部门<div class="bz">*</div></td>
+                    <td width="35%">
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                    <td width="15%">委托日期</td>
+                    <td width="35%"><font class="green">2014/08/15</font></td>
+                </tr>
+                <tr>
+                    <td>设计号<div class="bz">*</div></td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                    <td>项目经理</td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>项目名称<div class="bz">*</div></td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                    <td>进度名称</td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>图纸大小<div class="bz">*</div></td>
+                    <td>
+                        <div class="btn-group" style="width:calc(100% - 40px)">
+                            <button class="btn btn-default" type="button" style="width:calc(100% - 45px)">A1 : 594 x 841</button>
+                            <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul role="menu" class="dropdown-menu" style="width:calc(100% - 45px)">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>打印份数</td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span>份</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>装订样式<div class="bz">*</div></td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 蝴蝶精装
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 骑马钉
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 无线胶装
+                        </label>
+                    </td>
+                    <td>所用纸质</td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 硫化纸
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 铜版纸
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 普通纸
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>交付时间<div class="bz">*</div></td>
+                    <td><font class="green fontu">2014/08/15 12：30</font></td>
+                    <td>打印中心</td>
+                    <td>
+                        <div class="btn-group" style="width:calc(100% - 60px)">
+                            <button class="btn btn-default" type="button" style="width:calc(100% - 45px)">某某打印中心</button>
+                            <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul role="menu" class="dropdown-menu" style="width:calc(100% - 45px)">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>打印图纸联络人<div class="bz">*</div></td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                    <td>联络人联系方式</td>
+                    <td><input type="text" placeholder="当从成果页来时推送" class="width80"></td>
+                </tr>
+                <tr>
+                    <td>出图用途<div class="bz">*</div></td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 方案
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 报审
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 施工
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 其他：
+                        </label>
+                        <input type="text" placeholder="当从成果页来时推送" class="width16">
+                    </td>
+                    <td>出图类型<div class="bz">*</div></td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 院内出图
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 院外出图
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="105">出图要求备注<div class="bz">*</div></td>
+                    <td colspan="3">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </td>
+                </tr>
+                <tr height="105">
+                    <td>打印文件地址<div class="bz">*</div></td>
+                    <td colspan="3">
+                        <textarea class="form-control" rows="3"></textarea>
+                        <a><i class="fa fa-edit fa-lg gray iconi"></i></a>
+                    </td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+            <div class="title topmar70">审批设置：</div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table12">
+                <tr>
+                    <td width="15%">审批流程1</td>
+                    <td width="35%" class="blue"><span>工作流程配置推送岗位1</span></td>
+                    <td width="15%">选择审批人1</td>
+                    <td width="35%">
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>审批流程2</td>
+                    <td class="blue"><span>工作流程配置推送岗位2</span></td>
+                    <td>选择审批人2</td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>审批流程3</td>
+                    <td class="blue"><span>工作流程配置推送岗位3</span></td>
+                    <td>选择审批人3</td>
+                    <td>
+                        <input type="text" placeholder="当从成果页来时推送" class="width80">
+                        <a><span class="fa fa-edit fa-lg gray"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>审批时限</td>
+                    <td colspan="3" class="blue"><span>48小时，接受系统自动</span></td>
+                </tr>
+                <tr>
+                    <td height="105">提交备注</td>
+                    <td colspan="3">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+            <div class="submit">提交</div>
+        </div>
+        <!--右侧内容结束-->
+    </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+
+</div>
+<script>//左侧菜单调出js
+$(window).resize(function(){
+    public.resetMargin(".tbox", ".conone");
+    public.resetMargin(".text", ".xinxi");
+});
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+    public.resetMargin(".tbox", ".conone");
+    public.resetMargin(".text", ".xinxi");
+}
+
+</script>
+</body>
+</html>

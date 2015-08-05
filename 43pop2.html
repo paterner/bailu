@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>43-成果编辑器</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+</head>
+<body>
+<style>
+    .pop1{margin: 100px auto 0 auto; width: 1030px; height: 505px; background: rgb(9, 164, 221); overflow: hidden;}
+    .title{ text-align: left; text-indent: 20px; line-height: 50px; color: rgb(255, 255, 255); float: left; width: 100%; height: 50px; overflow: hidden; }
+    .pop1_btn_close,.pop1_btn_min{ cursor: pointer; text-indent: 0; float: right; width: 25px; height: 25px; line-height: 25px; text-align: center; }
+    .pop1_btn_close:hover{ background: rgb(255, 100, 100); }
+    .pop1_btn_min:hover{ background: rgb(24, 119, 201); }
+    .tab_title td{text-align: center;}
+    .tab{ margin: 0 3px 3px 3px; padding: 10px; float: left; width: 1004px; height: 432px; overflow: hidden; background: rgb(255, 255, 255); }
+    .t1{ float: left; width: 100%; border-color: rgb(237, 237, 237); }
+    .tab_cont td div{float: left; width: 100%; height: 100%; overflow: hidden; overflow-y: auto;}
+    .tab_cont td div li{ float: left; text-align: left; text-indent: 10px; width: 100%; height: 40px; line-height: 40px; list-style: none; overflow: hidden; }
+
+    .more{ float: left; width: 100%; height: 100px; overflow: hidden; line-height: 50px; text-align: left; }
+    .more input[type="text"]{ width: 200px; color: rgb(237, 237, 237); }
+    .more select{ width: 100px; color: rgb(237, 237, 237); }
+    .more div{ cursor: pointer; background: rgb(255, 100, 100); width: 50px; height: 30px; line-height: 30px; text-align: center; float: right; margin: 10px 3px 0 0; color: rgb(255, 255, 255);}
+</style>
+
+<div class="pop1">
+    <div class="title">
+        <div class="pop1_title_left">
+            成果编辑器
+            <div class="pop1_btn_close"><span class="fa fa-close"></span></div>
+            <div class="pop1_btn_min"><span class="fa fa-minus"></span></div>
+        </div>
+    </div>
+    <div class="tab">
+        <table border="1" cellpadding="0" cellspacing="0" class="t1">
+            <tr class="tab_title">
+                <td width="14%" height="40px">输入相关</td>
+                <td width="14%">模型相关</td>
+                <td width="14%">计算相关</td>
+                <td width="14%">出图相关</td>
+                <td width="14%">校审相关</td>
+                <td width="14%">配合相关</td>
+                <td width="14%">交付相关</td>
+            </tr>
+            <tr class="tab_cont">
+                <td height="292px">
+                    <div>
+                        <li><input type="checkbox" name="b1" id="b11"/><label for="b11">会议记录</label></li>
+                        <li><input type="checkbox" name="b1" id="b12"/><label for="b12">会议演示文档</label></li>
+                        <li><input type="checkbox" name="b1" id="b13"/><label for="b13">设计输入条件</label></li>
+                        <li><input type="checkbox" name="b1" id="b14"/><label for="b14">专业技术措施</label></li>
+                        <li><input type="checkbox" name="b1" id="b15"/><label for="b15">人员联系表</label></li>
+                        <li><input type="checkbox" name="b1" id="b16"/><label for="b16">政府发文清单</label></li>
+                        <li><input type="checkbox" name="b1" id="b17"/><label for="b17">会议邀请</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b2" id="b21"/><label for="b21">土建模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b22"/><label for="b22">机电模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b23"/><label for="b23">建筑模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b24"/><label for="b24">结构模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b25"/><label for="b25">给排水模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b26"/><label for="b26">电气模型</label></li>
+                        <li><input type="checkbox" name="b2" id="b27"/><label for="b27">暖通</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b3" id="b31"/><label for="b31">房间明细表</label></li>
+                        <li><input type="checkbox" name="b3" id="b32"/><label for="b32">结构计算表</label></li>
+                        <li><input type="checkbox" name="b3" id="b33"/><label for="b33">负荷计算表</label></li>
+                        <li><input type="checkbox" name="b3" id="b34"/><label for="b34">经济技术指标表</label></li>
+                        <li><input type="checkbox" name="b3" id="b35"/><label for="b35">绿化计算表</label></li>
+                        <li><input type="checkbox" name="b3" id="b36"/><label for="b36">人防计算表</label></li>
+                        <li><input type="checkbox" name="b3" id="b37"/><label for="b37">土方计算表</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b4" id="b41"/><label for="b41">系统图</label></li>
+                        <li><input type="checkbox" name="b4" id="b42"/><label for="b42">图纸说明</label></li>
+                        <li><input type="checkbox" name="b4" id="b43"/><label for="b43">设计说明</label></li>
+                        <li><input type="checkbox" name="b4" id="b44"/><label for="b44">系统图</label></li>
+                        <li><input type="checkbox" name="b4" id="b45"/><label for="b45">子项图纸集</label></li>
+                        <li><input type="checkbox" name="b4" id="b46"/><label for="b46">通用图纸集</label></li>
+                        <li><input type="checkbox" name="b4" id="b47"/><label for="b47">材料做发表</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b5" id="b51"/><label for="b51">模型校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b52"/><label for="b52">建筑校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b53"/><label for="b53">管综校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b54"/><label for="b54">结构校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b55"/><label for="b55">给排水校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b56"/><label for="b56">电气校审记录</label></li>
+                        <li><input type="checkbox" name="b5" id="b57"/><label for="b57">智能化校审记录</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b6" id="b61"/><label for="b61">条件反提</label></li>
+                        <li><input type="checkbox" name="b6" id="b62"/><label for="b62">工地巡检记录</label></li>
+                        <li><input type="checkbox" name="b6" id="b63"/><label for="b63">工地巡检记录</label></li>
+                        <li><input type="checkbox" name="b6" id="b64"/><label for="b64">工程验收记录</label></li>
+                        <li><input type="checkbox" name="b6" id="b65"/><label for="b65">变更洽商记录</label></li>
+                        <li><input type="checkbox" name="b6" id="b66"/><label for="b66">验槽记录</label></li>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <li><input type="checkbox" name="b7" id="b71"/><label for="b71">模型设计</label></li>
+                        <li><input type="checkbox" name="b7" id="b72"/><label for="b72">交付模型</label></li>
+                        <li><input type="checkbox" name="b7" id="b73"/><label for="b73">归档图纸集</label></li>
+                        <li><input type="checkbox" name="b7" id="b74"/><label for="b74">工程量清淡</label></li>
+                        <li><input type="checkbox" name="b7" id="b75"/><label for="b75">构件清单</label></li>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="more">
+            <input type="checkbox" id="moreCheckbox"/>
+            自定义成果：<input type="text" value="请输入15字以内中文事件名称"/>
+            成果归类：<select name=""><option value="">会议相关</option></select>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            专业属性：<select name="" style="width: 200px;"><option value="">不限</option></select>&nbsp;
+            数据类型：<select name=""><option value="">文件型</option></select>
+            <font color="red">！提示信息：请选择事件归类</font>
+            <div>添加</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

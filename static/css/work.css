@@ -2505,3 +2505,25 @@ p.lh30{line-height: 30px}
 .projecttest .tabelouter span.headspan{  margin-bottom: 20px;display: block;}
 .pl45{padding-left: 45px}
 .pl10{padding-left: 10px}
+
+/*40*/
+.knowledgecount .f17{font-size: 17px}
+.pl5{padding-left: 5px}
+.mt40{margin-top: 40px}
+.knowledgeone{height: 195px;line-height: 195px}
+.knowledgeone .arrowleft,.knowledgeone .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 20px;line-height: 20px;top:90px;}
+.left40{left: 40px}
+.right20{right: 20px}
+
+.pt10{padding-top: 10px}
+.p10{padding: 10px}
+.knowledgetwo{border:1px solid #cbcbca;}
+.knowledgetwo.mywork-result-comment .mywork-result-list-head{border-bottom:1px solid #cbcbca;padding-left: 0px}
+.knowledgetwo ul li {float: left;display:block;border-right: 1px solid #cbcbca;width: 100px;height: 45px;line-height: 45px;text-align: center;}
+.knowledgetwo ul li.on{background: #fff;border-bottom: 1px solid #fff}
+.knowledgetwo .twotitle label{padding: 10px}
+
+/*40pop1*/
+.title46.40pop{width: 200px}
+.labelp8{padding: 8px}
+.table46pop.pop40 label{ margin: 0 42px 0 0px}

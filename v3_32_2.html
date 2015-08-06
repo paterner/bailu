@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8"/>
-    <title>32</title>
+    <title>32_2</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +64,7 @@
             <!--路径导航结束-->
             <div class="clear"></div>
 
-            <div class="title p32">题库设置：</div>
+            <div class="title p32">题库设置：<span class="p32_red_btn">新增试题</span></div>
             
             <div class="columnConfig mt20">
                 <ul role="tablist" class="nav nav-tabs tab_back">
@@ -77,96 +77,150 @@
                         <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
                         <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
                     </div>
+                    <li class="tab_right ml10">显示控制：
+                        <select name="" id="">
+                            <option value="">仅更新</option>
+                        </select>
+                    </li>
+                    <div class="searchBox">
+                        <input type="text" class="searchInput">
+                        <div class="searchBtn"><span class="fa fa-search"></span></div>
+                    </div>
                 </ul>
 
-                <div class="filterBox">
-                    <li class="filterBoxTitle">区间：</li>
-                    <li class="chip1"><input type="radio" checked="true" id="type_all" name="filterBox"><label for="type_all">全部</label></li>
-                    <li class="chip1"><input type="radio" id="type_week" name="filterBox"><label for="type_week">本周</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">本月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近三个月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近半年</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">今年</label></li>
-                    <li class="chip1"><input type="radio" id="type_other" name="filterBox"><label for="type_other">自定义</label></li>
-                    <li class="otherInfo">自<span class="fontu">2014/07/14</span>至<span class="fontu">2015/01/03</span></li>
-                </div>
+                <div class="right_btn">下载题库模版</div>
                 
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_2">
                     <tbody>
                         <tr>
                             <th width="5%">序号</th>
-                            <th width="20%">检测内容</th>
-                            <th width="50%">评判标准</th>
-                            <th width="10%">出题人</th>
+                            <th width="19%">专题名称</th>
+                            <th width="8%">测评章节</th>
+                            <th width="19%">题目</th>
+                            <th width="16%">选项</th>
+                            <th width="5%">正解</th>
+                            <th width="5%">多选</th>
+                            <th width="5%">必过题</th>
+                            <th width="8%">出题人</th>
                             <th width="10%">更新日期</th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td class="c_red">是</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>很好<span class="c_blue">(5分)</span>；较好<span class="c_blue">(4分)</span>；一般<span class="c_blue">(3分)</span>；较差<span class="c_blue">(2分)</span>；很差<span class="c_blue">(1分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>有<span class="c_blue">(10分)</span>；没有<span class="c_blue">(0分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
                         <tr>
                             <td>10</td>
-                            <td>本地文件后缀为可识别用户名</td>
-                            <td>有<span class="c_blue">(10分)</span>；没有<span class="c_blue">(0分)</span></td>
+                            <td>revit建筑设计基础培训</td>
+                            <td>第一章</td>
+                            <td>有些题目有些题目默认两行有些题目有些题目默认两行</td>
+                            <td>A:不知道; B:知不道;<br>C:知道不; D:道不知</td>
+                            <td>A</td>
+                            <td>否</td>
+                            <td>否</td>
                             <td>王迪</td>
                             <td class="c_green">2015/03/10</td>
                         </tr>
@@ -176,13 +230,73 @@
                 <div class="clear"></div>
             </div>
             <div class="mt20 clearfix">
-                <div class="add_content">新增评价内容</div>
+                <div class="add_content">导入Excel表</div>
                 <div class="pageBox bottompageBox_mar">
                     <li class="sum">共<span>216</span>个</li>
                     <li class="pageCut"><span>1</span>/  9</li>
                     <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
                     <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
                 </div>
+            </div>
+                
+            <div class="title p32 mt40">试卷设置：</div>
+
+            <div class="columnConfig mt20">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_2">
+                    <tbody>
+                        <tr>
+                            <td width="33%" class="tl">&nbsp;&nbsp;&nbsp;&nbsp;所属章节：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td width="33%" class="tl">所属专题：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td width="34%" class="tl">考试时间：
+                                <select name="" id="" class="p32_2_select">
+                                    <option value="">90分钟</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">&nbsp;&nbsp;&nbsp;&nbsp;试卷名称：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">考试类型：
+                                <select name="" id="" class="p32_2_select">
+                                    <option value="">在线</option>
+                                </select>
+                            </td>
+                            <td class="tl">试卷总分：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                        </tr>
+                        <tr>
+                            <td class="tl">单选题数量：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">单题分值：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;难度：
+                                <select name="" id="" class="p32_2_select">
+                                    <option value="">一般</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">多选题数量：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">单题分值：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;难度：
+                                <select name="" id="" class="p32_2_select">
+                                    <option value="">一般</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">判断题数量：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">单题分值：<input type="text" placeholder="" class="p32_2_input" value=""></td>
+                            <td class="tl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;难度：
+                                <select name="" id="" class="p32_2_select">
+                                    <option value="">一般</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="mt20 clearfix">
+                <span class="red_btn fr">确定</span>
             </div>
 
             <div class="mt40">

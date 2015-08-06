@@ -2475,7 +2475,7 @@ table .tl{text-align: left;text-indent: 10px;}
 .projecttest.content{min-height: 0 !important;}
 .projecttest .projectuplaod {width: 850px;height: 500px;border:1px solid #333;margin:0 auto;line-height: 500px}
 .projecttest table tr td{text-align: left;}
-.projecttest .tabelouter{width: 940px;margin:0 auto;}
+.projecttest .tabelouter{width: 940px;margin:20px auto;}
 .projecttest .tabelouter input.score{float: none;margin-right: 0}
 .projec-comment .mywork-result-list-head{background-color: #f7f8f8;border: none;padding-left:10px;padding-right:10px;line-height: 45px;height: 45px}
 .projec-comment .icomment.b_blue{background-color: #35c5ea}
@@ -2497,3 +2497,11 @@ table .tl{text-align: left;text-indent: 10px;}
 .pt20 {padding-top: 20px}
 .pb20{padding-bottom: 20px}
 p.lh30{line-height: 30px}
+
+
+/*36*/
+.projecttest .tabelouter span.c_blue.borbot{font-size:16px;padding-bottom: 15px;  border-bottom: 1px solid #000;  display: block; margin-bottom: 20px;}
+.projecttest .tabelouter.mywork-result-list-head{border-bottom: none}
+.projecttest .tabelouter span.headspan{  margin-bottom: 20px;display: block;}
+.pl45{padding-left: 45px}
+.pl10{padding-left: 10px}

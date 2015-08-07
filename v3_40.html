@@ -17,8 +17,8 @@
     <script src="./data.js"></script>
     <script src="./static/js/unslider.min.js"></script>
     <script src="./static/js/Chart.min.js"></script>
-    <script src="./static/js/functioncharts.min.js"></script>
-    <script src="./static/js/functioncharts.maps.min.js"></script>
+    <script src="./static/js/highmaps.js"></script>
+    <script src="./static/js/cn-with-city.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -61,7 +61,11 @@
             		<canvas id="canvas9" height="300" width="200"></canvas>
             	</div>
             	<div class="knowoneright pa right20">
-            		<div id="chart-container">FusionCharts will render here</div>
+            		<div class="product_demo right" id="highmaps" style="box-shadow:none;border:none;width: 662px;height: 400px;margin: -20px -40px;" data-highcharts-chart="28">
+                        <div class="highcharts-container" id="highcharts-116" style="position: relative; overflow: hidden; width: 662px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                            <svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="662" height="400"></svg>
+                        </div>
+                    </div>
             	</div>
             	<a href="###" class="arrowleft pa left"> &lt; </a>
             	<a href="###" class="arrowright pa right"> &gt; </a>
@@ -686,100 +690,83 @@
             })
 </script>
 <script>
-	FusionCharts.ready(function () {
-    var visitChart = new FusionCharts({
-        type: 'msline',
-        renderAt: 'chart-container',
-        width: '550',
-        height: '350',
-        dataFormat: 'json',
-        dataSource: {
-            "chart": {
-                "caption": "Number of visitors last week",
-                "subCaption": "Bakersfield Central vs Los Angeles Topanga",
-                "captionFontSize": "14",
-                "subcaptionFontSize": "14",
-                "subcaptionFontBold": "0",
-                "paletteColors": "#0075c2,#1aaf5d",
-                "bgcolor": "#ffffff",
-                "showBorder": "0",
-                "showShadow": "0",
-                "showCanvasBorder": "0",
-                "usePlotGradientColor": "0",
-                "legendBorderAlpha": "0",
-                "legendShadow": "0",
-                "showAxisLines": "0",
-                "showAlternateHGridColor": "0",
-                "divlineThickness": "1",
-                "divLineIsDashed": "1",
-                "divLineDashLen": "1",
-                "divLineGapLen": "1",
-                "xAxisName": "Day",
-                "showValues": "0"               
+    var chart, stock, map = null;
+    initChart3()
+	function initChart3() {
+    if (map == null) {
+        var data = [{
+            value: 727,
+            name: "浙江"
+        }, {
+            value: 727,
+            name: "北京"
+        }, {
+            value: 120,
+            name: '广东'
+        }, {
+            value: 10,
+            name: '内蒙古'
+        }, {
+            value: 200,
+            name: "西藏"
+        }];
+
+
+        var mapArray = Highcharts.maps['cn-with-city'];
+
+
+        $('#highmaps').highcharts('Map', {
+
+            title: {
+                text: null
             },
-            "categories": [
-                {
-                    "category": [
-                        { "label": "Mon" }, 
-                        { "label": "Tue" }, 
-                        { "label": "Wed" },
-                        {
-                            "vline": "true",
-                            "lineposition": "0",
-                            "color": "#6baa01",
-                            "labelHAlign": "center",
-                            "labelPosition": "0",
-                            "label": "National holiday",
-                            "dashed":"1"
-                        },
-                        { "label": "Thu" }, 
-                        { "label": "Fri" }, 
-                        { "label": "Sat" }, 
-                        { "label": "Sun" }
-                    ]
+            credits: {
+                enabled: false
+            },
+
+            colorAxis: {
+                min: 0,
+                stops: [
+                    [0, '#EFEFFF'],
+                    [0.5, Highcharts.getOptions().colors[0]],
+                    [1, '#006cee']
+                ]
+            },
+            tooltip: {
+                formatter: function() {
+                    return "<b>" + this.point.name + " </b>\t" + this.point.value;
                 }
-            ],
-            "dataset": [
-                {
-                    "seriesname": "Bakersfield Central",
-                    "data": [
-                        { "value": "15123" }, 
-                        { "value": "14233" }, 
-                        { "value": "25507" }, 
-                        { "value": "9110" }, 
-                        { "value": "15529" }, 
-                        { "value": "20803" }, 
-                        { "value": "19202" }
-                    ]
-                }, 
-                {
-                    "seriesname": "Los Angeles Topanga",
-                    "data": [
-                        { "value": "13400" }, 
-                        { "value": "12800" }, 
-                        { "value": "22800" }, 
-                        { "value": "12400" }, 
-                        { "value": "15800" }, 
-                        { "value": "19800" }, 
-                        { "value": "21800" }
-                    ]
+            },
+
+            series: [{
+                data: data,
+                mapData: mapArray,
+                joinBy: ['name', 'name'],
+                name: 'Random data',
+                showInLegend: false,
+                events: {
+
+                },
+                states: {
+                    hover: {
+                        color: '#BADA55'
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        fontSize: '8px'
+                    }
                 }
-            ], 
-            "trendlines": [
-                {
-                    "line": [
-                        {
-                            "startvalue": "17022",
-                            "color": "#6baa01",
-                            "valueOnRight": "1",
-                            "displayvalue": "Average"
-                        }
-                    ]
-                }
-            ]
-        }
-    }).render();
-});
+            }, ]
+
+        }, function(map) {
+            console.log("Map init ok!");
+
+        });
+    }
+};
 </script>
 </body>
 </html>

@@ -686,22 +686,6 @@
         responsive : false,
         showTooltips: false
     });
-
-    $(document)
-            .on("click", ".p39_t2_right_cpb", function(e){
-                e.stopPropagation();
-                $(".p39_t2_right_cpb_selected").removeClass("p39_t2_right_cpb_selected");
-                $(this).addClass("p39_t2_right_cpb_selected");
-            })
-            .on("click", ".p39_t1_right_cpb_3", function(e){
-                e.stopPropagation();
-                $(".p39_t1_right_cpb_3_selected").removeClass("p39_t1_right_cpb_3_selected");
-                $(this).addClass("p39_t1_right_cpb_3_selected");
-            })
-            .on("click", ".p39_t1_ct2_close", function(e){
-                e.stopPropagation();
-                $(".p39_t1_right_cpb_3_selected").removeClass("p39_t1_right_cpb_3_selected");
-            })
 </script>
 <script>
     var chart, stock, map = null;

@@ -758,7 +758,7 @@ input[type="text"] {  border: 1px solid #aaa;  color: #c7c7c7;  float: left;  he
 }
 .contentBox6-1 .characterBox:first-child,.contentBox6-1 .characterBox:last-child{border: none;}
 .contentBox6-1 .characterBox:nth-child(2){border-bottom: 1px solid #dcdcdc; font-size: 16px; text-align: center;line-height: 40px;}
-.contentBox6-1 .characterBox ul{margin-top:	20px;}
+.contentBox6-1 .characterBox ul{margin-top: 20px;}
 .contentBox6-1 .characterBox ul li{width: 118px; line-height: 40px; text-align: center; height: 40px; border: none;}
 .contentBox6-1 .characterBox ul li a{border: none; blr: expression(this.onFocus=this.blur()); blr: expression(this.onFocus=this.close()); outline:none;padding:9px 15px;font-size:16px;}
 .contentBox6-1 .characterBox .popInput8{width:30%; font-size: 14px;height:29px;line-height:29px;}

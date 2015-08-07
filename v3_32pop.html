@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>32弹窗</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <style rel="stylesheet" type="text/css">
+
+        .nav{ background-color: #ededed;}
+        .nav>li>a:focus {
+            background-color:transparent;
+        }
+
+        a:focus {
+            color : #333;
+        }
+
+        .nav li{border-right: solid 1px #ccc;}
+
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+            border : none;
+            background : #fff;
+            position: relative;
+            bottom: -2px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class=" topmar70"></div>
+
+<div class="popBoxty">
+    <div class="closeBtn"><span class="fa fa-close"></span></div>
+    <div class="minBtn"><span class="fa fa-minus"></span></div>
+    <div class="popBoxty_title">新增评价内容</div>
+    <div class="clear"></div>
+    <div class="contentBoxty">
+
+        <div class="tab-content v3_31pop">
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">填写时间： <span class="c_green">2014/08/15</span></div>
+                <div class="pop31_bar_right">提出人：<span class="c_blue">绕里</span></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">检测内容： </div>
+                <div class="pop32_bar_area"><textarea rows="4"></textarea></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">评判标准：很好<span class="c_blue">(5分)</span>；<input type="text" placeholder="请输入标准" class="width80" value=""><input type="text" placeholder="请输入分数" class="width80" value=""><i class="pop32_add"></i></div>
+            </div>
+            
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_right"><div class="pop31_confirm">确定</div><div class="pop31_confirm ml10">取消</div></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

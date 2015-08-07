@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>32_2弹窗</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/work.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+    <style rel="stylesheet" type="text/css">
+
+        .nav{ background-color: #ededed;}
+        .nav>li>a:focus {
+            background-color:transparent;
+        }
+
+        a:focus {
+            color : #333;
+        }
+
+        .nav li{border-right: solid 1px #ccc;}
+
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+            border : none;
+            background : #fff;
+            position: relative;
+            bottom: -2px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class=" topmar70"></div>
+
+<div class="popBoxty">
+    <div class="closeBtn"><span class="fa fa-close"></span></div>
+    <div class="minBtn"><span class="fa fa-minus"></span></div>
+    <div class="popBoxty_title">新增测评题目</div>
+    <div class="clear"></div>
+    <div class="contentBoxty">
+
+        <div class="tab-content v3_31pop">
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">填写时间： <span class="c_green">2014/08/15</span></div>
+                <div class="pop31_bar_right">提出人：<span class="c_blue">绕里</span></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">专题名称： </div>
+                <div class="pop32_2_bar_input">
+                    <select name="" id="" class="pop32_2_select">
+                        <option value="">请选择专题名称</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">测评章节： </div>
+                <div class="pop32_2_bar_input">
+                    <select name="" id="" class="pop32_2_select2">
+                        <option value="">请选择章节</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">测评题目： </div>
+                <div class="pop32_bar_area"><textarea rows="4"></textarea></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">测评选项： </div>
+                <div class="pop32_2_bar_input">
+                    <div class="pop32_2_option"><span class="c_blue">A: </span><input type="text" placeholder="" class="pop32_2_option_input" value="A选项内容"></div>
+                    <div class="pop32_2_option mt10"><span class="c_blue">B: </span><input type="text" placeholder="" class="pop32_2_option_input" value="B选项内容"></div>  
+                    <div class="pop32_2_option mt10"><span class="c_blue">C: </span><input type="text" placeholder="" class="pop32_2_option_input" value="C选项内容"></div> 
+                    <div class="add_icon pop32"><i class="col_name"></i></div>         
+                </div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">正确答案：<input type="text" placeholder="" class="width80 pop32" value=""></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">是否多选：&nbsp;&nbsp;&nbsp;<input type="radio" id="" name="">&nbsp;&nbsp;<label for="">是</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="" name="">&nbsp;&nbsp;<label for="">否</label></div>
+            </div>
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_left">是否必过题：<input type="radio" id="" name="">&nbsp;&nbsp;<label for="">是</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="" name="">&nbsp;&nbsp;<label for="">否</label></div>
+            </div>
+            
+            <div class="pop31_bar clearfix">
+                <div class="pop31_bar_right"><div class="pop31_confirm">确定</div><div class="pop31_confirm ml10">取消</div></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

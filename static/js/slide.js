@@ -17,7 +17,7 @@ function Slider(options) {
     this.scrollImgLi = this.settings.scrollImgUl.getElementsByTagName('li');
     this.scrollNumLi = null;
     this.eleWidth = this.settings.scrollBox.clientWidth;
-    this.$index = 1;
+    this.$index = 0;
     this.timer = null;
     this.timerAnimate = null;
     this.init();
@@ -26,7 +26,7 @@ Slider.prototype = {
     //初始化
     init: function() {
         var _this = this;
-        for (var i = 1; i <= _this.scrollImgLi.length; i++) {
+        for (var i = 0; i <= _this.scrollImgLi.length-1; i++) {
             var li_ele = document.createElement('li');
             li_ele.innerHTML = i;
             _this.settings.scrollNumUl.appendChild(li_ele); 
@@ -35,11 +35,9 @@ Slider.prototype = {
         for (var j = 0; j < _this.scrollImgLi.length; j++) {
             _this.scrollImgLi[j].style.width = _this.eleWidth + 'px';
         }
-        _this.settings.scrollImgUl.insertBefore(_this.scrollImgLi[_this.scrollImgLi.length - 1].cloneNode(true), _this.scrollImgLi[0]);
-        _this.settings.scrollImgUl.appendChild(this.scrollImgLi[1].cloneNode(true));
         _this.scrollNumLi = _this.settings.scrollNumUl.getElementsByTagName("li");
         _this.settings.scrollImgUl.style.width = _this.eleWidth * _this.scrollImgLi.length + 'px';
-        _this.settings.scrollImgUl.style.left = -_this.eleWidth + 'px';
+        _this.settings.scrollImgUl.style.left = 0 + 'px';
         _this.scrollNumLi[0].className = "current";
         window.addEventListener("resize",function(){_this.reSize()},false);
         _this.mouseoverout();
@@ -69,19 +67,19 @@ Slider.prototype = {
         var _this = this;
         _this.settings.nextBtn.addEventListener('click', function() {
                 if(_this.$index == _this.scrollImgLi.length - 1) {
-                    _this.$index = 1;
-                    _this.settings.scrollImgUl.style.left = -_this.eleWidth + 'px';
-                }
-                _this.$index++
-                _this.scrollAnimate(_this.$index);
+                    alert('已经没有更多啦')
+                }else{
+                     _this.$index++
+                     _this.scrollAnimate(_this.$index);
+                }               
         });
         _this.settings.preBtn.addEventListener('click', function() {
                 if(_this.$index == 0) {
-                    _this.$index = 3;
-                    _this.settings.scrollImgUl.style.left = -_this.eleWidth * _this.scrollNumLi.length + 'px';
-                }
-                _this.$index--
+                    alert('已经没有更多啦')
+                }else{
+                     _this.$index--
                 _this.scrollAnimate(_this.$index);
+                }        
         })
     },
     //鼠标事件

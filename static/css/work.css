@@ -2574,8 +2574,10 @@ p.lh30{line-height: 30px}
 .knowledgecount .f17{font-size: 17px}
 .pl5{padding-left: 5px}
 .mt40{margin-top: 40px}
-.knowledgeone{height: 195px;line-height: 195px}
+.knowledgeone{height: 350px}
 .knowledgeone .arrowleft,.knowledgeone .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 20px;line-height: 20px;top:90px;}
+.knowledgeone .knowoneleft,.knowoneleft .knowoneright{width: 500px}
+.knowledgeone .knowoneleft .bar-color i,.knowledgeone .knowoneright .bar-color i{  width: 10px;  height: 10px;display: inline-block;  vertical-align: middle;  margin: 0 8px;}
 .left40{left: 40px}
 .right20{right: 20px}
 
@@ -2586,6 +2588,13 @@ p.lh30{line-height: 30px}
 .knowledgetwo ul li {float: left;display:block;border-right: 1px solid #cbcbca;width: 100px;height: 45px;line-height: 45px;text-align: center;}
 .knowledgetwo ul li.on{background: #fff;border-bottom: 1px solid #fff}
 .knowledgetwo .twotitle label{padding: 10px}
+
+.p40_slide{width: 100%;height: 380px;position: relative;overflow: hidden;}
+.p40_slide .slide-img {position: absolute;top: 0;left: 0;height: 380px;}
+.p40_slide .slide-img li{float: left;height: 380px;}
+.p40_slide .slide-num{display: none;}
+.p40_slide .arrowleft,.p40_slide .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 40px;line-height: 40px;top:90px;}
+.top10{top:10px;}
 
 /*40pop1*/
 .title46.40pop{width: 200px}

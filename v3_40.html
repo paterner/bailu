@@ -19,6 +19,7 @@
     <script src="./static/js/Chart.min.js"></script>
     <script src="./static/js/highmaps.js"></script>
     <script src="./static/js/cn-with-city.js"></script>
+    <script src="./static/js/slide.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -55,22 +56,47 @@
         <!--左侧菜单结束-->
         <!--右侧内容开始-->
         <div class="rightContent  projec-comment">
-            <h2 class="f17 pl5">知识统计</h2>
-            <div class="knowledgeone pr">
-            	<div class="knowoneleft pa left40">
-            		<canvas id="canvas9" height="300" width="200"></canvas>
-            	</div>
-            	<div class="knowoneright pa right20">
-            		<div class="product_demo right" id="highmaps" style="box-shadow:none;border:none;width: 662px;height: 400px;margin: -20px -40px;" data-highcharts-chart="28">
-                        <div class="highcharts-container" id="highcharts-116" style="position: relative; overflow: hidden; width: 662px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                            <svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="662" height="400"></svg>
+            <h2 class="f17 pl5">知识统计</h2>       
+            <div class="p40_slide" id="slide">
+                <ul class="slide-img clearfix" id="slide-img">
+                    <li>
+                        <div class="knowledgeone pr">
+                            <div class="knowoneleft pa left40">
+                                <canvas id="canvas9" height="350" width="250"></canvas>
+                            </div>
+                            <div class="knowoneright pa right20 top10">
+                                <div class="product_demo right" id="highmaps" style="box-shadow:none;border:none;width: 662px;height: 400px;margin: -20px -40px;" data-highcharts-chart="28">
+                                    <div class="highcharts-container" id="highcharts-116" style="position: relative; overflow: hidden; width: 662px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        <svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="662" height="400"></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-            	</div>
-            	<a href="###" class="arrowleft pa left"> &lt; </a>
-            	<a href="###" class="arrowright pa right"> &gt; </a>
+                    </li>
+                    <li>
+                        <div class="knowledgeone pr">
+                            <div class="knowoneleft pa left40">
+                                <canvas id="canvas4" height="300" width="200" class="fl"></canvas>
+                                <div class="bar-color fl" style="padding-left: 50px; margin-top:100px">
+                                    <p>专业分布</p>
+                                    <i style="background-color: #08a3dd"></i>计划工时<i style="background-color: #08a3dd"></i>实际工时<br><i style="background-color: #86c794"></i>实际工时大于计划工时
+                                </div>
+                            </div>
+                            <div class="knowoneright pa right20">
+                                <canvas id="canvas5" height="300" width="200" class="fl"></canvas>
+                                 <div class="bar-color fl" style="padding-left: 50px; margin-top:100px">
+                                    <p>专业分布</p>
+                                    <i style="background-color: #08a3dd"></i>计划工时<i style="background-color: #08a3dd"></i>实际工时<br><i style="background-color: #86c794"></i>实际工时大于计划工时
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="slide-num" id="slide-num"></ul>
+                <a href="###" class="arrowleft pa left" id="preBtn"> &lt; </a>
+                <a href="###" class="arrowright pa right" id="nextBtn"> &gt; </a>
             </div>
-			
+			<div class="clear"></div>
 			<div class="columnConfig mt40">
                 <ul role="tablist" class="nav nav-tabs tab_back">
                     <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#tab1" aria-expanded="true">BIM学习</a></li>
@@ -254,13 +280,13 @@
 
                 <div class="filterBox">
                     <li class="filterBoxTitle">区间：</li>
-                    <li class="chip1"><input type="radio" checked="true" id="type_all" name="filterBox"><label for="type_all">全部</label></li>
-                    <li class="chip1"><input type="radio" id="type_week" name="filterBox"><label for="type_week">本周</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">本月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近三个月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近半年</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">今年</label></li>
-                    <li class="chip1"><input type="radio" id="type_other" name="filterBox"><label for="type_other">自定义</label></li>
+                    <li class="chip1"><input type="radio" checked="true" id="type_all2" name="filterBox"><label for="type_all2">全部</label></li>
+                    <li class="chip1"><input type="radio" id="type_week2" name="filterBox"><label for="type_week2">本周</label></li>
+                    <li class="chip1"><input type="radio" id="type_month2" name="filterBox"><label for="type_month2">本月</label></li>
+                    <li class="chip1"><input type="radio" id="type_month2" name="filterBox"><label for="type_month2">最近三个月</label></li>
+                    <li class="chip1"><input type="radio" id="type_month2" name="filterBox"><label for="type_month2">最近半年</label></li>
+                    <li class="chip1"><input type="radio" id="type_month2" name="filterBox"><label for="type_month2">今年</label></li>
+                    <li class="chip1"><input type="radio" id="type_other2" name="filterBox"><label for="type_other2">自定义</label></li>
                     <li class="otherInfo">自<span class="fontu">2014/07/14</span>至<span class="fontu">2015/01/03</span></li>
                     <li class="tab_right">显示控制：
                         <select name="" id="">
@@ -367,13 +393,13 @@
 
                 <div class="filterBox">
                     <li class="filterBoxTitle">区间：</li>
-                    <li class="chip1"><input type="radio" checked="true" id="type_all" name="filterBox"><label for="type_all">全部</label></li>
-                    <li class="chip1"><input type="radio" id="type_week" name="filterBox"><label for="type_week">本周</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">本月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近三个月</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">最近半年</label></li>
-                    <li class="chip1"><input type="radio" id="type_month" name="filterBox"><label for="type_month">今年</label></li>
-                    <li class="chip1"><input type="radio" id="type_other" name="filterBox"><label for="type_other">自定义</label></li>
+                    <li class="chip1"><input type="radio" checked="true" id="type_all3" name="filterBox"><label for="type_all3">全部</label></li>
+                    <li class="chip1"><input type="radio" id="type_week3" name="filterBox"><label for="type_week3">本周</label></li>
+                    <li class="chip1"><input type="radio" id="type_month3" name="filterBox"><label for="type_month3">本月</label></li>
+                    <li class="chip1"><input type="radio" id="type_month3" name="filterBox"><label for="type_month3">最近三个月</label></li>
+                    <li class="chip1"><input type="radio" id="type_month3" name="filterBox"><label for="type_month3">最近半年</label></li>
+                    <li class="chip1"><input type="radio" id="type_month3" name="filterBox"><label for="type_month3">今年</label></li>
+                    <li class="chip1"><input type="radio" id="type_other3" name="filterBox"><label for="type_other3">自定义</label></li>
                     <li class="otherInfo">自<span class="fontu">2014/07/14</span>至<span class="fontu">2015/01/03</span></li>
                     <li class="tab_right">显示控制：
                         <select name="" id="">
@@ -468,18 +494,6 @@
                     <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
                     <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
                 </div>
-            </div>
-        	
-
-			<div class="knowledgeone pr">
-            	<div class="knowoneleft pa left40">
-            		<canvas id="canvas4" height="300" width="200"></canvas>
-            	</div>
-            	<div class="knowoneright pa right20">
-            		<canvas id="canvas5" height="300" width="200"></canvas>
-            	</div>
-            	<a href="###" class="arrowleft pa left"> &lt; </a>
-            	<a href="###" class="arrowright pa right"> &gt; </a>
             </div>
         </div>
             <!--右侧内容结束-->
@@ -767,6 +781,21 @@
         });
     }
 };
+</script>
+<script>
+    $(function() {
+        //幻灯片轮播
+        var options = {
+            scrollBox: document.getElementById('slide'),
+            scrollImgUl: document.getElementById('slide-img'),
+            scrollNumUl: document.getElementById('slide-num'),
+            nextBtn: document.getElementById('nextBtn'),
+            preBtn: document.getElementById('preBtn'),
+            scrollTimer: 2000, 
+            isAutoPlay: false 
+        }
+        new Slider(options);
+    });
 </script>
 </body>
 </html>

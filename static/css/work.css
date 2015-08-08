@@ -213,15 +213,19 @@ label{font-weight: normal!important;}
 .mywork-result-comment .icomment{display: block;float: right;width: 75px;height: 25px;line-height: 25px;text-decoration: none;background: #8f8f8f;color:#fff;text-align: center;}
 .mywork-result-comment .icomment:hover{background-color: #818181;text-decoration: none;}
 .mywork-result-comment .icomment:active{background: #09a3dc;}
-.mywork-result-comment-main {  padding-left: 70px;}
-.mywork-result-comment-main ul{padding-top: 20px}
+.mywork-result-comment-main { position: relative; padding-left: 70px;}
+.mywork-result-comment-main ul{padding-top: 20px;}
 .mywork-result-comment-main ul li{margin-bottom: 20px;padding-bottom:20px;border-bottom: 1px solid #dddddd}
 .mywork-result-comment-main .pre_25{width: 25%}
 .mywork-result-comment-main .pre_75{width: 75%}
 .mywork-result-comment-main .comment_reply{  background: url("../img/48comment_reply.png") no-repeat;  height: 89px;  padding-top: 30px; padding-left: 10px;}
 .mywork-result-comment-main .comment_agree a{display: block;height: 33px;line-height:33px;width: 70px;background: url("../img/icon48.png") -79px -527px no-repeat;float: left;padding-left: 30px}
+.mywork-result-comment-main .comment_agree a:hover{text-decoration: none;}
 .mywork-result-comment-main .comment_agree a.icon_replay{background: url("../img/icon48.png") -76px -571px no-repeat;}
+.mywork-result-comment-main .comment_agree .like.clicked{background-position: -79px -626px;}
+.mywork-result-comment-main .comment_agree .icon_replay.clicked{background-position: -77px -671px;}
 .mywork-result-comment-main ul li .icon_focus{padding-right: 20px;border-right: 1px solid #ddd}
+.mywork-result-comment-main .floor{position: absolute;top: 0px;right: 10px;font-weight: 700;font-size: 16px;}
 
 
 /* v3.0 27 */
@@ -348,6 +352,7 @@ p.lh30{line-height: 30px}
 .projecttest .tabelouter span.headspan{  margin-bottom: 20px;display: block;}
 .pl45{padding-left: 45px}
 .pl10{padding-left: 10px}
+.mywork-result-list-head .btn-info{background-color: #fff;color: #5bc0de;}
 
 /*40*/
 .knowledgecount .f17{font-size: 17px}

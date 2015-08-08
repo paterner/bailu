@@ -357,6 +357,14 @@ p.lh30{line-height: 30px}
 .knowledgeone .arrowleft,.knowledgeone .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 20px;line-height: 20px;top:90px;}
 .knowledgeone .knowoneleft,.knowoneleft .knowoneright{width: 500px}
 .knowledgeone .knowoneleft .bar-color i,.knowledgeone .knowoneright .bar-color i{  width: 10px;  height: 10px;display: inline-block;  vertical-align: middle;  margin: 0 8px;}
+#canvas9{
+    -webkit-transform-origin:bottom left; -webkit-transform:rotate(90deg);
+    -moz-transform-origin:bottom left; -moz-transform:rotate(90deg);
+    -o-transform-origin:bottom left; -o-transform:rotate(90deg);
+    -ms-transform-origin:bottom left; -ms-transform:rotate(90deg);
+    transform-origin:bottom left; transform:rotate(90deg);
+    position: relative; top: -285px; left: -20px
+}
 .knowledgeone .knowoneleft #canvas9{top: -310px}
 .left40{left: 40px}
 .right20{right: 20px}
@@ -380,6 +388,6 @@ p.lh30{line-height: 30px}
 .title46.40pop{width: 200px}
 .labelp8{padding: 8px}
 .table46pop.pop40 label{ margin: 0 42px 0 0px}
-
+.table46pop.pop40 label input{margin:0px;}
 
 

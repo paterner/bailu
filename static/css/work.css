@@ -363,7 +363,7 @@ input[type=radio].mr5{margin-right: 5px}
 .mt40{margin-top: 40px}
 .knowledgeone{height: 350px}
 .knowledgeone .arrowleft,.knowledgeone .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 20px;line-height: 20px;top:90px;}
-.knowledgeone .knowoneleft,.knowoneleft .knowoneright{width: 500px}
+.knowledgeone .knowoneleft,.knowledgeone .knowledgeone{width: 500px}
 .knowledgeone .knowoneleft .bar-color i,.knowledgeone .knowoneright .bar-color i{  width: 10px;  height: 10px;display: inline-block;  vertical-align: middle;  margin: 0 8px;}
 #canvas9{
     -webkit-transform-origin:bottom left; -webkit-transform:rotate(90deg);

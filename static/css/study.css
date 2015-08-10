@@ -1033,3 +1033,11 @@ input[type="text"].normal{float: none}
 .mywork-result-main .mywork-result-main-right ul li p.mywork-name{margin-bottom: 5px}
 .mywork-result-main .mywork-result-main-right ul li p.mywork-text{text-indent:2em }
 .upload04 .rightContent {margin:0 auto; float: none}
+
+
+/*v3_15*/
+.blueborder .btn-primary{background: #fff;border:1px solid #09a3dc;color: #09a3dc}
+.blueborder .btn-primary:hover{background: #09a3dc;border:1px solid #09a3dc;color: #fff}
+.content15{margin: 15px auto 0;min-width: 1270px; width: calc(100% - 100px);}
+.resultContent{float: right;margin-right: -110px;}  
+.fileouter21.nobor{border:0px;}

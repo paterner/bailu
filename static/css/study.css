@@ -919,7 +919,7 @@ input[type=radio].mr5{margin-right: 5px}
 .knowledgeone .arrowleft,.knowledgeone .arrowright{display: block;background: #f7f7f7;color: #999;width: 10px;height: 20px;line-height: 20px;top:90px;}
 .knowledgeone .knowoneleft,.knowledgeone .knowoneright{width: 500px}
 .knowledgeone .knowoneleft .bar-color i,.knowledgeone .knowoneright .bar-color i{  width: 10px;  height: 10px;display: inline-block;  vertical-align: middle;  margin: 0 8px;}
-#canvas9{
+#canvas9,#canvas24{
     -webkit-transform-origin:bottom left; -webkit-transform:rotate(90deg);
     -moz-transform-origin:bottom left; -moz-transform:rotate(90deg);
     -o-transform-origin:bottom left; -o-transform:rotate(90deg);
@@ -928,6 +928,7 @@ input[type=radio].mr5{margin-right: 5px}
     position: relative; top: -285px; left: -20px
 }
 .knowledgeone .knowoneleft #canvas9{top: -310px}
+.knowledgeone.p24 .knowoneleft #canvas9{top: -285px}
 .left40{left: 40px}
 .right20{right: 20px}
 

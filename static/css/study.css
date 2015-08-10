@@ -443,7 +443,7 @@ td{
 .textbox{width:600px;height:360px;margin:0 auto;}
 .textbox p{margin-top:35px; line-height: 30px; text-align: center;font-size: 18px;}
 .pro_menu{width:75px; float: left;height:23px;}
-.bluemenu{width:63px;height:23px; line-height: 23px; background: #fff;border: 1px solid #08a3dd; text-align: center; color:#08a3dd; border-radius: 3px; font-size: 12px;margin:0 auto;}
+.bluemenu,.gmenu{width:63px;height:23px; line-height: 23px; background: #fff;border: 1px solid #08a3dd; text-align: center; color:#08a3dd; border-radius: 3px; font-size: 12px;margin:0 auto;}
 .graymenu{width:63px;height:23px; line-height: 23px; background: #fff;border: 1px solid #8e8e8e; text-align: center; color:#08a3dd; border-radius: 3px; font-size: 12px;margin:0 auto;}
 
 .tagccchip{
@@ -952,3 +952,41 @@ input[type=radio].mr5{margin-right: 5px}
 .labelp8{padding: 8px}
 .table46pop.pop40 label{ margin: 0 42px 0 0px}
 .table46pop.pop40 label input{margin:0px;}
+
+/* 20 */
+.width60{margin: 0 10px 0 0 !important;width: 60px;height: 25px;padding: 0;text-align: center;font-family: arial;color: #000!important;}
+.examination_time_btn{height: 25px!important;line-height: 15px!important;background-color: #747474;color: #fff;}
+.list_left_num{width: 40px;float: left;text-align: center;}
+.list_right_content{margin-left: 40px;}
+.examination_list li{margin-bottom: 40px;}
+.p20_bottom{width: 940px;margin: 40px auto;}
+.timeline{height:2px;margin:10px auto 0;width:95%; position: relative;}
+.step_ball_content,.step_line_content,.sp_content,.timebottom_content{width: 100%;position: relative;}
+.timeline .step_ballbox,.timeline .sp_ballbox{width: 20px;height: 20px;background: #fff;position: absolute;top: -10px;z-index: 99}
+.step_ball_content .step_ballbox:nth-child(1){left: 0%;margin-left: 0px;}
+.step_ball_content .step_ballbox:nth-child(2){left: 33.33%;margin-left: -5px;}
+.step_ball_content .step_ballbox:nth-child(3){left: 66.67%;margin-left: -15px;}
+.step_ball_content .step_ballbox:nth-child(4){left: 100%;margin-left: -20px;}
+.timeline .step_ballbox .ball,.timeline .sp_ballbox .ball{border:3px solid #c7c7c7;border-radius:10px; margin:5px auto 0;width:6px; height:6px;}
+.timeline .step_ballbox .ball.on,.timeline .sp_ballbox .ball.on{border-color: #09a3dc;}
+.timeline .step_line,.timeline .sp_line{height:2px;position: absolute;width: 33.33%;background: #c7c7c7;z-index: 10;}
+.timeline .step_line.on,.timeline .sp_line.on{background: #09a3dc;}
+.step_line_content .step_line:nth-child(2){left: 33.33%;}
+.step_line_content .step_line:nth-child(3){left: 66.67%;}
+.gmenu{border-color: #8e8e8e;color: #8e8e8e;}
+.timebottom_content{height: 60px;margin-top: 10px;}
+.timebottom_content .timebottom_box,.timebottom_content .timebottom_box_sp{float: none;position: absolute;margin: 0}
+.timebottom_content .timebottom_box:nth-child(1){left: 0;}
+.timebottom_content .timebottom_box:nth-child(2){left: 33.33%;margin-left: -28px;}
+.timebottom_content .timebottom_box:nth-child(3){left: 66.67%;margin-left: -50px;}
+.timebottom_content .timebottom_box:nth-child(4){left: 100%;margin-left: -76px;}
+.timebottom_content .tit21,.timebottom_content .pro_menu{float: none;}
+.p07.table_2{margin-top: 0px;}
+.gray_btn,.blue_btn{padding: 5px 8px;background-color: #747474;color: #fff;border-radius: 3px;}
+.blue_btn{background-color: #08a3dd;}
+
+
+
+
+
+

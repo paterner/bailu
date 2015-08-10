@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>09</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/study.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery-2.1.3.min.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./data.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>工作</span> Co-task</a></li>
+                <li><a href="#"><span>工具</span> Tools</a></li>
+                <li><div class="checked"><span>知识</span> Knowledge</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                <li><a href="#"><span>服务</span> Service</a></li>
+                <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+            </ul>
+        </div>
+        <div class="userbox">
+            <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+            <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+            <div class="userbox_quit">退出</div>
+        </div>
+        <div class="userinfo">今日签到时间为 09:50 <span>修改</span> 目前在线人数为 9999 <span>打招呼</span></div>
+    </header>
+    <!--头部结束-->
+    <!--左侧菜单开始-->
+    <div class="leftNav"></div>
+    <!--左侧菜单结束-->
+    <!--右侧内容开始-->
+    <div class="rightContent">
+        <!--路径导航开始-->
+        <ol class="breadcrumb">
+            <li><a href="#">知识</a></li>
+            <li><a href="#">我的知识</a></li>
+            <li class="active">我的评测</li>
+        </ol>
+        <!--路径导航结束-->
+
+        <h3 class="ml20">晋级轨迹</h3>
+
+        <div class="step">
+            <div class="stepId nowThis">
+                <div class="out">
+                    <div class="in">新手</div>
+                </div>
+            </div>
+            <div class="jiange nowThis">
+                <!--<div class="line1"></div> -->
+            </div>
+            <div class="stepId">
+                <div class="out">
+                    <div class="in">熟手</div>
+                </div>
+            </div>
+            <div class="jiange"><!--<div class="line1"></div>--></div>
+            <div class="stepId">
+                <div class="out">
+                    <div class="in">高手</div>
+                </div>
+            </div>
+            <div class="jiange"><!--<div class="line1"></div>--></div>
+            <div class="stepId">
+                <div class="out">
+                    <div class="in">杀手</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="timeline">
+                <div class="step_ball_content">
+                    <div class="step_ballbox"><div class="ball on"></div></div>
+                    <div class="step_ballbox"><div class="ball"></div></div>
+                    <div class="step_ballbox"><div class="ball"></div></div>
+                    <div class="step_ballbox"><div class="ball"></div></div>
+                </div>
+                <div class="step_line_content">
+                    <div class="step_line"></div>
+                    <div class="step_line"></div>
+                    <div class="step_line"></div>
+                </div>
+                <div class="sp_content">
+                    <div class="sp_ballbox" style="left:11.11%"><div class="ball on"></div></div>
+                    <div class="sp_line on" style="width:11.11%;left:0px;"></div>
+                    <div class="sp_ballbox" style="left:22.22%"><div class="ball"></div></div>
+                </div>
+                <div class="ballbox" style="left:150px"><div class="ball"></div></div>
+                <div class="ballbox" style="left:230px"><div class="ball"></div></div>
+            </div>
+            <div class="timebottom_content clearfix">
+                <div class="timebottom_box">
+                    <div class="tit21 nowThis1">2014/01/03</div>
+                    <div class="pro_menu"><div class="bluemenu">开始学习</div></div>
+                </div>
+                <div class="timebottom_box">
+                    <div class="tit21">----/--/--</div>
+                    <div class="pro_menu"><div class="gmenu">章节评测</div></div>
+                </div>
+                <div class="timebottom_box">
+                    <div class="tit21">----/--/--</div>
+                    <div class="pro_menu"><div class="gmenu">章节评测</div></div>
+                </div>
+                <div class="timebottom_box">
+                    <div class="tit21">----/--/--</div>
+                    <div class="pro_menu"><div class="gmenu">章节评测</div></div>
+                </div>
+                <div class="timebottom_box_sp" style="left:10%;">
+                    <div class="tit21 nowThis1">----/--/--</div>
+                    <div class="pro_menu"><div class="bluemenu">章节评测</div></div>
+                </div>
+                 <div class="timebottom_box_sp" style="left:21%;">
+                    <div class="tit21">----/--/--</div>
+                    <div class="pro_menu"><div class="gmenu">章节评测</div></div>
+                </div>
+            </div>
+        </div>
+        <!--上传步骤结束-->
+        <div class="clear"></div>
+        <div class="mar2" role="tabpanel">
+        <div class="dropdown fr mar4">
+            <button aria-expanded="false" data-toggle="dropdown" id="dropdownMenu1" type="button" class="btn btn-default dropdown-toggle">
+                按时间正序
+                <span class="caret"></span>
+            </button>
+            <ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+            </ul>
+        </div>
+        <!-- Nav tabs -->
+        <ul role="tablist" class="nav nav-tabs tab_back">
+            <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#tab1" aria-expanded="false">章节评测</a></li>
+            <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="profile" href="#tab2" aria-expanded="false">专题评测</a></li>
+            <li class="active" role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="messages" href="#tab3" aria-expanded="true">实战评测</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content tab_bor">
+        <div id="tab1" class="tab-pane" role="tabpanel">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_2 p07">
+                <tbody>
+                    <tr>
+                        <th width="15%">测评日期</th>
+                        <th width="20%">专题名称</th>
+                        <th width="10%">测评章节</th>
+                        <th width="10%">测评用时</th>
+                        <th width="10%">得分</th>
+                        <th width="10%">测评结果</th>
+                        <th width="15%">操作</th>
+                        <th width="10%">重考费用</th>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td class="c_red">45</td>
+                        <td class="c_red">未通过</td>
+                        <td>
+                            <span class="gray_btn">重学</span>
+                            <span class="gray_btn ml10">重考</span>
+                        </td>
+                        <td class="c_blue">500 C豆</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>Revit建筑设计基础培训</td>
+                        <td>第一章</td>
+                        <td>55分</td>
+                        <td>65</td>
+                        <td>通过</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_blue">——</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab2" class="tab-pane pad20" role="tabpanel">
+            <div class="resultContent2">
+                <div class="ttitleBox">
+                    <div class="td1"><b>测评日期</b></div>
+                    <div class="td2"><b>专题名称</b></div>
+                    <div class="td3"><b>模型状态</b></div>
+                    <div class="td4"><b>提交日期</b></div>
+                    <div class="td5"><b>得分</b></div>
+                    <div class="td6"><b>测评结果</b></div>
+                    <div class="td7"><b>操作</b></div>
+                    <div class="td8"><b>重考费用</b></div>
+                </div>
+                <div class="tChip">
+                    <div class="td1 green">2012/10/28</div>
+                    <div class="td2">Revit建筑设计基础培训</div>
+                    <div class="td3">已提交</div>
+                    <div class="td4 green">2012/10/28</div>
+                    <div class="td5 ">65</div>
+                    <div class="td6">通过</div>
+                    <div class="td7"><div class="ckxq">查看详情</div></div>
+                    <div class="td8"><div class="deline"></div></div>
+                </div>
+                <div class="tChip">
+                    <div class="td1 green">2012/10/28</div>
+                    <div class="td2">Revit建筑设计基础培训</div>
+                    <div class="td3"><div class="tjmx">提交模型</div></div>
+                    <div class="td4 green">----/--/--</div>
+                    <div class="td5 red">0</div>
+                    <div class="td6 red">未通过</div>
+                    <div class="td7"><div class="stjmx">重学</div><div class="stjmx">重考</div></div>
+                    <div class="td8 blue">500 c豆</div>
+                </div>
+                <div class="tChip">
+                    <div class="td1 green">2012/10/28</div>
+                    <div class="td2">Revit建筑设计基础培训</div>
+                    <div class="td3">已提交</div>
+                    <div class="td4 green">2012/10/28</div>
+                    <div class="td5 ">65</div>
+                    <div class="td6">通过</div>
+                    <div class="td7"><div class="ckxq">查看详情</div></div>
+                    <div class="td8"><div class="deline"></div></div>
+                </div>
+                <div class="tChip">
+                    <div class="td1 green">2012/10/28</div>
+                    <div class="td2">Revit建筑设计基础培训</div>
+                    <div class="td3"><div class="tjmx">提交模型</div></div>
+                    <div class="td4 green">----/--/--</div>
+                    <div class="td5 red">0</div>
+                    <div class="td6 red">未通过</div>
+                    <div class="td7"><div class="stjmx">重学</div><div class="stjmx">重考</div></div>
+                    <div class="td8 blue">500 c豆</div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="tab3 active" class="tab-pane" role="tabpanel">3</div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_2 p07">
+                <tbody>
+                    <tr>
+                        <th width="15%">申请日期</th>
+                        <th width="20%">申请单位</th>
+                        <th width="20%">测评起止日期</th>
+                        <th width="10%">基地</th>
+                        <th width="10%">实战项目</th>
+                        <th width="10%">测评科目</th>
+                        <th width="5%">测评结果</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td class="c_red">未通过</td>
+                        <td><span class="gray_btn">重新测评</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c_green">2015/03/10</td>
+                        <td>某某设计院</td>
+                        <td>
+                            <span class="c_gray">起：</span><span class="c_green">2015/03/10</span><br>
+                            <span class="c_gray">止：</span><span class="c_green">2015/03/10</span>
+                        </td>
+                        <td>北京</td>
+                        <td>BIM土建技能</td>
+                        <td>
+                            <span class="detail">查看详情</span>
+                        </td>
+                        <td>通过</td>
+                        <td><span class="blue_btn">申请证书</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+</div>
+<script>//左侧菜单调出js
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+}
+
+</script>
+</body>
+</html>

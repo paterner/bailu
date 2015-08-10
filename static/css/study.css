@@ -988,6 +988,48 @@ input[type=radio].mr5{margin-right: 5px}
 
 
 
+/*21pop*/
+input[type="text"].normal{float: none}
+.fileclose21{margin-top: 5px; width: 30px;  height: 30px;  background: #bababa;  color: #fff;  margin-left: 10px;line-height: 30px;  font-size: 20px;}
+.fileouter21{border:1px solid #bababa;width: 627px}
+.ml5{margin-left: 5px}
+.fileloading{display: block;background: #09a3dc;width: 80px;height: 20px;margin: 10px 10px 0 10px}
+.pb10{padding-bottom: 10px}
+.f18{font-size: 18px}
+.m20{margin: 20px}
+.pb20{padding-bottom:20px }
+.pop21 .c_blue{color: #35c5ea}
+.pop21 .c_red{color:#f35455;}
 
-
-
+/*04*/
+.upload04 .step {width: 80%;margin: 0 auto;float: none}
+.border-bottom{border-bottom: 1px solid #bababa }
+.filtrationResult.mywork-result-nav{background-color: #5e5f62;height: 48px;line-height: 48px;  min-height: 48px!important;}
+.mywork-result-nav-left{width: 80%;border-right: 1px solid #e5e5e5;margin-right: -1px;height: 48px}
+.mywork-result-nav-right{width: 20%;height: 48px;}
+.mywork-result-nav .mywork-result-nav-left a,.mywork-result-nav-right a{display: block;width: 48px;height: 48px;background:url("../img/icon48.png") no-repeat;float: left;}
+.mywork-result-nav-right a{width: 33px}
+.mywork-result-nav .mywork-result-nav-left div{padding: 0px 10px}
+.mywork-result-nav .mywork-result-nav-left i{background:url("../img/icon48.png") 0px -195px no-repeat;  display: block;float: right;  width: 10px;  height: 22px;  margin-top: 13px;  margin-left: 15px;}
+.mywork-result-nav .mywork-result-nav-left a.icon-down{background-position: 12px 14px}
+.mywork-result-nav .mywork-result-nav-left a.icon-up{background-position: 12px -24px}
+.mywork-result-nav .mywork-result-nav-left a.icon-add{background-position: 12px -66px}
+.mywork-result-nav .mywork-result-nav-left a.icon-low{background-position: 12px -103px}
+.mywork-result-nav .mywork-result-nav-left a.icon-big{background-position: -65px -25px;margin-right: 0px}
+.mywork-result-nav .mywork-result-nav-left a.icon-small{background-position: -65px 13px}
+.mywork-result-nav .mywork-result-nav-left a.icon-fullscreen{background-position: -65px -105px}
+.mywork-result-nav .mywork-result-nav-left a.icon-smalscreen{background-position: -65px -65px}
+.mywork-result-nav .mywork-result-nav-right a.icon-pen{background-position: 6px -142px}
+.mywork-result-nav .mywork-result-nav-right a.icon-box{background-position: -74px -143px}
+.mywork-result-nav-right span {display: block;width: 20px;height: 20px ;border-radius: 2px; background:red;float: left;  margin-top: 13px; margin-right: 0px;border: 1px solid #bfbfbf}
+.mywork-result-nav-right span.pizhu{width: 75px;text-align: center;height: 30px;line-height:30px;margin:7px 0px 0px 5px;background: #5e5f62;color:#bfbfbf;}
+.mywork-result-nav-right i{display: block;float: left;width: 15px;height: 48px;background:url("../img/icon48.png") 3px -492px no-repeat;}
+.mywork-result-main{background-color: #f3f3f3;height: 1200px}
+.mywork-result-main .mywork-result-main-left{width: 80%;height:100%;line-height:1200px;border-right: 1px solid #e5e5e5;margin-right: -1px;text-align:center;}
+.mywork-result-main .mywork-result-main-right{width: 20%;height: 100%}
+.mywork-result-main .mywork-result-main-right .searchBox{float:none; width: 90%;  height: 22px;  border: 1px solid rgb(201,201,201);  background: rgb(248,248,248);   border-radius: 3px;  margin: 10px auto 0px;}
+.mywork-result-main .mywork-result-main-right ul{padding:0px 10px;}
+.mywork-result-main .mywork-result-main-right ul li{color: #d74949;padding:20px 0px;border-bottom:1px solid #e5e5e5}
+.mywork-result-main .mywork-result-main-right ul li p.mywork-name{margin-bottom: 5px}
+.mywork-result-main .mywork-result-main-right ul li p.mywork-text{text-indent:2em }
+.upload04 .rightContent {margin:0 auto; float: none}

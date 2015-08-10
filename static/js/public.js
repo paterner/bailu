@@ -153,25 +153,6 @@
         id.html(code);
     }
 
-    var resetMargin = function(outIds, inIds){
-        var id1 = $(outIds);
-        var id2 = $(inIds);
-        var outWidth = id1.width();
-        var chipWidth = id2.outerWidth();
-        var sum = Math.floor(outWidth/chipWidth);
-        if( outWidth / chipWidth != sum ){
-            var space = Math.floor( ( outWidth - chipWidth * sum ) / ( sum - 1 ) ) ;
-            for(var i= 0,imax=id2.length;i<imax;i++){
-                sumRow = Math.floor(i/sum);
-                if((i+1)%sum!=0){
-                    id2.eq(i).css({
-                        "margin-right" : space
-                    })
-                }
-            }
-        }
-    }
-
     $(document)
         .on("mouseover", ".ln_btn", function(){
             var d = leftMenu[$(this).attr("alt")];
@@ -280,10 +261,17 @@
         })
 
 
+
+
+
+
+    $(document).ready(function(){
+
+    });
+
     return public = {
         createRightNaviBar : createRightNaviBar,
         createLeftNavi : createLeftNavi,
-        filtrateCondition : filtrateCondition,
-        resetMargin : resetMargin
+        filtrateCondition : filtrateCondition
     }
 })();

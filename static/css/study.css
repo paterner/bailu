@@ -1041,3 +1041,24 @@ input[type="text"].normal{float: none}
 .content15{margin: 15px auto 0;min-width: 1270px; width: calc(100% - 100px);}
 .resultContent{float: right;margin-right: -110px;}  
 .fileouter21.nobor{border:0px;}
+
+/*v3_22*/
+.apply22 input[type="text"]{float: none;margin: 0;padding: 0px}
+.apply22.width80{width: 80%;margin:0 auto;}
+table.width100{width: 100%}
+.mb10{margin-bottom: 10px}
+.apply22 h3{margin-bottom: 35px}
+.apply22 .borlblue{border-left: 5px solid #08a3dd;padding-left: 15px}
+.baseinfo table{margin-bottom: 50px}
+.baseinfo table tr td{height: auto}
+.baseinfo table tr td label{width:150px;}
+.baseinfo.infoform table tr td{border-left:none;border-right:none;  padding: 5px 0;height: auto }
+.baseinfo.infoform table tr td label{width:20%;}
+.baseinfo.infoform table tr td input{width: 70%}
+.baseinfo.infoform table tr td .oneselect{width: 70%}
+.baseinfo.infoform table tr td .threeselect{width: 23.2%}
+.baseinfoimg {background: #dddddd;  padding: 10px 0px;  width: 80%;border-bottom:10px solid #08a3dd }
+.baseinfomap{height: 420px;background: #000}
+.marginauto{margin: 0 auto}
+
+.form-control.apply22{height: 300px;overflow-y:scroll }

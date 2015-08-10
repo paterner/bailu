@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>知识首页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/study.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery.1.7.2.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./data.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>工作</span> Co-task</a></li>
+                <li><a href="#"><span>工具</span> Tools</a></li>
+                <li><div class="checked"><span>知识</span> Knowledge</div><font><a href="#" class="s-title-1">本地</a> <a href="#" class="s-title">云端</a></font></li>
+                <li><a href="#"><span>服务</span> Service</a></li>
+                <li class="delbak"><a href="#"><span>权限</span> USMC</a></li>
+            </ul>
+        </div>
+        <div class="userbox">
+            <div class="userbox_face"><img src="./static/img/face_1.jpg" class="img-circle"></div>
+            <div class="userbox_option"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+            <div class="userbox_quit">退出</div>
+        </div>
+        <div class="userinfo">今日签到时间为 09:50 <span>修改</span> 目前在线人数为 9999 <span>打招呼</span></div>
+    </header>
+    <!--头部结束-->
+    <!--左侧菜单开始-->
+    <div class="leftNav"></div>
+    <!--左侧菜单结束-->
+    <!--右侧内容开始-->
+    <div class="rightContent">
+        <!--路径导航开始-->
+        <ol class="breadcrumb">
+            <div class="searchBox">
+                <div class="paixu">按时间正排<span class="fa fa-angle-down"></span></div>
+                <input type="text" class="searchInput"/>
+                <div class="searchBtn"><span class="fa fa-search"></span></div>
+            </div>
+            <li><a href="#">知识</a></li>
+            <li><a href="#">BIM学习</a></li>
+            <li class="active">视频区</li>
+        </ol>
+        <!--路径导航结束-->
+        <div class="filtrationResultOutBox">
+            <div class="filtrationResult">
+                <li class="filtrationTitle">筛选结果:</li>
+                <li id="selected_key1" class="filtrationChip">Revit<span class="fa fa-close selected_filtrationChip"></span></li>
+                <li id="selected_key2" class="filtrationChip">建筑类<span class="fa fa-close selected_filtrationChip"></span></li>
+                <div class="filtrationSubmit">保存结果</div>
+            </div>
+            <div class="conditionBox1">
+                <div class="conditionBoxChip conditionBoxChipStyle1">
+                    <li class="conditionBoxChipTitle">专业:</li>
+                    <li id="key1" class="conditionBoxChipOne">建筑类</li>
+                    <li id="key2" class="conditionBoxChipOne">结构类</li>
+                    <li id="key3" class="conditionBoxChipOne">机电类</li>
+                    <li id="key4" class="conditionBoxChipOne">管理类</li>
+                    <li id="key5" class="conditionBoxChipOne">拓展类</li>
+                    <div class="add"><span class="fa fa-plus"></span></div>
+                </div>
+                <div class="conditionBoxChip conditionBoxChipStyle2">
+                    <li class="conditionBoxChipTitle">专题:</li>
+                    <li id="key1" class="conditionBoxChipOne">中国AU</li>
+                    <li id="key2" class="conditionBoxChipOne">世界AU</li>
+                    <li id="key3" class="conditionBoxChipOne">中国院BIM论坛</li>
+                    <div class="add"><span class="fa fa-plus"></span></div>
+                </div>
+                <div class="conditionBoxChip conditionBoxChipStyle1">
+                    <li class="conditionBoxChipTitle">软件:</li>
+                    <li id="key1" class="conditionBoxChipOne">Revit</li>
+                    <li id="key2" class="conditionBoxChipOne">Navisworks</li>
+                    <li id="key3" class="conditionBoxChipOne">Rhino</li>
+                    <li id="key4" class="conditionBoxChipOne">CFD</li>
+                    <li id="key5" class="conditionBoxChipOne">ALLPlan</li>
+                    <li id="key6" class="conditionBoxChipOne">SketchUP</li>
+                    <li id="key7" class="conditionBoxChipOne">CE</li>
+                    <li id="key8" class="conditionBoxChipOne">Inventor</li>
+                    <div class="add"><span class="fa fa-plus"></span></div>
+                </div>
+                <div class="conditionBoxChip conditionBoxChipStyle2 conditionBoxChipEnd">
+                    <li class="conditionBoxChipTitle">状态:</li>
+                    <li id="key1" class="conditionBoxChipOne">已看过的</li>
+                    <li id="key2" class="conditionBoxChipOne">正在看的</li>
+                    <li id="key3" class="conditionBoxChipOne">未看过的</li>
+                    <li id="key4" class="conditionBoxChipOne">最新更新的</li>
+                    <div class="add"><span class="fa fa-plus"></span></div>
+                </div>
+                <div class="upAndDownBtn"></div>
+            </div>
+        </div>
+        <div class="filtrationResult mar2">
+            <div class="pageBox">
+                <li class="sum">共<span>216</span>个</li>
+                <li class="pageCut"><span>6</span>/3</li>
+                <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+            </div>
+            <li class="filtrationTitle">类型：</li>
+            <li class="filtrationTitle">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 全部
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> AutoDesk提供
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> CBIM提供
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 第三方提供
+                </label>
+            </li>
+            <li class="filtrationTitle"><a href="#" class="uploadpic"></a></li>
+        </div>
+        <div class="cbbbox">
+            <div class="resultContent1">
+                <div class="ttitleBox">
+                    <div class="starBox">序号</div>
+                    <div class="objParent">名称</div>
+                    <div class="taskParent">时长</div>
+                    <div class="event">来源</div>
+                    <div class="resultTitle">记录</div>
+                    <div class="endTime">关注</div>
+                </div>
+                <div class="tChip">
+                    <div class="starBox">1</div>
+                    <div class="objParent">Revit建筑设计基础培训 (01) —导言—BIM设计基本流程</div>
+                    <div class="taskParent">1小时1分57秒</div>
+                    <div class="event">CBIM</div>
+                    <div class="resultTitle twoLine ">
+                        <div class="mt_redu_1">:85</div>
+                        <div class="mt_redu_2">:9999</div>
+                    </div>
+                    <div class="endTime"><a class="glyphicon glyphicon-heart" aria-hidden="true"></a></div>
+                </div>
+                <div class="tChip">
+                    <div class="starBox">2</div>
+                    <div class="objParent">Revit建筑设计基础培训 (01) —导言—BIM设计基本流程</div>
+                    <div class="taskParent">1小时1分57秒</div>
+                    <div class="event">CBIM</div>
+                    <div class="resultTitle twoLine ">
+                        <div class="mt_redu_1">:85</div>
+                        <div class="mt_redu_2">:9999</div>
+                    </div>
+                    <div class="endTime"><a class="glyphicon glyphicon-heart" aria-hidden="true"></a></div>
+                </div>
+                <div class="tChip">
+                    <div class="starBox">3</div>
+                    <div class="objParent">Revit建筑设计基础培训 (01) —导言—BIM设计基本流程</div>
+                    <div class="taskParent">1小时1分57秒</div>
+                    <div class="event">CBIM</div>
+                    <div class="resultTitle twoLine ">
+                        <div class="mt_redu_1">:85</div>
+                        <div class="mt_redu_2">:9999</div>
+                    </div>
+                    <div class="endTime"><a class="glyphicon glyphicon-heart" aria-hidden="true"></a></div>
+                </div>
+                <div class="tChip">
+                    <div class="starBox">4</div>
+                    <div class="objParent">Revit建筑设计基础培训 (01) —导言—BIM设计基本流程</div>
+                    <div class="taskParent">1小时1分57秒</div>
+                    <div class="event">CBIM</div>
+                    <div class="resultTitle twoLine ">
+                        <div class="mt_redu_1">:85</div>
+                        <div class="mt_redu_2">:9999</div>
+                    </div>
+                    <div class="endTime"><a class="glyphicon glyphicon-heart" aria-hidden="true"></a></div>
+                </div>
+            </div>
+            <div class="pageBox bottompageBox">
+                <li class="sum">共<span>216</span>个</li>
+                <li class="pageCut"><span>1</span>/  9</li>
+                <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+    <!--尾部开始-->
+    <div class="footer">
+        ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+    </div>
+    <!--尾部结束-->
+</div>
+<script>//左侧菜单调出js
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+}
+
+</script>
+</body>
+</html>

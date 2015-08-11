@@ -409,7 +409,7 @@ td{
 .videoshow .videotext1{width:584px;height:168px; float: left;padding-left:66px;padding-top:32px;}
 .videoshow .videotext1 ul li{width:180px;height:32px; float: left; line-height: 32px;margin-right:40px;}
 .videoshow .videopage{width:611px;height:132px; float: right;margin-top:27px; border: 1px solid #e0e0e0;}
-.videoshow .videopage .title{height:28px;width:100%;background-color: #f0f0f0; border-bottom:1px solid #e0e0e0; }
+.videoshow .videopage .title{height:28px;width:100%;background-color: #f0f0f0; border-bottom:1px solid #e0e0e0; margin: 0px;text-indent:0px;border-left:0px;}
 .videoshow .videopage .title .pre,.videoshow .videopage .title .next{width:20px; line-height: 28px; float: left; text-align: center;display: block;cursor: pointer;}
 .videoshow .videopage .title .pre:hover,.videoshow .videopage .title .next:hover{color: #09a3dc;}
 .videoshow .videopage a{display: block; float: left;width:60px;height:28px; text-align: center;line-height: 28px; font-size: 12px;margin-left:11px;}

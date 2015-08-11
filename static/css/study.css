@@ -1083,6 +1083,9 @@ table.width100{width: 100%}
 .baseinfo.infoform table tr td .oneselect{width: 70%}
 .baseinfo.infoform table tr td .threeselect{width: 23.2%}
 .baseinfoimg {background: #dddddd;  padding: 10px 0px;  width: 80%;border-bottom:10px solid #08a3dd }
+.baseinfoimg .upload_img{position: absolute;top: -20px;left: 119px;width: 80px;height: 30px;}
+.baseinfoimg .upload_img input{position: absolute;top: -20px;display: block;width: 70px!important;height: 30px;z-index: 99;opacity: 0;}
+.baseinfoimg .upload_img .gray_btn{position: absolute;top: -20px;z-index: 98;}
 .baseinfomap{height: 420px;background: #000}
 .marginauto{margin: 0 auto}
 

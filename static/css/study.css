@@ -1117,4 +1117,23 @@ table.width100{width: 100%}
 .mr40{margin-right: 40px;}
 .filtrationResult a.list{margin-top:6px;background: url("../img/v3_p6.png") 5px 7px no-repeat;  display: block; width: 24px;  height: 24px; border-radius: 50%; border: 1px solid #d7d7d7; float: left;  margin-left: 10px;}
 .filtrationResult a.list:hover{background-color: #09a3dc;background-position: 5px -35px;}
-
+.myknowledge06{height: 300px}
+.myknowledge06 select{width: 100px;height: 30px;line-height: 30px}
+.myknowledge06 .myknowledge06head{padding:0px 15px;font-size: 16px}
+.myknowledge06 .myknowledge06head .c_red{color: #f35455}
+.myknowledge06 .myknowledge06left{left: 0px;width: 70%;margin-top: 40px }
+.myknowledge06 .myknowledge06right{right: 0px;width: 30% }
+.myknowledge06 .myknowledge06left .stepId ,.myknowledge06 .myknowledge06left .jiange{height:80px;background: #f3f3f3;border-top: 1px dashed #cbcbca}
+.myknowledge06 .myknowledge06left .timeline{width: 97%;margin: 0px}
+.myknowledge06 .myknowledge06left .step_ballbox,.myknowledge06 .myknowledge06left .sp_ballbox{border-radius: 20px}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(1){margin-left: -20px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(2){left: 12.5%;margin-left: -28px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(3){left: 25%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(4){left: 37.5%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(5){left: 50%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(6){left: 62.5%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(7){left: 75%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(8){left: 87.5%;margin-left: -38px;}
+.myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(9){left: 100%;margin-left: -48px;}
+.myknowledge06 .myknowledge06right .tl{text-align: left;}
+.myknowledge06 .myknowledge06right {text-align: center;}

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./static/css/font-awesome.css">
     <script src="./static/js/jquery.1.7.2.js"></script>
     <script src="./static/js/public.js"></script>
+    <script src="./static/js/Chart.min.js"></script>
     <script src="./data.js"></script>
 </head>
 <body>
@@ -47,9 +48,114 @@
             <li><a href="#">知识</a></li>
             <li class="active">我的知识</li>
         </ol>
-		
-		<!--顶部 楠哥你来-->
+       
+		<div class="myknowledge06 pr">
+			 <div class="myknowledge06head pr">
+	        	<div class="fr">
+						你有 <span class="c_red">1</span>条新消息
+					</div>
+	        </div>
+			<div class="myknowledge06head">
+				我的搜索 <select name="" id=""><option>本周</option></select>
+				<button class="btn btn-sm active ml10">查看历史</button>
+			</div>
+			<div class="myknowledge06left pa">
+				<div class="step">
+		            <div class="stepId nowThis">
+		             
+		            </div>
+		            <div class="jiange nowThis">
+		                <!--<div class="line1"></div> -->
+		            </div>
+		            <div class="stepId">
+		               
+		            </div>
+		            <div class="jiange"><!--<div class="line1"></div>--></div>
+		            <div class="stepId">
+		               
+		            </div>
+		            <div class="jiange"><!--<div class="line1"></div>--></div>
+		            <div class="stepId">
+		              	
+		            </div>
+		            <div class="clear"></div>
+		           <div class="timeline">
+		                <div class="step_ball_content">
+		                    <div class="step_ballbox"><div class="ball on"></div></div>
+		                    
+		                </div>
+		                <div class="step_line_content">
+		                    <div class="step_line"></div>
+		                    <div class="step_line"></div>
+		                    <div class="step_line"></div>
+		                </div>
+		                <div class="sp_content">
+		                    <div class="sp_ballbox" style="left:12.5%"><div class="ball on"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:25%"><div class="ball"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:37.5%"><div class="ball"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:50%"><div class="ball"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:62.5%"><div class="ball"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:75%"><div class="ball"></div></div>
+		                    <div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		                    <div class="sp_ballbox" style="left:87.5%"><div class="ball"></div></div>
+		            		<div class="sp_line on" style="width:12.5%;left:0px;"></div>
+		            		<div class="sp_ballbox" style="left:100%"><div class="ball"></div></div>
+		                </div>
+		                <div class="ballbox" style="left:150px"><div class="ball"></div></div>
+		                <div class="ballbox" style="left:230px"><div class="ball"></div></div>
+		            </div>
+		            <div class="timebottom_content clearfix">
+		                <div class="timebottom_box">
+		                    <div class="tit21 nowThis1">2014/01/03</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21 nowThis1">2014/01/03</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		               	<div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+		                <div class="timebottom_box">
+		                    <div class="tit21">----/--/--</div>
+		                    
+		                </div>
+	            	</div>
+        		</div>	
+			</div>
+			<div class="myknowledge06right pa ">
+				<p class="tl mb10">我的兴趣图谱：</p>
+        		<canvas id="myChart" width="210" height="190"></canvas>
+        	</div>
 
+		</div>
+		
 
 
 
@@ -861,6 +967,31 @@
 window.onload = function(){
     public.createLeftNavi(leftNavCode);
 }
+
+</script>
+<script>
+	
+	var data = {
+		labels : ["结构","建筑","经济","智能化","结构","算量"],
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : [65,59,90,81,56,55]
+			},
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,1)",
+				pointColor : "rgba(151,187,205,1)",
+				pointStrokeColor : "#fff",
+				data : [28,48,40,19,96,100]
+			}
+		]
+	}
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myNewChart = new Chart(ctx).Radar(data);
 
 </script>
 </body>

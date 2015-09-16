@@ -1145,3 +1145,33 @@ table.width100{width: 100%}
 .myknowledge06 .myknowledge06left .timebottom_content .timebottom_box:nth-child(9){left: 100%;margin-left: -48px;}
 .myknowledge06 .myknowledge06right .tl{text-align: left;}
 .myknowledge06 .myknowledge06right {text-align: center;}
+
+/*v4_01*/
+.headSearchInput{width: 350px}
+.tbox{width:auto;border-top:1px solid #c2c2c2;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
+.tbox1{width:100%;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
+.conone{ float: left;margin:23px 0 0px 0;border: 1px solid #dcdcdc; position: relative;z-index: 100;}
+.conone .inbox{padding:7px 7px 0 7px;width:232px;height:376px;}
+.conone:hover{  border-color: #09a3dc; z-index:200;  box-shadow:1px 1px 5px #09a3dc; margin-bottom: -28px;}
+.conone:hover .timeBox{display: block;}
+.conone .zwtp{width:230px;height:230px;}
+.conone .zwtp img{border: 1px solid #c3c3c3;}
+.conone .bt{width:232px;height:44px; line-height: 22px;margin-top:15px; text-align: left;font-size: 12px;}
+.conone .time{width:115px;height:30px; line-height: 30px; font-size: 12px;color:#999;}
+.conone .jd{width:232px;height:30px; line-height: 30px;color:#999; font-size: 12px;}
+.timeBox{width: 100%; height: 28px; background: #09a3dc;display:none; color: rgb(255,255,255); text-align: center; line-height: 28px; position: relative;z-index: 101;}
+.timeBox span{color: rgb(255,255,255); font-size: 14px; padding: 0 5px;}
+.conone .tubiao{width:232px;height:22px; line-height: 22px;color:#999; font-size: 12px;}
+.conone .tubiao .number ,.rightContent_head .tubiao .number {  background: rgba(0, 0, 0, 0) url("../img/inBox_icon.png") no-repeat scroll 0 3px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
+.conone .tubiao .download, .rightContent_head .tubiao .download {  background: rgba(0, 0, 0, 0) url("../img/bbs.png") no-repeat scroll 0 4px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
+.conone .inbox_toplike{height: 30px;line-height: 30px;background: rgba(0,0,0,0.3);position: absolute;top: 0;left: 0;width: 100%;display: none;;color: #fff;font-size: 16px}
+.conone .inbox_toplike i{display: block;width: 15px;height: 15px;margin-right: 15px;float: left;}
+.conone:hover .inbox_toplike{display: block;}
+
+
+/*v4_02*/
+.rightContent_head h1{font-size: 18px;font-weight: bold;  line-height: 25px;height: 50px;}
+.question_list ul li {height: 60px;border: 1px solid #999;padding: 10px 10px 20px;color: #999}
+.handle_icon{display: block;float: left;width: 40px;height: 40px;margin-right: 20px;border-radius: 20px;border:1px solid #999;}
+.question_list ul li h2{font-size: 18px;font-weight: bold;color: #000}
+.question_list_right{padding: 10px}

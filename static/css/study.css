@@ -5,14 +5,14 @@
 .gray{color:#adadad;}
 .red{ color: #f35455;}
 /*头部开始*/
-header{height:87px; border-bottom: 2px solid #09a3dc;margin-bottom: 15px;}
-.logo{width:216px;height:87px; background: url("../img/png_1.png") center no-repeat; float: left;}
+header{height:87px; border-bottom: 1px solid #cfcfcf;}
+.logo{width:216px;height:87px; background: url("../img/v4_logo.png") center no-repeat; float: left;}
 .m-nav{height:87px;float: left;margin-left:16px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .m-nav ul{ position: relative;}
 .m-nav ul li{float: left;padding:0 20px; background: url("../img/shu.png") center right no-repeat; line-height: 87px;text-align: left; display: block;}
 .m-nav ul li span{ font-size: 24px; font-weight: 700;}
 .m-nav ul li a{ color: #8c8c8c;display: block;height:82px;}
-.m-nav ul li a:hover{ color: #000; border-bottom: 7px solid #09a3dc;display: block;height:82px;}
+.m-nav ul li a:hover{ color: #000; border-bottom: 7px solid #d44233;display: block;height:82px;}
 .m-nav .delbak{ background: none;}
 .checked{ color: #000; border-bottom: 7px solid #09a3dc;display: block;height:82px;}
 .m-nav font{height:26px; line-height: 26px; position: absolute;margin-right: 20px;top:54px; font-size: 12px;}
@@ -190,7 +190,7 @@ header{height:87px; border-bottom: 2px solid #09a3dc;margin-bottom: 15px;}
 /*右侧栅格化布局结束*/
 
 /*footer开始*/
-.footer{min-width:1280px;color:#a6a7a9; float: left; width: 100%; height: 70px;text-align: left; line-height: 70px; margin: 10px 0 0 0; text-indent: 160px;background: rgb(15,25,34) url("../img/png_10.png") 90px 20px no-repeat;}
+.footer{min-width:1280px;color:#a6a7a9; float: left; width: 100%; height: 70px;text-align: left; line-height: 70px; margin: 0 0 0 0; text-indent: 160px;background: rgb(15,25,34) url("../img/png_10.png") 90px 20px no-repeat;}
 /*footer结束*/
 
 /*工作模块页面css开始*/
@@ -318,16 +318,25 @@ label{font-weight: normal!important;}
 .table46pop label{float: left;  margin: 0 5px 0 7px;}
 .table46pop input[type="radio"]{margin: 13px 0 0 -25px;}
 
+/* v4 */
+.container-fluid{padding-left: 0;padding-right: 0;}
+.v4-container{background-color: #f6f6f6;padding: 15px;}
+.l_icon{display: none;}
+.ln_btn{height: 40px;width: 130px;margin-left: 15px;border:1px solid #cbcbca;}
+.r_info{height: 39px;width: 130px;line-height: 39px;border: 0;}
+.ln_btn_clicked .r_info {background-color: #d44233!important;}
+.l_icon_child{display: none;}
+.r_info_child{width: 130px;height: 38px; background-color: #fff;border-left:1px solid #cbcbca;border-right: 1px solid #cbcbca;border-bottom: 1px solid #cbcbca;}
 /*v4_01*/
 .headSearchInput{width: 350px}
 .tbox{width:auto;border-top:1px solid #c2c2c2;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
 .tbox1{width:100%;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
-.conone{ float: left;margin:23px 0 0px 0;border: 1px solid #dcdcdc; position: relative;z-index: 100;}
+.conone{ float: left;margin:23px 0 0px 0;border: 1px solid #dcdcdc; position: relative;z-index: 100;background-color: #fff;}
 .conone .inbox{padding:7px 7px 0 7px;width:232px;height:376px;}
 .conone:hover{  border-color: #09a3dc; z-index:200;  box-shadow:1px 1px 5px #09a3dc; margin-bottom: -28px;}
 .conone:hover .timeBox{display: block;}
 .conone .zwtp{width:230px;height:230px;}
-.conone .zwtp img{border: 1px solid #c3c3c3;}
+.conone .zwtp img{border: 1px solid #c3c3c3;width: 232px;height: 232px;}
 .conone .bt{width:232px;height:44px; line-height: 22px;margin-top:15px; text-align: left;font-size: 12px;}
 .conone .time{width:115px;height:30px; line-height: 30px; font-size: 12px;color:#999;}
 .conone .jd{width:232px;height:30px; line-height: 30px;color:#999; font-size: 12px;}
@@ -343,7 +352,7 @@ label{font-weight: normal!important;}
 
 /*v4_02*/
 .rightContent_head h1{font-size: 18px;font-weight: bold;  line-height: 25px;height: 50px;}
-.question_list ul li {height: 60px;border: 1px solid #e9e9e9;padding: 10px 10px 20px;color: #999;margin-bottom: 15px}
+.question_list ul li {height: 60px;border: 1px solid #e9e9e9;padding: 10px 10px 20px;color: #999;margin-bottom: 15px;background-color: #fff;}
 .question_list ul li.clickOn{box-shadow: 0px 0px 10px 5px #888888;}
 .handle_icon{display: block;float: left;width: 40px;height: 40px;margin-right: 20px;border-radius: 20px;border:1px solid #999;}
 .question_list ul li h2{font-size: 18px;font-weight: bold;color: #000}

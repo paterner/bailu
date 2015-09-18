@@ -16,7 +16,7 @@ label,summary{cursor:default;}
 a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
-body,textarea,input,button,select,keygen,legend{font:12px/1.14,\5b8b\4f53;color:#333;outline:0;font-family:proxima-nova,"Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp";}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14,\5b8b\4f53;color:#333;outline:0;font-family:proxima-nova,"Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp";font-family: arial;}
 body{background:#fff;}
 a,a:hover{color:#333;}
 .clear{ clear: both}

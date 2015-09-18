@@ -234,6 +234,7 @@ dt{font-weight: normal;}
 .mr10{margin-right: 10px}
 .mr20{margin-right: 20px}
 .mt10{margin-top: 10px}
+.mt15{margin-top: 15px}
 .mt20{margin-top: 20px}
 .mr15{margin-right: 15px}
 .ml20{margin-left: 20px;}
@@ -321,6 +322,7 @@ label{font-weight: normal!important;}
 /* v4 */
 .container-fluid{padding-left: 0;padding-right: 0;}
 .v4-container{background-color: #f6f6f6;padding: 15px;}
+.v4-header{border-bottom: 1px solid #dfdfdf;margin-bottom: 15px}
 .l_icon{display: none;}
 .ln_btn{height: 40px;width: 130px;margin-left: 15px;border:1px solid #cbcbca;}
 .r_info{height: 39px;width: 130px;line-height: 39px;border: 0;}
@@ -328,27 +330,34 @@ label{font-weight: normal!important;}
 .l_icon_child{display: none;}
 .r_info_child{width: 130px;height: 38px; background-color: #fff;border-left:1px solid #cbcbca;border-right: 1px solid #cbcbca;border-bottom: 1px solid #cbcbca;}
 /*v4_01*/
-.headSearchInput{width: 350px}
-.tbox{width:auto;border-top:1px solid #c2c2c2;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
+input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../img/sar.png) 335px 13px no-repeat; }
+.tbox{width:auto;margin-bottom: 20px; margin-top: -20px;display: table;}
 .tbox1{width:100%;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
-.conone{ float: left;margin:23px 0 0px 0;border: 1px solid #dcdcdc; position: relative;z-index: 100;background-color: #fff;}
-.conone .inbox{padding:7px 7px 0 7px;width:232px;height:376px;}
-.conone:hover{  border-color: #09a3dc; z-index:200;  box-shadow:1px 1px 5px #09a3dc; margin-bottom: -28px;}
+.conone{ float: left;margin:23px 10px 0px 0px;border: 1px solid #dcdcdc; position: relative;z-index: 100;background-color: #fff;}
+.conone .inbox{padding:7px 7px 0 7px;width:240px;height:350px;}
+.conone:hover{  border-color: #09a3dc; z-index:200;  box-shadow:1px 1px 5px #09a3dc; margin-bottom: -40px;}
 .conone:hover .timeBox{display: block;}
 .conone .zwtp{width:230px;height:230px;}
 .conone .zwtp img{border: 1px solid #c3c3c3;width: 232px;height: 232px;}
 .conone .bt{width:232px;height:44px; line-height: 22px;margin-top:15px; text-align: left;font-size: 12px;}
 .conone .time{width:115px;height:30px; line-height: 30px; font-size: 12px;color:#999;}
 .conone .jd{width:232px;height:30px; line-height: 30px;color:#999; font-size: 12px;}
-.timeBox{width: 100%; height: 28px; background: #09a3dc;display:none; color: rgb(255,255,255); text-align: center; line-height: 28px; position: relative;z-index: 101;}
-.timeBox span{color: rgb(255,255,255); font-size: 14px; padding: 0 5px;}
-.conone .tubiao{width:232px;height:22px; line-height: 22px;color:#999; font-size: 12px;}
-.conone .tubiao .number ,.rightContent_head .tubiao .number {  background: rgba(0, 0, 0, 0) url("../img/inBox_icon.png") no-repeat scroll 0 3px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
-.conone .tubiao .download, .rightContent_head .tubiao .download {  background: rgba(0, 0, 0, 0) url("../img/bbs.png") no-repeat scroll 0 4px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
+.timeBox{width: 100%; height: 40px; background: #7f7f7f;display:none; color:#fff; text-align: center; line-height:40px; position: relative;z-index: 101;}
+.timeBox ul li {float: left;width: 50%;font-size: 16px;}
+.timeBox ul li.edit{background: #d44233}
+.timeBox ul li:hover {background: #adadad}
+.timeBox ul li.edit:hover{background: #e45142}
+.conone .tubiao{width:232px;height:22px; line-height: 22px;color:#999; font-size: 12px;margin-top: 10px}
+.v4-container .number,.v4-container .download,  .v4-container .text,.v4-container .file{  background: rgba(0, 0, 0, 0) url("../img/inBox_icon.png") no-repeat scroll 0 3px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
+.v4-container .download{  background-position:0 -55px;   }
+.v4-container .text{  background-position:0 -35px;}
+.v4-container .file{  background-position:0 -78px;}
+.conone .inbox h3{font-size: 14px;text-align: center;margin-top: 10px}
 .conone .inbox_toplike{height: 30px;line-height: 30px;background: rgba(0,0,0,0.3);position: absolute;top: 0;left: 0;width: 100%;display: none;;color: #fff;font-size: 16px}
 .conone .inbox_toplike i{display: block;width: 15px;height: 15px;margin-right: 15px;float: left;}
 .conone:hover .inbox_toplike{display: block;}
-
+.conone .inbox_toplike i.inbox_heart{width: 20px;height: 20px;background: url(../img/v4_follow_icon1.png);margin: 5px;}
+.conone .inbox_toplike i.inbox_heart.fullheart{background: url(../img/v4_follow_icon2.png);}
 
 /*v4_02*/
 .rightContent_head h1{font-size: 18px;font-weight: bold;  line-height: 25px;height: 50px;}

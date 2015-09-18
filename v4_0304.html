@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>0304</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/study.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery.1.7.2.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/Chart.min.js"></script>
+    <script src="./data.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>首页</span> Homepage</a></li>
+                <li><a href="#"><span>设置</span> Set up</a></li>
+                <li><a href="#"><span>统计</span> Statistics</a></li>
+            </ul>
+        </div>
+        <div class="userbox">
+           <div class="m-nav">
+            <ul>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="clearfix v4-container">
+        <!--路径导航开始-->
+        <div class="clearfix">
+        	<ol class="breadcrumb fl">
+        		<li><a href="#">首页</a></li>
+	            <li><a href="#">专题--名称</a></li>
+	            <li class="active">问卷列表</li>
+	        </ol>
+        </div>
+        <!--路径导航结束-->
+      	<div class="questionCenter">
+      		<h1>协同平台使用调查</h1>
+      		<ul class="questionHeader clearfix">
+      			<li class="selectOn">问卷详情</li>
+      			<li>问卷统计</li>
+      		</ul>
+
+           <!-- 问卷详情 -->
+           <div class="questionTab">
+        		<div class="questionMain">
+        			<div class="questionSection">
+        				<h5 class="c_green">1、协同平台好用吗问题有可能会很长长，如第六题？ 
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_a" value="d_one_a">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_b" value="d_one_b">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_c" value="d_one_c">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_d" value="d_one_d">一般
+      					  </label>
+      					</div>
+          		</div>
+          		<div class="questionSection">
+        				<h5 class="c_green">2、协同平台有几个模块？ 
+  	      				<span class="c_red">* </span> <span class="c_gray">（至少选择两项。必选）</span>
+  	      			</h5>
+  	      			<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_a" value="d_two_a">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_b" value="d_two_b">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_c" value="d_two_c">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_d" value="d_two_d">一般
+      					  </label>
+      					</div>
+        			</div>
+        			<div class="questionSection">
+        				<h5 class="c_green">3、题目：下列出填写正确的答案 
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<textarea class="form-control mt20" rows="3" placeholder="填写题在此处填写答案"></textarea>
+        			</div>
+        			<div class="questionSection img">
+        				<h5 class="c_green">4、题目：该选择什么样的图呢？
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<ul class="clearfix">
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_a" value="d_four_a">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_b" value="d_four_b">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_c" value="d_four_c">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+    							  <label>
+    							  	<img src="static/img/v4_test_img.png">
+    							    <input type="radio" name="d_four" id="d_four_d" value="d_four_d">
+    							  </label>
+    							</div>
+  	      				</li>
+  	      			</ul>
+        			</div>
+
+        		</div>
+            <div class="pageBox bottompageBox_mar fr">
+              <li class="sum">共<span>216</span>个</li>
+              <li class="pageCut"><span>1</span>/  9</li>
+              <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+              <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+            </div>
+            <div class="clearfix"></div>
+            <div class="other-suggest mt10">
+              <h3>其他建议：<span class="fr text-limit">(限制500字以内)</span></h3>
+              <textarea class="form-control mt20" rows="5" placeholder="这里填写建议"></textarea>
+              <p class="suggest-limit mt10">！每一个调查表最后一页才会显示其他建议</p>
+            </div>
+            <div class="fr mt20">
+              <button type="button" class="btn btn-danger">提交</button>
+              <button type="button" class="btn btn-default">取消</button>
+            </div>
+          </div>
+
+          <!-- 问卷统计 -->
+          <div class="questionTab">
+        		<div class="questionMain">
+        			<ul class="question_count clearfix">
+        				<li>
+        					<h6>数据量</h6>
+        					<p>1000</p>
+        				</li>
+        				<li>
+        					<h6>浏览量</h6>
+        					<p>1000</p>
+        				</li>
+        				<li>
+        					<h6>独立IP</h6>
+        					<p>1000</p>
+        				</li>
+        				<li>
+        					<h6>填写率</h6>
+        					<p>1000</p>
+        				</li>
+        				<li>
+        					<h6>平均用时</h6>
+        					<p>1000</p>
+        				</li>
+        			</ul>
+        			<div class="questionSection">
+          			<table>
+          				<tr>
+          					<th width="60%">题目</th>
+          					<th width="5%">浏览量</th>
+          					<th width="15%">选择数/填写数</th>
+          					<th width="30%">百分比</th>
+          				</tr>
+          				<tr>
+          					<td colspan="4" class="tl tdhead">
+          						<h5 class="c_green">1、协同平台好用吗问题有可能会很长长，如第六题？ 
+    		      					<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+    		      				</h5>
+    	      				</td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td colspan="4" class="tl tdhead">
+          						<h5 class="c_green">2、协同平台有几个模块？ 
+    			      				<span class="c_red">* </span> <span class="c_gray">（至少选择两项。必选）</span>
+    			      			</h5>
+    	      				</td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">答案一：<span>一般</span></td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td colspan="4" class="tl tdhead">
+          						<h5 class="c_green">3、题目：下列出填写正确的答案 
+    			      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+    			      			</h5>
+    	      				</td>
+    	      				
+          				</tr>
+          				<tr>
+    	      				<td>
+                      <p>
+                        正式的答案，就不要线框什么的了直接就是一段内容或许更长些。正式的答案，就不要线框 什么的了直接就是一段内容或许更
+                        正式的答案，就不要线框什么的了直接就是一段内容或许更长些。正式的答案，就不要线框 什么的了直接就是一段内容或许更
+                        正式的答案，就不要线框什么的了直接就是一段内容或许更长些。正式的答案，就不要线框 什么的了直接就是一段内容或许更
+                      </p>
+    	      				</td>
+          					<td>1000</td>
+          					<td>1000</td>
+          					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td colspan="4" class="tl tdhead">
+          						<h5 class="c_green">4、题目：该选择什么样的图呢？
+    			      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+    			      			</h5>
+    	      				</td>
+          				</tr>
+          				<tr>
+          					<td class="tl">
+    			      			<img src="static/img/v4_test_num_img.png" class="mb10">
+                    </td>
+  			      			<td>1000</td>
+  	      					<td>1000</td>
+  	      					<td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">
+                      <img src="static/img/v4_test_num_img.png" class="mb10">
+                    </td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          				<tr>
+          					<td class="tl">
+                      <img src="static/img/v4_test_num_img.png" class="mb10">
+                    </td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>
+                      <span class="fl mr5">40%</span> 
+                      <div class="progress">
+                         <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            <span class="sr-only">40% 完成</span>
+                         </div>
+                      </div>
+                    </td>
+          				</tr>
+          			</table>
+        			</div>
+        		</div>
+            <div class="pageBox bottompageBox_mar fr">
+              <li class="sum">共<span>216</span>个</li>
+              <li class="pageCut"><span>1</span>/  9</li>
+              <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+              <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+      	</div>
+    </div>
+</div>
+
+<!--尾部开始-->
+<div class="footer">
+    ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+</div>
+<!--尾部结束-->
+</div>
+<script>//左侧菜单调出js
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+}
+</script>
+<script>
+  $(function(){
+    $('.questionTab').eq(0).show();
+    $('.questionHeader li').on('click',function(){
+      var index = $(this).index();
+      $(this).addClass('selectOn').siblings('li').removeClass('selectOn');
+      $('.questionTab').eq(index).show().siblings('.questionTab').hide();
+    })
+  })
+</script>
+</body>
+</html>

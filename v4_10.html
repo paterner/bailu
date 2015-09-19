@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8"/>
-    <title>01</title>
+    <title>10</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -238,11 +238,115 @@
 </div>
 <!--尾部结束-->
 </div>
+
+<!--新建专题开始-->
+<div class="screen-fix">
+  <div class="screen-bg"></div>
+  <div class="new-box">
+    <div class="del-btn"></div>
+    <div class="new-box-title">新建专题</div>
+    <div class="new-box-content">
+        <div class="createTitle-reply">
+          <div class="createTitle-reply-title clearfix">
+            <div class="title-box">
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-bold" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-italic" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="icon-u"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-text-color" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="title-box">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">字体</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="title-box">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">字号</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="title-box">
+              <button type="button" class="btn btn-default menusel rightbox" aria-label="Left Align">
+                <span class="right-icon icon1"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel rightbox" aria-label="Left Align">
+                <span class="right-icon icon2"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel rightbox" aria-label="Left Align">
+                <span class="right-icon icon3"></span>
+              </button>
+              <button type="button" class="btn btn-default menusel rightbox" aria-label="Left Align">
+                <span class="right-icon icon4"></span>
+              </button>
+            </div>
+          </div>
+          <div class="createTitle-reply-content">
+            <div class="new-box-caption clearfix">
+                <div class="new-box-caption-left">标题：</div>
+                <div class="new-box-caption-right">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="new-box-sCaption clearfix">
+                <div class="new-box-sCaption-left">副标题：</div>
+                <div class="new-box-sCaption-right">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+          </div>
+          <div class="fr mt20">
+              <button type="button" class="btn btn-danger">确定</button>
+              <button type="button" class="btn btn-gray">取消</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--新建专题结束-->
 <script>//左侧菜单调出js
 window.onload = function(){
     public.createLeftNavi(leftNavCode);
 }
-
+$('.del-btn').click(function() {
+    $('.screen-fix').hide();
+});
 </script>
 </body>
 </html>

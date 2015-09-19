@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>08</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/study.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery.1.7.2.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/Chart.min.js"></script>
+    <script src="./data.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>首页</span> Homepage</a></li>
+                <li><a href="#"><span>设置</span> Set up</a></li>
+                <li><a href="#"><span>统计</span> Statistics</a></li>
+            </ul>
+        </div>
+        <div class="userbox">
+           <div class="m-nav">
+            <ul>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="clearfix v4-container">
+        <!--路径导航开始-->
+        <div class="clearfix">
+        	<ol class="breadcrumb fl">
+        		<li><a href="#">首页</a></li>
+	            <li><a href="#">内容设置</a></li>
+	            <li class="active">预览</li>
+	        </ol>
+        </div>
+        <!--路径导航结束-->
+      	<div class="questionCenter">
+      		<h1>协同平台使用调查</h1>
+           <!-- 问卷详情 -->
+        		<div class="questionMain">
+        			<div class="questionSection">
+        				<h5 class="c_green">1、协同平台好用吗问题有可能会很长长，如第六题？ 
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_a" value="d_one_a">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_b" value="d_one_b">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_c" value="d_one_c">一般
+      					  </label>
+      					</div>
+      					<div class="radio">
+      					  <label>
+      					    <input type="radio" name="d_one" id="d_one_d" value="d_one_d">一般
+      					  </label>
+      					</div>
+          		</div>
+          		<div class="questionSection">
+        				<h5 class="c_green">2、协同平台有几个模块？ 
+  	      				<span class="c_red">* </span> <span class="c_gray">（至少选择两项。必选）</span>
+  	      			</h5>
+  	      			<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_a" value="d_two_a">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_b" value="d_two_b">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_c" value="d_two_c">一般
+      					  </label>
+      					</div>
+      					<div class="checkbox">
+      					  <label>
+      					    <input type="checkbox" name="d_two" id="d_one_d" value="d_two_d">一般
+      					  </label>
+      					</div>
+        			</div>
+        			<div class="questionSection">
+        				<h5 class="c_green">3、题目：下列出填写正确的答案 
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<textarea class="form-control mt20" rows="3" placeholder="填写题在此处填写答案"></textarea>
+        			</div>
+        			<div class="questionSection img">
+        				<h5 class="c_green">4、题目：该选择什么样的图呢？
+  	      				<span class="c_red">* </span> <span class="c_gray">（必选）</span>
+  	      			</h5>
+  	      			<ul class="clearfix">
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_a" value="d_four_a">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_b" value="d_four_b">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+      							  <label>
+      							  	<img src="static/img/v4_test_img.png">
+      							    <input type="radio" name="d_four" id="d_four_c" value="d_four_c">
+      							  </label>
+      							</div>
+  	      				</li>
+  	      				<li>
+  	      					<div class="radio">
+    							  <label>
+    							  	<img src="static/img/v4_test_img.png">
+    							    <input type="radio" name="d_four" id="d_four_d" value="d_four_d">
+    							  </label>
+    							</div>
+  	      				</li>
+  	      			</ul>
+        			</div>
+              <div class="questionSection">
+                <h5 class="c_green">5、题目：找出下面文档中的错误？ 
+                  <span class="c_red">* </span> <span class="c_gray">（必选）</span>
+                </h5>
+                <div class="questionSection-errorQ clearfix">
+                  <div class="questionSection-errorQ-left">
+                    <h2>大标题啊大标题</h2>
+                    <h3>副标题啊小标题啊副标题长度不限</h3>
+                    <p>　　内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好
+多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下
+专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多
+的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好
+多，当然也可以少，一般情况下专题或者是某项内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标内容
+就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也
+可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标
+准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开
+始了往下好多好多，当然也可以少，一般情况下专题或者是某内容就从这里开始了往下好多好多，当然也可以少，内容就从这里开始了
+往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某内
+容就从这里开始了往下好多好多，当然也可以内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准内容
+就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，内容就从这
+里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？</p>
+                    <p>　　内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好
+                    多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下
+                    专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多
+                    的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好
+                    多，当然也可以少，一般情况下专题或者是某项内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标内容
+                    就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也
+                    可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标
+                    准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开
+                    始了往下好多好多，当然也可以少，一般情况下专题或者是某内容就从这里开始了往下好多好多，当然也可以少，内容就从这里开始了
+                    往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某内
+                    容就从这里开始了往下好多好多，当然也可以内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准内容
+                    就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，内容就从这
+                    里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？</p>
+                    <p>　　内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好
+                    多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下
+专题或者是某项标准应该会很多的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多
+的吧？内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好
+多，当然也可以少，一般情况下专题或者是某项内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标内容
+就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也
+可以少，一般情况下专题或者是某项标准应该会很多内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标
+准应该会很多的内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？内容就从这里开
+始了往下好多好多，当然也可以少，一般情况下专题或者是某内容就从这里开始了往下好多好多，当然也可以少，内容就从这里开始了
+往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某内
+容就从这里开始了往下好多好多，当然也可以内容就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准内容
+就从这里开始了往下好多好多，当然也可以少，一般情况下专题或者是内容就从这里开始了往下好多好多，当然也可以少，内容就从这
+里开始了往下好多好多，当然也可以少，一般情况下专题或者是某项标准应该会很多的吧？</p>
+                  </div>
+                  <div class="questionSection-errorQ-right">
+                    <div class="title-btn">
+                      <button type="button" class="btn btn-default">挑错</button>
+                    </div>
+                    <ul class="error-list">
+                      <li>
+                        <p class="c_red">错误一：</p>
+                        <textarea  cols="30" rows="5" class="form-control mt10" placeholder="可直接复制错误内容，粘贴到此处"></textarea>
+                      </li>
+                      <li>
+                        <p class="c_red">错误一：</p>
+                        <textarea  cols="30" rows="5" class="form-control mt10" placeholder="可直接复制错误内容，粘贴到此处"></textarea>
+                      </li>
+                      <li>
+                        <p class="c_red">错误一：</p>
+                        <textarea  cols="30" rows="5" class="form-control mt10" placeholder="可直接复制错误内容，粘贴到此处"></textarea>
+                      </li>
+                    </ul>
+                    <div class="error-add-btn">添加内容</div>
+                  </div>
+                </div>
+              </div>
+              <div class="questionSection">
+                <h5 class="c_green">6、题目：投票啊投票啊啊啊投票记着投票别忘记好吧？ 
+                  <span class="c_red">* </span> <span class="c_gray">（必选）</span>
+                </h5>
+                <div class="questionSection-vote clearfix">
+                  <div class="questionSection-vote-title">点击框体时自动弹出下列属性，还不错</div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      <span class="sr-only">40% 完成</span>
+                    </div>
+                  </div>
+                  <span class="fl ml10">3774 （92%）</span>
+                  <div class="fr">
+                    <button type="button" class="btn btn-default">投票</button>
+                    <button type="button" class="btn btn-default">删除</button>
+                  </div>
+                </div>
+                <div class="questionSection-vote clearfix">
+                  <div class="questionSection-vote-title">点击框体时自动弹出下列属性，还不错</div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      <span class="sr-only">40% 完成</span>
+                    </div>
+                  </div>
+                  <span class="fl ml10">3774 （92%）</span>
+                  <div class="fr">
+                    <button type="button" class="btn btn-default">投票</button>
+                    <button type="button" class="btn btn-default">删除</button>
+                  </div>
+                </div>
+                <div class="questionSection-vote clearfix">
+                  <div class="questionSection-vote-title">点击框体时自动弹出下列属性，还不错</div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      <span class="sr-only">40% 完成</span>
+                    </div>
+                  </div>
+                  <span class="fl ml10">3774 （92%）</span>
+                  <div class="fr">
+                    <button type="button" class="btn btn-default">投票</button>
+                    <button type="button" class="btn btn-default">删除</button>
+                  </div>
+                </div>
+                <div class="questionSection-vote clearfix">
+                  <div class="questionSection-vote-title">点击框体时自动弹出下列属性，还不错</div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      <span class="sr-only">40% 完成</span>
+                    </div>
+                  </div>
+                  <span class="fl ml10">3774 （92%）</span>
+                  <div class="fr">
+                    <button type="button" class="btn btn-default">投票</button>
+                    <button type="button" class="btn btn-default">删除</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="other-suggest mt20">
+                <h3>建议：</h3>
+                <textarea class="form-control mt20" rows="10"></textarea>
+              </div>
+
+        		</div>
+            
+            <div class="clearfix"></div>
+            
+            <div class="fr mt20">
+              <button type="button" class="btn btn-danger">发布</button>
+              <button type="button" class="btn btn-default">暂存</button>
+            </div>
+         
+          
+      	</div>
+    </div>
+</div>
+  <div class="backtop">
+    <img src="static/img/v4_backtop.png" alt="">
+  </div>
+<!--尾部开始-->
+<div class="footer">
+    ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+</div>
+<!--尾部结束-->
+</div>
+
+</body>
+</html>

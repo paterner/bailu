@@ -369,5 +369,6 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .createTitle-reply-content{padding: 10px;}
 .createTitle-reply-content textarea{font-size: 14px;border: 0;width: 100%;}
 
-
-
+/* v4_13 */
+.createTitle-set-right.w500{width: 500px}
+.rightContent.Content-center{margin: 0 auto;float: none;}

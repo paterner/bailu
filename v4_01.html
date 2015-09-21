@@ -244,5 +244,14 @@ window.onload = function(){
 }
 
 </script>
+<script>
+    $(function(){
+        $('.inbox.addnew').hover(function(){
+            $(this).children('img').attr('src','./static/img/v4_add_icon_new.png')
+        },function(){
+             $(this).children('img').attr('src','./static/img/v4_add_icon.png')
+        })
+    })
+</script>
 </body>
 </html>

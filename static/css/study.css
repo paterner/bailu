@@ -322,7 +322,7 @@ img.hauto{height: auto}
 .questionSection table tr th{padding: 10px;text-align: center;background:#d8d8d8 }
 .questionSection table tr td {border:0px;line-height: 44px;}
 .questionSection table tr td.tdhead {border:0px;height: 70px;line-height: 70px}
-.progress{width: 170px;height: 10px;float: left;margin-top: 15px;padding: 1px;}
+.progress{width: 170px;height: 10px;float: left;margin-top: 15px;margin-bottom: 15px;padding: 1px;}
 .progress-bar{background-color: #d44233;}
 
 /* v4_05 */
@@ -398,6 +398,8 @@ img.hauto{height: auto}
 .createQuestion-item-content-option .option-arrow{position: relative;float: left;width: 40px;height: 40px;}
 .option-arrow .arrow-down, .option-arrow .arrow-up{width: 40px;height: 20px;cursor:pointer; left: 0;top: 0; position: absolute;background: url(../img/v4_07_icon.png) 9px -281px no-repeat;}
 .option-arrow .arrow-up{top: 20px;background-position: 10px -184px;}
+.option-arrow .arrow-up:hover{background-image: url(../img/v4_07_icon.png);background-position: 9px -348px;}
+.option-arrow .arrow-down:hover{background-image: url(../img/v4_07_icon.png);background-position: 9px -414px;}
 .option-input input{margin:0;padding: 0;float: none;width: 668px;height: 40px;color: #000;text-indent: 10px;border-color: #dedede;}
 .option-input.noset input{width: 550px;}
 .option-op i{float: left;width: 30px;height: 30px;border:1px solid #d6d6d6;border-radius: 2px;margin-left: 10px;margin-top: 4px;background: url(../img/v4_07_icon.png) no-repeat;cursor: pointer;}

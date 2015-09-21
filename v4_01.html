@@ -56,8 +56,8 @@
       	<div class="rightContent">
       		<div class="tbox v4">
                 <div class="conone">
+                    <i class="inbox_heart"></i>
                  	<div class="inbox_toplike">
-                 		<i class="inbox_heart"></i>
                  		2015/09/27   15:30
                  	</div>
                     <div class="inbox">
@@ -79,8 +79,8 @@
                     </div>
                 </div>
                 <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -107,8 +107,8 @@
                     </div>
                 </div>
                  <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -130,8 +130,8 @@
                     </div>
                 </div>
                  <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -153,8 +153,8 @@
                     </div>
                 </div>
                  <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -176,8 +176,8 @@
                     </div>
                 </div>
                  <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -199,8 +199,8 @@
                     </div>
                 </div>
                 <div class="conone">
+                    <i class="inbox_heart"></i>
                     <div class="inbox_toplike">
-                        <i class="inbox_heart"></i>
                         2015/09/27   15:30
                     </div>
                     <div class="inbox">
@@ -250,6 +250,14 @@ window.onload = function(){
             $(this).children('img').attr('src','./static/img/v4_add_icon_new.png')
         },function(){
              $(this).children('img').attr('src','./static/img/v4_add_icon.png')
+        })
+
+        $('.inbox_heart').click(function(){
+            if($(this).hasClass('fullheart')){
+                $(this).removeClass('fullheart')
+            }else{
+                 $(this).addClass('fullheart')
+            }
         })
     })
 </script>

@@ -63,7 +63,7 @@
       		</div>
       		<div class="question_list">
       			<ul>
-      				<li class="clickOn">
+      				<li class="">
       					<div>
 	      					<div class="fl">
 	      						<p> 
@@ -201,6 +201,13 @@
 window.onload = function(){
     public.createLeftNavi(leftNavCode);
 }
+$('.question_list').find('li').click(function() {
+  if($(this).hasClass('clickOn')) {
+    $(this).removeClass('clickOn');
+  } else {
+    $(this).addClass('clickOn');
+  }
+});
 
 </script>
 </body>

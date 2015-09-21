@@ -244,7 +244,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .conone .inbox.addnew{background: #f0f0f0;line-height: 350px;text-align: center;}
 .conone .inbox.addnew img{width:114px;height:114px;}
 .conone .inbox{padding:7px 7px 0 7px;width:240px;height:350px;}
-.conone:hover{  border-color: #09a3dc; z-index:200;  box-shadow:1px 1px 5px #09a3dc; margin-bottom: -40px;}
+.conone:hover{  border-color: #aaa; z-index:200;  box-shadow:1px 1px 5px #aaa; margin-bottom: -40px;}
 .conone:hover .timeBox{display: block;}
 .conone .zwtp{width:230px;height:230px;}
 .conone .zwtp img{border: 1px solid #c3c3c3;width: 232px;height: 232px;}
@@ -312,9 +312,9 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .question_count li {float: left;width: 19%;border-right: 1px solid #e9e9e9;text-align: center;}
 .questionSection table{width: 100%}
 .questionSection table tr th{padding: 10px;text-align: center;background:#d8d8d8 }
-.questionSection table tr td {border:0px;height: 38px}
+.questionSection table tr td {border:0px;line-height: 44px;}
 .questionSection table tr td.tdhead {border:0px;height: 70px;line-height: 70px}
-.progress{width: 170px;height: 10px;float: left;margin-top: 5px;padding: 1px;}
+.progress{width: 170px;height: 10px;float: left;margin-top: 15px;padding: 1px;}
 .progress-bar{background-color: #d44233;}
 
 /* v4_05 */
@@ -329,9 +329,9 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .v4-leftNav .leftNav-step.on i{border: 0;background-color: #d44233;color: #fff;width: 41px;height: 41px;}
 .v4-leftNav .vertical-line{height: 180px;width: 1px;background-color: #b0b0b0;left: 20px;top: 20px;position: absolute;z-index: 10;}
 .question-type{margin-bottom: 20px;height: 45px;}
-.question-type li{float: left;width: 90px;height: 40px;cursor:pointer; border: 1px solid #d6d6d6;line-height: 40px;font-size: 14px;text-align: center;margin-right: 5px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
+.question-type li{float: left;background-color: #fff; width: 90px;height: 40px;cursor:pointer; border: 1px solid #d6d6d6;line-height: 40px;font-size: 14px;text-align: center;margin-right: 5px;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
 .question-type li:hover{box-shadow: 0px -1px 2px 1px #e0e0e0;}
-.createTitle-main{width: 1000px;padding: 30px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; border: 1px solid #d6d6d6;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
+.createTitle-main{width: 1000px;padding: 30px;background-color: #fff; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; border: 1px solid #d6d6d6;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
 .createTitle-title{margin: 30px 0 35px 50px;height: 60px;line-height: 60px;}
 .createTitle-title-left{float: left;width: 70px;font-size: 18px;font-family: '黑体';}
 .createTitle-title-middle{float: left;}
@@ -346,7 +346,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .createTitle-set-right .checkbox{width: 125px;float: left;margin: 0;height: 40px;}
 .createTitle-bottom{margin-bottom: 20px;line-height: 40px;}
 .createTitle-bottom .topic-name{width: 240px;height: 40px;border: 1px solid #d6d6d6;color: #000;border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
-.createTitle-bottom .topic-name-auto{position: absolute;left: 10px;top: 40px;}
+.createTitle-bottom .topic-name-auto{position: absolute;left: 10px;top: 40px;display: none;}
 .createTitle-bottom .topic-name-auto li{width: 230px;height: 40px;background-color: #fff;z-index: 99; padding: 0 10px;border-left: 1px solid #d6d6d6;border-right: 1px solid #d6d6d6;}
 .createTitle-bottom .topic-name-auto li:hover{width: 232px;border: 1px solid #d6d6d6;margin-left: -1px;}
 .createTitle-bottom .topic-name-auto li:last-child{border-bottom: 1px solid #d6d6d6;}
@@ -374,7 +374,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .createTitle-reply-content textarea{font-size: 14px;border: 0;width: 100%;}
 
 /* v4_07 */
-.createQuestion-item{width: 1000px;border: 1px solid #d6d6d6;margin-top: 20px;position: relative;}
+.createQuestion-item{width: 1000px;border: 1px solid #d6d6d6;margin-top: 20px;position: relative;background-color: #fff;}
 .createQuestion-item-title{height: 40px;width: 100%;background-color: #d6d6d6;} 
 .createQuestion-item-title .title-suggest{line-height: 40px;margin-left: 30px;}
 .createQuestion-item-title .title-input{margin:7px;padding: 0;border: 0;float: none;width: 45px;text-align: center;color: #000;}
@@ -383,7 +383,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .createQuestion-item-content-title{margin-bottom: 40px;}
 .createQuestion-item-content-title input{height: 60px;width: 100%;float: none;margin:0;padding: 0;color: #727272;text-indent: 30px;border-color: #dedede;}
 .createQuestion-item-icon{position: absolute;right: -50px;top: -1px;width: 50px;}
-.createQuestion-item-up, .createQuestion-item-down, .createQuestion-item-del{display:block;width: 50px;height: 30px;border: 1px solid #d6d6d6;background: url(../img/v4_07_icon.png) 14px -342px no-repeat;}
+.createQuestion-item-up, .createQuestion-item-down, .createQuestion-item-del{display:block;width: 50px;height: 30px;border: 1px solid #d6d6d6;background: url(../img/v4_07_icon.png) 14px -342px no-repeat #fff;}
 .createQuestion-item-down{background-position: 14px -408px;}
 .createQuestion-item-del{background-position: 17px -476px;}
 .createQuestion-item-content-option{height: 40px;margin-bottom: 30px;}
@@ -449,7 +449,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .create-examination-btn{display: block;margin:80px auto;width: 190px;height: 60px;line-height: 60px;color: #fff;text-align: center;font-size: 20px;border: 0;background-color: #9c9c9c;font-family: 'microsoft yahei';border-radius: 5px;}
 
 /* v4_12 */
-.user-info-box{width: 700px;}
+.user-info-box{width: 700px;background-color: #fff;}
 .user-info-box-title{height: 40px;position: relative;}
 .user-info-box-title .title-icon1{display: block;position: absolute;width: 379px;height:40px;background: url(../img/v4_12_icon1.png);left: 0}
 .user-info-box-title .title-icon2{display: block;position: absolute;width: 341px;height:40px;background: url(../img/v4_12_icon2.png);right: 0}

@@ -138,7 +138,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 /*头部结束*/
 
 /*左侧导航开始*/
-.leftNav{float:left; width: 215px; height: 0px; height: auto!important; min-height:0px; overflow:hidden; margin:0;}
+.leftNav{float:left; width: 148px; height: 0px; height: auto!important; min-height:0px; overflow:hidden; margin:0;}
 .ln_btn{float:left; height: 60px; width: 100%; overflow: hidden; margin: 0; cursor: pointer;}
 .ln_btn_end{border-bottom: 1px solid #cbcbca;}
 .l_icon{float: left; width: 59px; height: 60px; text-align: center; line-height: 70px;border-top: 1px solid #cbcbca;border-right: 1px solid #cbcbca;border-bottom: 1px solid #cbcbca;background-image: url("../img/png_7.png"); background-repeat: no-repeat;}
@@ -155,12 +155,12 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 .r_info_child{float: left; width: 155px; height: 39px; margin: 0;background-color: rgb(247,247,247); color: rgb(81,81,81);text-align: center; line-height: 39px;border-top: 1px solid #cbcbca; font-size: 14px;}
 .ln_btn_child:hover .r_info_child{color: rgb(237,237,237);background-color: rgb(176,176,176);}
 .ln_btn_child:hover .l_icon_child{color: rgb(219,219,219);background-color: rgb(176,176,176);}
-.ln_btn_child_clicked .r_info_child{background-color: rgb(255,255,255)!important; color: rgb(82,82,82);}
+.ln_btn_child_clicked .r_info_child{background-color:#d44233; color: #fff;}
 .ln_btn_child_clicked .l_icon_child{background-color: rgb(255,255,255)!important; color: rgb(195,195,195);}
 /*左侧导航结束*/
 
 /*右侧内容开始*/
-.rightContent{float: left; padding: 0 15px;width:calc(100% - 245px);width:-moz-calc(100% - 245px);width:-webkit-calc(100% - 245px);height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
+.rightContent{float: left;width:1170px;height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
 .filtrationResult{float: left; width: 100%; height: 40px; height: auto!important; min-height:40px!important; background:rgb(237,237,237); overflow: hidden;}
 .filtrationResult li{float: left; list-style: none; height: 24px; text-align: center; line-height: 24px;  font-size: 14px;}
 .filtrationTitle{ min-width: 0px; overflow: hidden; padding: 0 5px 0 10px;margin: 8px 0 0 0;}
@@ -315,6 +315,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .other-suggest .text-limit{color: #b7b7b7;font-size: 14px;font-weight: 200;}
 .other-suggest .suggest-limit{color: #e8968e;}
 img.hauto{height: auto}
+.questionSection .radio+.radio {margin-top: 10px}
 /*tongji*/
 .question_count{width:80%;margin: 0 auto}
 .question_count li {float: left;width: 19%;border-right: 1px solid #e9e9e9;text-align: center;}

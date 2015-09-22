@@ -55,20 +55,20 @@
 	    <!--左侧菜单结束-->
     	<div class="rightContent">
         <ul class="question-type clearfix">
-          <li>+单选题</li>
-          <li>+多选题</li>
-          <li>+填写题</li>
-          <li>+选图题</li>
-          <li>+文档纠错</li>
-          <li>+投票</li>
-          <li>+建议</li>
+          <li id="oneChoice-btn" class="createQuestion-btn">+单选题</li>
+          <li id="multipleChoice-btn" class="createQuestion-btn">+多选题</li>
+          <li id="fillIn-btn" class="createQuestion-btn">+填写题</li>
+          <li id="choiceImg-btn" class="createQuestion-btn">+选图题</li>
+          <li id="errorCorrection-btn" class="createQuestion-btn">+文档纠错</li>
+          <li id="vote-btn" class="createQuestion-btn">+投票</li>
+          <li id="suggest-btn" class="createQuestion-btn">+建议</li>
           <li class="fr">预览</li>
         </ul> 
         <div class="createTitle-main">
           <div class="createTitle-title clearfix">
             <div class="createTitle-title-left">标题：</div>
             <div class="createTitle-title-middle">
-              <input type="text" />
+              <input type="text" class="form-control" />
             </div>
             <div class="createTitle-title-right">
               <p>
@@ -128,7 +128,7 @@
             <div class="fl">
               <span class="fl">发往：</span>
               <div class="fl pr">
-                <input type="text" placeholder="在此输入专题名称" id="topicName" class="topic-name">
+                <input type="text" placeholder="在此输入专题名称" id="topicName" class="topic-name form-control">
                 <ul class="topic-name-auto" style="display: none;">
                   <li>与输入专题名称相关的专题一</li>
                   <li>与输入专题名称相关的专题一</li>
@@ -138,15 +138,16 @@
               专题
             </div>
             <div class="fr">
-              <button type="button" class="btn btn-danger">确定</button>
-              <button type="button" class="btn btn-default">取消</button>
+              <button type="button" class="btn btn-danger mr10">确定</button>
+              <button type="button" class="btn btn-gray">取消</button>
             </div>
           </div>
         </div>
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="oneChoice">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <div class="checkbox">
@@ -254,11 +255,11 @@
             </div>
           </div>
         </div> 
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="multipleChoice">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <div class="checkbox">
@@ -366,11 +367,11 @@
             </div>
           </div>
         </div>
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="fillIn">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <span class="ml30">设置：至少</span>
@@ -395,11 +396,11 @@
             </div>
           </div>
         </div>
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="choiceImg">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <div class="checkbox">
@@ -463,11 +464,11 @@
             </div>
           </div>
         </div>
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="errorCorrection">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <div class="checkbox">
@@ -569,11 +570,11 @@
             </div>
           </div>
         </div> 
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="vote">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <div class="checkbox">
@@ -663,11 +664,11 @@
             </div>
           </div>
         </div>
-        <div class="createQuestion-item">
+        <div class="createQuestion-item" id="suggest">
           <div class="createQuestion-item-icon">
-            <i class="createQuestion-item-up"></i>
-            <i class="createQuestion-item-down"></i>
-            <i class="createQuestion-item-del"></i>
+            <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
+            <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
+            <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
           </div>
           <div class="createQuestion-item-title">
             <span class="title-suggest">建议：</span>
@@ -686,8 +687,8 @@
         </div>   		
     	</div>
       <div class="v4-07-btn">
-        <button type="button" class="btn btn-danger">发布</button>
-        <button type="button" class="btn btn-gray">暂存</button>
+        <button type="button" class="btn btn-danger n-btn mr10">发布</button>
+        <button type="button" class="btn btn-gray n-btn">暂存</button>
       </div>
     </div>
   </div>
@@ -699,6 +700,48 @@
       ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
   </div>
   <!--尾部结束-->
-
+  <script>
+ 
+    // checkArrow();
+    $('#topicName').focus(function() {
+      $('.topic-name-auto').show();
+    });
+    $('#topicName').blur(function() {
+      $('.topic-name-auto').hide();
+    });
+    $('.createQuestion-btn').click(function() {
+      var type = $(this).attr('id').split('-')[0];
+      $('#'+type).show();
+      checkArrow();
+    });
+    
+    function checkArrow() {
+      $('.createQuestion-item-up').show();
+      $('.createQuestion-item-down').show();
+        
+      var showList = $('.createQuestion-item').filter(function(index, item) {
+        return $(item).css('display') != 'none';
+      });
+      $(showList[0]).find('.createQuestion-item-up').hide();
+      $(showList[showList.length-1]).find('.createQuestion-item-down').hide();
+    }
+  
+    function itemDown(e) {
+      var $nextNode = $(e).parents('.createQuestion-item').next();
+      var $parentNode = $(e).parents('.createQuestion-item').remove();
+      $nextNode.after($parentNode);
+      checkArrow();
+    }
+    function itemUp(e) {
+      var $prevNode = $(e).parents('.createQuestion-item').prev();
+      var $parentNode = $(e).parents('.createQuestion-item').remove();
+      $prevNode.before($parentNode);
+      checkArrow();
+    }
+    function itemDel(e) {
+      $(e).parents('.createQuestion-item').remove();
+      checkArrow();
+    }
+  </script>
 </body>
 </html>

@@ -23,3 +23,5 @@ a,a:hover{color:#333;}
 .blue1{color:#09a3dc;}
 .green1{color:#2f801f;}
 .green2{color:#78bcaf;}
+body{font-family:Arial,"Microsoft YaHei"}
+.breadcrumb>li+li:before{content: "/\00a0";}

@@ -1,3 +1,14 @@
+/*reset*/
+body{
+   font-family:Arial,"Microsoft YaHei"
+}
+.breadcrumb>li+li:before{
+    content: "/\00a0";
+}
+.btn{
+    padding: 10px 30px;
+    margin-left: 15px;
+}
 /* common */
 .fl {float: left!important;}
 .fr {float: right!important;}
@@ -65,9 +76,7 @@ td{text-align: center}
 .pageCut span{color: rgb(23,197,229);padding: 0 5px;}
 .turnLeft,.turnRight{margin: 0 0 0 10px; cursor:pointer;width: 22px; height: 22px!important; line-height: 22px!important;border: 1px solid rgb(201,201,201); border-radius:12px; background: rgb(255,255,255);}
 .turnLeft span,.turnRight span{color: rgb(23,197,229);}
-.turnLeft:hover,.turnRight:hover{background: rgb(23,197,229);}
-.turnLeft:hover span,.turnRight:hover span{color: rgb(255,255,255);}
-.turnLeft:hover,.turnRight:hover{background: #d44233!important;}
+.turnLeft:hover,.turnRight:hover{background: #d44233!important;box-shadow:0px 0px 10px 2px #aaaaaa;}
 .turnLeft:hover span,.turnRight:hover span{color: #fff!important;}
 .bottompageBox{position: relative; top:-10px; right:65px;}
 .filterBox{ width: 100%;/*margin: 0 2%;*/ border-bottom: 1px solid rgb(201,201,201); height: 40px;}
@@ -113,7 +122,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 .m-nav{height:87px;float: left;margin-left:16px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .m-nav ul{ position: relative;}
 .m-nav ul li{float: left;padding:0 20px; /*background: url("../img/shu.png") center right no-repeat;*/ line-height: 87px;text-align: left; display: block;}
-.m-nav ul li span{ font-size: 24px; font-weight: 700;}
+.m-nav ul li span{ font-size: 20px; font-weight: 500;}
 .m-nav ul li a{ color: #8c8c8c;display: block;height:82px;}
 .m-nav ul li a:hover{ color: #000; border-bottom: 7px solid #d44233;display: block;height:82px;}
 .m-nav .delbak{ background: none;}
@@ -124,6 +133,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 .m-nav font .s-title-1{margin-right: 20px;height:26px; float: left;color:#09a3dc;}
 .m-nav font .s-title-1:hover{border: none;height:26px;color:#09a3dc;}
 .userbox{float:right; width: 170px; height: 48px; position: relative; top: 10px; }
+.userbox ul li{padding:0 10px }
 .userbox_face{float: left; width: 47px; height: 47px; border:1px solid #cbcdca; border-radius: 50%;padding: 2px; overflow: hidden;}
 .userbox_face img{width: 45px; height:45px; border-radius: 21px;border:0px;margin:1px 0 0 1px;}
 .userbox_option,.userbox_quit{float: left; margin: 9px 0 0 19px; width: 30px; height: 30px; border: 1px solid #cbcbca; border-radius: 16px;text-align: center; line-height: 30px; cursor: pointer;}
@@ -160,7 +170,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 /*左侧导航结束*/
 
 /*右侧内容开始*/
-.rightContent{float: left;width:1170px;height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
+.rightContent{float: left;width:1170px;padding:0 15px; height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
 .filtrationResult{float: left; width: 100%; height: 40px; height: auto!important; min-height:40px!important; background:rgb(237,237,237); overflow: hidden;}
 .filtrationResult li{float: left; list-style: none; height: 24px; text-align: center; line-height: 24px;  font-size: 14px;}
 .filtrationTitle{ min-width: 0px; overflow: hidden; padding: 0 5px 0 10px;margin: 8px 0 0 0;}
@@ -238,7 +248,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 .r_info_child:hover {border:1px solid #cbcbca;background-color: #fff!important;color: #000!important;}
 .breadcrumb>.active{color: #d44233;}
 /*v4_01*/
-input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../img/sar.png) 335px 13px no-repeat; margin-right: 15px;background-color: #fff;}
+input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../img/head_search.png) 320px 9px no-repeat; margin-right: 15px;background-color: #fff;}
 .tbox{width:1055px;margin-bottom: 20px; margin-top: -20px;margin-right:-20px;display: table;float: right;}
 .tbox1{width:100%;/*padding:0 10px;*/ margin-bottom: 20px;display: table;}
 .conone{ float: left;margin:23px 10px 0px 0px;border: 1px solid #d6d6d6;box-shadow: 0px 0px 10px 1px #d6d6d6;position: relative;z-index: 100;background-color: #fff;}
@@ -250,7 +260,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .conone:hover .timeBox{display: block;}
 .conone .zwtp{width:250px;height:237px;}
 .conone .zwtp img{border: 1px solid #c3c3c3;width: 248px;height: 237px;}
-.conone .bt{width:232px;height:44px; line-height: 22px;margin-top:8px;margin-left:7px; text-align: left;font-size: 12px;}
+.conone .bt{width:232px;height:44px; line-height: 22px;margin-top:8px;margin-left:7px;font-size: 12px;}
 .conone .time{width:115px;height:30px; line-height: 30px; font-size: 12px;color:#999;}
 .conone .jd{width:232px;height:30px; line-height: 30px;color:#999; font-size: 12px;}
 .timeBox{width: 100%; height: 40px; background: #7f7f7f;display:none; color:#fff; text-align: center; line-height:40px; position: relative;z-index: 101;}
@@ -258,7 +268,7 @@ input.headSearchInput{width: 350px;height: 30px;padding: 5px;background:url(../i
 .timeBox ul li.edit{background: #d44233}
 .timeBox ul li:hover {background: #adadad}
 .timeBox ul li.edit:hover{background: #e45142}
-.conone .tubiao{width:232px;height:22px; line-height: 22px;color:#999; font-size: 12px;margin-top: 8px;margin-left: 7px}
+.conone .tubiao{height:22px; line-height: 22px;color:#999; font-size: 12px;  width: 222px; margin: 0 auto;margin-top: 8px;  }
 .v4-container .number,.v4-container .download,  .v4-container .text,.v4-container .file{  background: rgba(0, 0, 0, 0) url("../img/inBox_icon.png") no-repeat scroll 0 3px;  float: left;  height: 20px;  padding-left: 24px;  width: 50px;  }
 .v4-container .download{  background-position:0 -55px;   }
 .v4-container .text{  background-position:0 -35px;}

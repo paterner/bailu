@@ -162,7 +162,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 /*左侧导航结束*/
 
 /*右侧内容开始*/
-.rightContent{float: left;width:1170px;padding:0 15px; height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
+.rightContent{float:left;width:1170px;padding:0 15px; height:0px; height:auto!important; min-height:200px!important;overflow: hidden;}
 .filtrationResult{float: left; width: 100%; height: 40px; height: auto!important; min-height:40px!important; background:rgb(237,237,237); overflow: hidden;}
 .filtrationResult li{float: left; list-style: none; height: 24px; text-align: center; line-height: 24px;  font-size: 14px;}
 .filtrationTitle{ min-width: 0px; overflow: hidden; padding: 0 5px 0 10px;margin: 8px 0 0 0;}
@@ -485,3 +485,21 @@ img.hauto{height: auto}
 /* v4_13 */
 .createTitle-set-right.w500{width: 500px}
 .rightContent.Content-center{margin: 0 auto;float: none;}
+
+/*regiter*/
+.rightContent.register .form-group{width: 49%}
+.rightContent.register h1{font-size: 18px;border-left:4px solid #e24b4b;padding-left: 10px;margin-bottom: 40px}
+.rightContent.register .form-group label{width: 90px;text-align: right;}
+.rightContent.register .form-group label.c_red{width: auto;margin-left: 90px;}
+.rightContent.register .form-group .isrequired{font-size: 16px;color: #e24b4b;margin-right: 5px}
+.rightContent.register .form-group .registericon{background: url(../img/v4_regist_icon.png) no-repeat #fff;}
+.rightContent.register .form-group .registericon.name{background-position:296px -386px}
+.rightContent.register .form-group .registericon.email{background-position: 294px -168px}
+.rightContent.register .form-group .registericon.keyword{background-position: 294px -221px}
+.rightContent.register .form-group .registericon.tel{background-position:294px -299px}
+.rightContent.register .form-group .registericon.weixin{background-position: 294px -117px}
+.registerright,.registererror{display: inline-block;height: 20px;width: 30px;}
+.rightContent.register .form-group .registericon.registerright{background-position: 4px -57px;background-color: #f6f6f6}
+.rightContent.register .form-group .registericon.registererror{background-position: 6px 2px;background-color: #f6f6f6}
+.rightContent.register .form-group .registericon.weixin{background-position: 294px -117px}
+

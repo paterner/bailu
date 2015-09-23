@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>Enterprise Registration</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/study.css"/>
+    <link rel="stylesheet" href="./static/css/font-awesome.css">
+    <script src="./static/js/jquery.1.7.2.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="./static/js/Chart.min.js"></script>
+    <script src="./data.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header class="register">
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>个人注册</span> Individual Registration</a></li>
+                <li><a href="#"><span>企业注册</span> Enterprise Registration</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="clearfix v4-container">
+        <div class="rightContent register">
+            <h1>简单注册</h1>
+            <form class="form-inline">
+                <div class="mb40">
+                    <div class="form-group">
+                        <div>
+                             <label for="name"><i class="isrequired">*</i>企业用户名：</label>
+                            <input type="text" class="form-control registericon name" id="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="email"><i class="isrequired">*</i>企业邮箱：</label>
+                            <input type="email" class="form-control registericon email" id="email" >
+                        </div>
+                    </div>
+                </div>
+                <div class="mb40">
+                    <div class="form-group">
+                        <label for="setkeyword"><i class="isrequired">*</i>企业联络人：</label>
+                        <input type="password" class="form-control registericon name" id="setkeyword">
+                    </div>
+                    <div class="form-group">
+                        <label for="setkeywordagain"><i class="isrequired">*</i>联络人电话：</label>
+                        <input type="password" class="form-control registericon tel" id="setkeywordagain">
+                    </div>
+                </div>
+                <div  class="mb40">
+                    <div class="form-group">
+                        <label for="tel"><i class="isrequired">*</i>设置密码：</label>
+                        <input type="tel" class="form-control registericon keyword" id="tel">
+                    </div>
+                    <div class="form-group">
+                         <label for="weixin"><i class="isrequired">*</i>确认密码：</label>
+                        <input type="text" class="form-control registericon keyword" id="weixin">
+                    </div>
+                </div>  
+            </form>
+            <p class="register-tip">！若使用相关高级功能，请填写下列高级注册信息</p>
+            <h1>高级注册</h1>
+            <form class="form-inline">
+                <div class="mb40">
+                    <div class="form-group">
+                        <div>
+                            <label for="">企业中文名称：</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="">企业缩写代码：</label>
+                            <input type="text" class="form-control" id="" >
+                        </div>
+                    </div>
+                </div>
+                <div class="mb40">
+                    <div class="form-group">
+                        <label for="">企业性质：</label>
+                        <input type="text" class="form-control registericon businessNature" id="" readonly="readonly">
+                    </div>
+                    <div class="form-group">
+                        <label for="">企业法人：</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div  class="mb40">
+                    <div class="form-group">
+                        <label for="">组织机构代码：</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                         <label for="">企业地址：</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                </div>  
+            </form>
+            <p class="register-tip2">！CBIM承诺不向任何第三方泄露个人信息或企业信息</p>
+            <div class="tc">
+                <button type="button" class="btn btn-danger register-btn">立即注册</button>
+            </div>
+        </div>
+    </div>
+  <div class="backtop">
+    <img src="static/img/v4_backtop.png" alt="">
+  </div>
+<!--尾部开始-->
+<div class="footer">
+    ICP备15024055号-1 CopyRight© 中国建筑设计院有限公司 版权所有
+</div>
+<!--尾部结束-->
+</div>
+
+</body>
+</html>

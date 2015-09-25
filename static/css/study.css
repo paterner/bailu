@@ -228,7 +228,7 @@ header{height:87px; border-bottom: 1px solid #cfcfcf;}
 
 /* v4 */
 .container-fluid{padding-left: 0;padding-right: 0;}
-.v4-container{background-color: #f6f6f6;padding: 15px;}
+.v4-container{background-color: #f6f6f6;padding: 15px;min-height: 800px;}
 .v4-header{border-bottom: 1px solid #dfdfdf;margin-bottom: 15px}
 .l_icon{display: none;}
 .ln_btn{height: 40px;width: 130px;margin-left: 15px;border:1px solid #cbcbca;}
@@ -489,23 +489,58 @@ img.hauto{height: auto}
 
 /*regiter*/
 header.register{border-bottom: 1px solid #af3030;}
-.rightContent.register{width: 1100px!important;padding: 0;margin:60px auto;float: none;}
+.rightContent.register{width: 1100px!important;padding: 0;margin:100px auto;float: none;}
 .rightContent.register .form-group{width: 49%}
 .rightContent.register h1{font-size: 18px;border-left:4px solid #e24b4b;padding-left: 10px;margin-bottom: 40px}
 .rightContent.register .form-group label{width: 100px;text-align: right;}
-.rightContent.register .form-group label.c_red{width: auto;margin-left: 100px;font-size: 12px;}
+.rightContent.register .form-group label.c_red{width: auto;margin-left: 110px;font-size: 12px;}
 .rightContent.register .form-group .isrequired{font-size: 16px;color: #e24b4b;margin-right: 5px}
-.rightContent.register .form-group .registericon{background: url(../img/v4_regist_icon.png) no-repeat #fff;}
-.rightContent.register .form-group .registericon.name{background-position:298px -386px}
-.rightContent.register .form-group .registericon.email{background-position: 295px -168px}
+.rightContent.register .form-group .registericon,.login .form-group .loginicon{background: url(../img/v4_regist_icon.png) no-repeat #fff;}
+.rightContent.register .form-group .registericon.name{background-position:298px -388px}
+.rightContent.register .form-group .registericon.email{background-position: 295px -172px}
 .rightContent.register .form-group .registericon.keyword{background-position: 298px -221px}
-.rightContent.register .form-group .registericon.tel{background-position:296px -299px}
+.rightContent.register .form-group .registericon.phone{background-position:294px -301px}
 .rightContent.register .form-group .registericon.weixin{background-position: 294px -117px}
-.registerright,.registererror{display: inline-block;height: 20px;width: 30px;margin-bottom: -5px;}
-.rightContent.register .form-group .registericon.registerright{background-position: 4px -57px;background-color: #f6f6f6}
-.rightContent.register .form-group .registericon.registererror{background-position: 6px 2px;background-color: #f6f6f6}
+.rightContent.register .form-group .registericon.business{background-position: 296px -533px}
+.rightContent.register .form-group .registericon.validate{background-position: 296px -621px}
+.rightContent.register .form-group .registericon.property{background-position: 295px -767px}
+.rightContent.register .form-group .registericon.Professional{background-position: 296px -693px}
+.rightContent.register .form-group .registericon.tel{background-position: 296px -845px}
+.rightContent.register .form-group .registericon.code{background-position: 296px -942px}
+.registerright,.registererror,.loginright,.loginerror{display: inline-block;height: 20px;width: 30px;margin-bottom: -5px;}
+.rightContent.register .form-group .registericon.registerright,.form-group .loginicon.loginright{background-position: 4px -57px;background-color: #f6f6f6}
+.rightContent.register .form-group .registericon.registererror,.form-group .loginicon.loginerror{background-position: 6px 2px;background-color: #f6f6f6}
 .rightContent.register .form-group .registericon.weixin{background-position: 296px -117px}
 .rightContent.register .register-tip{margin-top: 50px;margin-bottom: 50px;border-bottom:1px solid #e5e5e5;line-height: 40px;color: #e24b4b;text-align: right;}
-.rightContent.register .register-tip2{margin-top: 50px;margin-bottom: 10px;line-height: 40px;text-align: center;}
+.rightContent.register .register-tip2{margin-top: 100px;margin-bottom: 10px;line-height: 40px;text-align: center;}
 .rightContent.register .btn.register-btn{font-size: 20px;font-family: 'microsoft yahei';padding: 5px 40px;margin:0 auto;}
 .rightContent.register .form-group .registericon.businessNature{background-position:289px -469px}
+.rightContent.register .form-group .form-control.select{margin-left: 10px;font-family: 'microsoft yahei';width:154px;}
+.send-validate{display: inline-block;height: 30px;width: 80px;border: 1px solid #e5e5e5;border-radius: 3px; margin-bottom: -12px;font-size: 14px;color: #567a4a;text-align: center;line-height: 30px;background-color: #fff;cursor: pointer;}
+.rightContent.register .form-group .form-control.short{width: 132px;}
+.register-pass {width: 560px;height: 306px;z-index: 999;left: 50%;top: 50%;margin-top: -153px;margin-left: -280px;position: fixed;background-color: #fff;box-shadow: 0px 0px 2px 4px #777;}
+.register-pass-title{width: 100%;height: 40px;line-height: 40px;text-indent: 10px;color: #fff;background-color: #9c9c9c;font-size: 20px;position: relative;}
+.register-pass-title .register-pass-close{display: block;width: 15px;height: 15px;background: url(../img/v4_passresiger_icon.png);position: absolute;right: 10px;top: 10px;cursor: pointer;}
+.register-pass p{margin-top: 50px;font-size: 18px;text-align: center;}
+.register-pass-btn{margin-top: 80px;}
+.register-pass-btn .btn.btn-examine.pass{margin-left: 105px;margin-right: 20px;}
+/*login*/
+.login{width: 500px;height: 385px;border:1px solid #d6d6d6;border-radius: 3px;background-color: #fff;margin:130px auto;}
+.login .form-group{margin-top: 60px;}
+.login .form-group label{width: 110px;text-align: right;}
+.login .form-group .loginrighticon{background: url(../img/v4_login_icon.png) no-repeat #fff!important;}
+.login .form-group .loginrighticon.username{background-position: 295px 7px!important;}
+.login .form-group .loginrighticon.password{background-position: 298px -53px!important;}
+.login .form-group .loginrighticon.n-username{background-position: 298px -121px!important;}
+.btn.btn-login{margin: 80px auto 0;float: none;padding: 5px 50px;font-size: 20px;font-family: 'microsoft yahei';display: block;}
+
+/*examine*/
+.examine{width: 450px;height: 270px;position: relative;margin:130px auto;}
+.examine img{position: absolute;display: block;width: 45px;height: 45px;top: 7px;left: 30px;}
+.examine img.examining{left: 10px;}
+.examine p{font-size: 16px;text-align: center;line-height: 60px;}
+.examine-btn{margin-top: 90px;padding-left: 30px;}
+.btn.btn-examine{float: left;width: 165px;height: 40px;padding: 0;margin: 0;font-size: 20px;font-family: 'microsoft yahei';}
+.btn.btn-examine.reset{width: 165px;padding-left: 20px;background-image:  url(../img/v4_examine_icon.png);background-position:  20px 10px;background-repeat:  no-repeat;margin-left: 20px;}
+.btn.btn-examine.examining{margin-left: 70px;}
+

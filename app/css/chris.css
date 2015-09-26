@@ -1,0 +1,27 @@
+/*subject*/
+.search-box{height: 2rem;padding:0 1rem;background-color: #f2f2f2;}
+.search-box .search-input{width: 87.7%;height: 1.5rem;line-height: 1.5rem; border:1px solid #bcbcbc;border-radius: 3px;background-color: #fff;margin-top: .1875rem;float: left;text-indent: .625rem;}
+.search-box .search-btn{display: block;float: left;width: 1.5rem;height: 1.5rem;border:1px solid #bcbcbc;border-radius: 3px;margin-top: .1875rem;margin-left: .3125rem;background: url(../img/v4_app_1.png) .1875rem -6.3125rem/1.5625rem 18.75rem no-repeat #fff;}
+.slide-bar img{display: block;width: 100%;height: 9.375rem;}
+.subject-list li{height: 4.375rem;padding: .3125rem .625rem;border-bottom: 1px solid #bcbcbc;}
+.subject-list li a{display: block;position: relative;}
+.subject-list li img{display: block;position: absolute;width: 4.375rem;height: 4.375rem;left: 0;top: 0;}
+.subject-list li .list-right{margin-left: 5.375rem;}
+.subject-list li .list-right h2{font-size: .875rem;font-weight: 200;color: #000;width: 100%;text-overflow: ellipsis;word-break: break-all;overflow: hidden;white-space: nowrap;}
+.subject-list li .list-right p{font-size: .625rem;color: #707070;}
+.subject-list li .list-right .list-bottom i{padding-left: .78rem; font-size: .5rem;color: #5fa070;font-style: normal;background: url(../img/v4_app_1.png) 0 -9.25rem/1.5625rem 18.75rem no-repeat;}
+.subject-list li .list-right .list-bottom i.view{background-position: 0 -12.0625rem;}
+.subject-list li .list-right .list-bottom i.comment{background-position: 0 -15.0625rem;}
+.midterms-tab ul li{width: 50%;height: 2.5rem;background-color: #dbdbdb;float: left;line-height: 2.5rem;text-align: center;color: #171717;font-size: .875rem;}
+.midterms-tab ul li.on{background-color: #fff;}
+.count-list li{background-color: #fff;}
+.count-list li h4{padding: 1.09375rem;font-size: .875rem;color: #2f7c43;border-bottom: 1px solid #bcbcbc;}
+.count-list li .count-option{padding: .5rem 0 .75rem 2rem;}
+.count-list li .count-option p{font-size: .875rem;color: #171717;}
+.count-list li .count-option .count-option-bottom{margin-top: .625rem;}
+.count-list li .count-option .count-option-bottom i{padding-left: .78rem; font-size: .5rem;color: #afafaf;font-style: normal;background: url(../img/v4_app_1.png) 0 -9.25rem/1.5625rem 18.75rem no-repeat;margin-right: .3125rem;}
+.count-list li .count-option .count-option-bottom i.dview{background-position: 0 -12.0625rem;}
+.count-list li .count-option .count-option-bottom i.dedit{background-position: 0 -17.875rem;}
+
+
+

@@ -510,6 +510,7 @@ header.register{border-bottom: 1px solid #af3030;}
 .registerright,.registererror,.loginright,.loginerror{display: inline-block;height: 20px;width: 30px;margin-bottom: -5px;}
 .rightContent.register .form-group .registericon.registerright,.form-group .loginicon.loginright{background-position: 4px -57px;background-color: #f6f6f6}
 .rightContent.register .form-group .registericon.registererror,.form-group .loginicon.loginerror{background-position: 6px 2px;background-color: #f6f6f6}
+.form-group .loginicon.loginright.b_fff{background-color: #fff}
 .rightContent.register .form-group .registericon.weixin{background-position: 296px -117px}
 .rightContent.register .register-tip{margin-top: 50px;margin-bottom: 50px;border-bottom:1px solid #e5e5e5;line-height: 40px;color: #e24b4b;text-align: right;}
 .rightContent.register .register-tip2{margin-top: 100px;margin-bottom: 10px;line-height: 40px;text-align: center;}

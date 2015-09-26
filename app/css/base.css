@@ -10,24 +10,64 @@ address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
 html{height: 100%;}
 body{font-family:Arial "Microsoft YaHei";background-color:#f8f8f8;height: 100%;}
 ol,ul{list-style:none;}
-a{text-decoration:none;color:#004b91}
+a{text-decoration:none;color:#fff}
 input:focus{border:0;outline:medium}
 .clearfix:after {clear:both;font-size:0;height:0;display:block;visibility:hidden;content:'';line-height:0}
 .full-height{min-height: 100%;overflow-y: auto;}
 
 /*base*/
+.marginauto{margin:0 auto;}
 .mt40{margin-top: 40px}
+.mt20{margin-top: 20px}
+.mt30{margin-top: 30px}
+.mr10{margin-right: 10px}
+.c_red{color: #e24b4b}
+.pr{position: relative;}
+.pa{position: absolute;}
+.f12{font-size: 12px}
+.tc{text-align: center;}
+.f11{font-size: 11px}
+.p16{padding: 1rem}
 /* common */
 header{width: 100%; height: 3.375rem;line-height: 3.675rem;background-color: #e24b4b;color: #fff;font-size: 1.125rem;position: relative;}
 header .header-title{max-width: 5.5rem;margin: 0 auto;text-indent: 1.625rem; background: url(../img/v4_app_1.png) 0 1.25rem/1.5625rem 18.75rem no-repeat;}
 header .beader-close-btn{display: block;width: .9375rem;height: .9375rem;background: url(../img/v4_app_1.png) 0 -4.0625rem/1.5625rem 18.75rem no-repeat;position:absolute;right: .9375rem;bottom: .9375rem;}
-.button{padding: 0.8125rem;color: #fff;font-size: 0.875rem;text-align: center;margin: 1rem auto;background-color: #e24b4b;max-width: 50%;margin-top: 3rem;border-radius: 0.5rem}
-
+.button{padding: 0.8125rem;color: #fff;font-size: 0.875rem;text-align: center;background-color: #e24b4b;width: 50%;border-radius: 0.4rem}
+.b_gray{background-color: #979797}
+.box{display: -webkit-box;display:box;}
+.box-center{box-align:center; -webkit-box-align:center;box-pack:center; -webkit-box-pack:center;}
+.box .flex1{-webkit-box-flex:1; box-flex:1;}
+/*遮罩层*/
+.coverOuter{position: fixed;background-color: rgba(0,0,0,0.8);width: 100%;height: 100%;z-index: 999;top: 0;left: 0}
+.coverOuter .divInner{background-color: #fff}
+.coverOuter .divInner .button{border-radius: 0px;margin: 0}
 /*login*/
 .v4_app_main{width: 100%;box-sizing:border-box;padding: 1.5rem}
 header .beader-close-btn.header-left{left: .9375rem}
 header .header-right{position:absolute;right: .9375rem;bottom: .9375rem;font-size: .8125rem;line-height: normal;}
-.form input{border:none;border-bottom: 1px solid #cecece; background:#f8f8f8;width: 100%;height: 30px;padding: 0.5rem; box-sizing: border-box; margin: 0.5rem 0;padding-left:1.125rem;}
-.form input.login_icon{background: url(../img/v4_regist_icon.png) no-repeat;} 
-.form input.login_name{background-position: 0px -389px} 
-.form input.login_password{background-position: 0px -225px} 
+.form .inputouter{border-bottom: 1px solid #cecece; padding: 0.5rem;position: relative;}
+.form .inputouter.box{display: -webkit-box;display:box;}
+.form .inputouter.box .flex1{width: 40%}
+.form .inputouter.box .flex2{width: 60%}
+.form .inputouter.box .flex2.w100 select{ width: calc(100% - 0.5rem);}
+.form .inputouter.box .flex2 select{ display: block;width: calc(50% - 0.5rem);float: left;margin-left: 0.5rem;}
+.form input{border:none; background:#f8f8f8;width: 100%;height: 30px;box-sizing: border-box;padding-left:1.125rem;}
+.login_icon{background: url(../img/v4_regist_icon.png) 0px 0px /30px 400px no-repeat;} 
+.form input.login_name{background-position: 0px -88px} 
+.form input.login_password{background-position: 0px -290px} 
+.form input.login_email{background-position: 0px -65px} 
+.form input.login_tel{background-position: 0px -45px} 
+.form input.login_vcode{background-position: 0px -115px} 
+.form input.login_companytel{background-position:0px -138px} 
+.form input.login_location{background-position: 0px -160px} 
+.form input.login_company{background-position: 0px -184px} 
+.form input.login_companytype{background-position: 0px -210px} 
+.form input.login_professional{background-position: 0px -234px} 
+.form input.login_job{background-position: 0px -255px} 
+.form select {color: #8b8b8b; height: 30px;border: 1px solid #cecece}
+.login_icon.valid_right, .login_icon.valid_error{position: absolute;display: block;background-position: 0px 0px;width:20px;height: 20px;right: 0px;top: 10px }
+.login_icon.valid_error{background-position: 0px -18px}
+
+.vcodebtn{width: 30%;color: #4f8d51;background-color: #fff;font-size: .8125rem;border:1px solid #cecece;text-align: center;position: absolute;top: 10px;right: 0px;height: 28px;line-height: 28px;border-radius: 0.4rem}
+.login_icon.login_nopass{background-position: 0px -318px;padding: 0.5rem 0 0.125rem 1.5rem;}
+.login_icon.login_rewrite{background-position:18px -353px;background-color: #979797; padding-right: 0rem;padding-left: 1.62rem;}

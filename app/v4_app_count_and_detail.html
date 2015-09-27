@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>统计</title>
+    <title>统计与详情</title>
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/chris.css">
   </head>
@@ -80,19 +80,63 @@
         <div class="detail-option img">
           <i class="detail-radio"></i>
           <img src="img/temp_list.jpg" alt="">
-          <p>一般</p>
+          <span>点击图片可查看大图</span>
         </div>
-        <div class="detail-option on">
+        <div class="detail-option img on">
           <i class="detail-radio"></i>
-          <p>协同平台好用吗问题有可能会很长很长如第几题？要控制长度啊，两行就够了</p>
+          <img src="img/temp_list.jpg" alt="">
+          <span>点击图片可查看大图</span>
         </div>
-        <div class="detail-option">
+        <div class="detail-option img">
           <i class="detail-radio"></i>
-          <p>挺好用的挺好用的尽量长一些，两行</p>
+          <img src="img/temp_list.jpg" alt="">
+          <span>点击图片可查看大图</span>
         </div>
-        <div class="detail-option">
+        <div class="detail-option img">
           <i class="detail-radio"></i>
-          <p>很好用啊</p>
+          <img src="img/temp_list.jpg" alt="">
+          <span>点击图片可查看大图</span>
+        </div>
+      </li>
+      <li>
+        <h4>
+          <p>5、题目：投票啊投票啊记得投票哦？（投票）</p>
+        </h4>
+        <div class="detail-option vote">
+          <i class="detail-radio"></i>
+          <p>投票第一题题目名字等可排列多行</p>
+          <div class="percent-bar">
+            <div class="progress-bar" style="width: 40%;">40%</div>
+          </div>
+        </div>
+        <div class="detail-option vote on">
+          <i class="detail-radio"></i>
+          <p>投票第一题题目名字等可排列多行两行字哦</p>
+          <div class="percent-bar">
+            <div class="progress-bar" style="width: 40%;">40%</div>
+          </div>
+        </div>
+        <div class="detail-option vote">
+          <i class="detail-radio"></i>
+          <p>投票第一题题目名字等可排列多行</p>
+          <div class="percent-bar">
+            <div class="progress-bar" style="width: 40%;">40%</div>
+          </div>
+        </div>
+        <div class="detail-option vote">
+          <i class="detail-radio"></i>
+          <p>投票第一题题目名字等可排列多行</p>
+          <div class="percent-bar">
+            <div class="progress-bar" style="width: 40%;">40%</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h4>
+          <p>6、题目：其他建议（填写建议）</p>
+        </h4>
+        <div class="detail-fill">
+          <textarea id="" cols="30" rows="5" placeholder="在此处填写建议"></textarea>
         </div>
       </li>
     </ul>
@@ -363,5 +407,33 @@
         </div>
       </li>
     </ul>
+    <script src="js/zepto.min.js"></script>
+    <script>
+      $('.midterms-tab').find('li').on('click', function() {
+        if ($(this).hasClass('on')) {
+          return;
+        } else {
+          var id = $(this).attr('id');
+          $(this).addClass('on').siblings().removeClass('on');
+          $('#' + id + '_list').show().siblings('ul').hide();
+        }
+      });
+      $('.detail-option').on('click', function() {
+        if ($(this).find('.detail-radio').length > 0) {
+          if ($(this).hasClass('on')) {
+            return
+          } else {
+            $(this).addClass('on').siblings('.detail-option').removeClass('on');
+          }
+        } 
+        else if ($(this).find('.detail-checkbox').length > 0) {
+          if ($(this).hasClass('on')) {
+            $(this).removeClass('on');
+          } else {
+            $(this).addClass('on');
+          }
+        }
+      });
+    </script>
   </body>
 </html>

@@ -17,13 +17,91 @@
     </header>
     <div class="midterms-tab">
       <ul class="clearfix">
-        <li id="detail">问卷详情</li>
-        <li class="on" id="count">问卷统计</li>
+        <li class="on" id="detail">问卷详情</li>
+        <li id="count">问卷统计</li>
       </ul>
     </div>
-    <ul class="count-list">
+
+    <ul class="detail-list" id="detail_list">
       <li>
-        <h4>1、协同平台好用吗问题有可能会很长很长，如第几题？要控制长度啊，两行够了？( 单选 )</h4>
+        <h4>
+          <p>1、协同平台好用吗问题有可能会很长很长，如第几题？要控制长度啊，两行够了？( 单选 )</p>
+        </h4>
+        <div class="detail-option">
+          <i class="detail-radio"></i>
+          <p>一般</p>
+        </div>
+        <div class="detail-option on">
+          <i class="detail-radio"></i>
+          <p>协同平台好用吗问题有可能会很长很长如第几题？要控制长度啊，两行就够了</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-radio"></i>
+          <p>挺好用的挺好用的尽量长一些，两行</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-radio"></i>
+          <p>很好用啊</p>
+        </div>
+      </li>
+      <li>
+        <h4>
+          <p>2、协同平台有几个模块？( 多选选 )</p>
+        </h4>
+        <div class="detail-option">
+          <i class="detail-checkbox"></i>
+          <p>一般</p>
+        </div>
+        <div class="detail-option on">
+          <i class="detail-checkbox"></i>
+          <p>协同平台好用吗问题有可能会很长很长如第几题？要控制长度啊，两行就够了</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-checkbox"></i>
+          <p>挺好用的挺好用的尽量长一些，两行</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-checkbox"></i>
+          <p>很好用啊</p>
+        </div>
+      </li>
+      <li>
+        <h4>
+          <p>3、题目：下列填出正确的答案。（填写）</p>
+        </h4>
+        <div class="detail-fill">
+          <textarea id="" cols="30" rows="5" placeholder="在此处填写答案"></textarea>
+        </div>
+      </li>
+      <li>
+        <h4>
+          <p>4、题目：该选择什么样的图呢？（选图）</p>
+        </h4>
+        <div class="detail-option img">
+          <i class="detail-radio"></i>
+          <img src="img/temp_list.jpg" alt="">
+          <p>一般</p>
+        </div>
+        <div class="detail-option on">
+          <i class="detail-radio"></i>
+          <p>协同平台好用吗问题有可能会很长很长如第几题？要控制长度啊，两行就够了</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-radio"></i>
+          <p>挺好用的挺好用的尽量长一些，两行</p>
+        </div>
+        <div class="detail-option">
+          <i class="detail-radio"></i>
+          <p>很好用啊</p>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="count-list" id="count_list" style="display:none;">
+      <li>
+        <h4>
+          <p>1、协同平台好用吗问题有可能会很长很长，如第几题？要控制长度啊，两行够了？( 单选 )</p>
+        </h4>
         <div class="count-option">
           <p>答案一</p>
           <div class="count-option-bottom">
@@ -78,7 +156,9 @@
         </div>
       </li>
       <li>
-        <h4>2、协同平台有几个模块？（多选）</h4>
+        <h4>
+          <p>2、协同平台有几个模块？（多选）</p>
+        </h4>
         <div class="count-option">
           <p>答案一</p>
           <div class="count-option-bottom">
@@ -133,7 +213,9 @@
         </div>
       </li>
       <li>
-        <h4>3、题目：下列填出正确的答案。（填写）</h4>
+        <h4>
+          <p>3、题目：下列填出正确的答案。（填写）</p>
+        </h4>
         <div class="count-option">
           <p class="fill">填写题答案填写统计</p>
           <div class="count-option-bottom">
@@ -149,7 +231,9 @@
         </div>
       </li>
       <li>
-        <h4>4、题目：该选择什么样的图呢？（选图）</h4>
+        <h4>
+          <p>4、题目：该选择什么样的图呢？（选图）</p>
+        </h4>
         <div class="count-option clearfix">
           <img src="img/temp_list.jpg" alt="">
           <div class="count-option-bottom img">
@@ -204,7 +288,9 @@
         </div>
       </li>
       <li>
-        <h4>5、题目：投票啊投票啊记得投票哦？（投票）</h4>
+        <h4>
+          <p>5、题目：投票啊投票啊记得投票哦？（投票）</p>
+        </h4>
         <div class="count-option">
           <p>答案一</p>
           <div class="count-option-bottom">
@@ -259,7 +345,9 @@
         </div>
       </li>
       <li>
-        <h4>6、题目：其他建议（填写建议）</h4>
+        <h4>
+          <p>6、题目：其他建议（填写建议）</p>
+        </h4>
         <div class="count-option">
           <p class="fill">建议填写统计</p>
           <div class="count-option-bottom">

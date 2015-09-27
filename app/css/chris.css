@@ -14,8 +14,9 @@
 .subject-list li .list-right .list-bottom i.comment{background-position: 0 -15.0625rem;}
 .midterms-tab ul li{width: 50%;height: 2.5rem;background-color: #dbdbdb;float: left;line-height: 2.5rem;text-align: center;color: #171717;font-size: .875rem;}
 .midterms-tab ul li.on{background-color: #fff;}
-.count-list li{background-color: #fff;}
-.count-list li h4{padding: 1.09375rem;font-size: .875rem;color: #2f7c43;border-bottom: 1px solid #f3f3f3;}
+.count-list li,.detail-list li{background-color: #fff;}
+.count-list li h4,.detail-list li h4{padding: 1.09375rem;font-size: .875rem;color: #2f7c43;border-bottom: 1px solid #f3f3f3;}
+.count-list li h4 p,.detail-list li h4 p{max-height: 2.3125rem;overflow: hidden;}
 .count-list li .count-option{padding: .5rem 0 .75rem 2rem;border-bottom: 1px solid #f3f3f3;position: relative;}
 .count-list li .count-option p{font-size: .875rem;color: #171717;}
 .count-list li .count-option p.fill{color: #a6a6a6;}
@@ -29,3 +30,17 @@
 .count-list li .count-option img{display: block;width: 4.375rem;height: 4.375rem;float: left;}
 .count-list li .count-option .count-option-bottom.img{float: left;margin-top: 2.8125rem;margin-left: .8125rem;}
 .count-list li .count-option .count-option-bottom .count-percent.img{top: -1.75rem;left: 0}
+.detail-list li .detail-option{padding: .78rem 1.31rem .78rem 2.25rem;border-bottom: 1px solid #f3f3f3;position: relative;}
+.detail-list li .detail-option.on{background-color: #f6f6f6;}
+.detail-list li .detail-option .detail-radio{display: block;width: .875rem;height: .875rem;border:1px solid #d4d4d4;border-radius: 50%;background-color: #f2f2f2;position: absolute;left: 2.25rem;top: 50%;margin-top: -.46875rem;}
+.detail-list li .detail-option p{margin-left: 1.8125rem;font-size: .875rem;color: #171717;max-height: 2.3125rem;overflow: hidden;}
+.detail-list li .detail-option.on .detail-radio{width:1rem;height:1rem;border:0;background: url(../img/v4_app_2.png) -.25rem 0/1.75rem 3.03125rem no-repeat;}
+.detail-list li .detail-option .detail-checkbox{display: block;width: .875rem;height: .875rem;border: 1px solid #d4d4d4;border-radius: 3px;background-color: #f2f2f2;position: absolute;left: 2.25rem;top: 50%;margin-top: -.46875rem;}
+.detail-list li .detail-option.on .detail-checkbox{background: url(../img/v4_app_2.png) -.125rem -1.75rem/1.75rem 3.03125rem no-repeat #fff;}
+.detail-list li .detail-fill{padding: .6875rem .9rem .6875rem 2.25rem;}
+.detail-list li .detail-fill textarea{padding: .5rem;border-color: #f3f3f3;border-radius: 2px;resize: none;}
+.detail-list li .detail-option.img{padding: 0;height: 4.9375rem;line-height: 4.9375rem;}
+.detail-list li .detail-option.img img{width: 4.375rem;height: 4.375rem;display: block;position: absolute;left: 4.6875rem;top: .25rem;}
+
+
+

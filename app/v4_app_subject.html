@@ -18,8 +18,12 @@
       <input type="text" class="search-input">
       <a class="search-btn"></a>
     </div>
-    <div class="slide-bar">
-      <img src="img/temp_slide.jpg" alt="">
+    <div class="slide-bar banner" >      
+      <ul>
+        <li><img src="img/temp_slide.jpg" alt=""></li>
+        <li><img src="img/temp_slide.jpg" alt=""></li>
+        <li><img src="img/temp_slide.jpg" alt=""></li>
+      </ul>
     </div>
     <ul class="subject-list">
       <li>
@@ -79,5 +83,17 @@
         </a>
       </li>
     </ul>
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/unsilder.min.js"></script>
+    <script>
+      $('.banner').unslider({
+  speed: 500,               //  The speed to animate each slide (in milliseconds)
+  delay: 3000,              //  The delay between slide animations (in milliseconds)
+  complete: function() {},  //  A function that gets called after every slide animation
+  keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+  dots: true,               //  Display dot navigation
+  fluid: false              //  Support responsive design. May break non-responsive designs
+});
+    </script>
   </body>
 </html>

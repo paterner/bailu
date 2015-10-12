@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>02</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/reset.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/study.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/font-awesome.css">
+    <script src="{{STATIC_URL}}js/jquery.1.7.2.js"></script>
+    <script src="{{STATIC_URL}}js/public.js"></script>
+    <script src="{{STATIC_URL}}js/Chart.min.js"></script>
+    <script src="{{STATIC_URL}}data.js"></script>
+    <script type="text/javascript">
+    
+    // 页面加载时，双花括号部分将被后台赋值为一个json对象，其值相当于backend_test.html页面中相应ajax接收到的Response
+    var jtopic = {{ jtopic | safe }};
+    
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+      <div class="v4-width clearfix">
+        <div class="logo"></div>
+        <div class="m-nav">
+            <ul>
+                <li><a href="#"><span>首页</span> Homepage</a></li>
+                <li><a href="#"><span>设置</span> Set up</a></li>
+                <li><a href="#"><span>统计</span> Statistics</a></li>
+            </ul>
+        </div>
+        <div class="userbox">
+           <div class="m-nav">
+            <ul>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </header>
+    <!--头部结束-->
+    <div class="clearfix v4-container">
+        <!--路径导航开始-->
+        <div class="clearfix v4-header">
+          <div class="v4-width clearfix">
+          	<ol class="breadcrumb fl">
+          		<li><a href="#">首页</a></li>
+              <li><a href="#">专题--名称</a></li>
+              <li class="active">问卷列表</li>
+  	        </ol>
+  	       <input class="form-control headSearchInput fr" type="text" placeholder="搜索">
+         </div>
+        </div>
+        <!--路径导航结束-->
+      <div class="v4-width clearfix">
+	    <!--左侧菜单开始-->
+	    <div class="leftNav"></div>
+	    <!--左侧菜单结束-->
+      	<div class="rightContent">
+      		<div class="rightContent_head  clearfix">
+      			<h1 class="fl">协同平台使用调查专题</h1>
+      			<div class="tubiao fr">
+                <span class="text green2">1261</span>
+                <span class="number green2">1261</span>
+                <span class="download green2">1261</span>
+            </div>
+      		</div>
+      		<div class="question_list">
+      			<ul>
+      				<li class="">
+      					<div>
+	      					<div class="fl">
+	      						<p> 
+	      						<i class="v4_star"></i>
+	      						浏览：<span class="c_green">1230</span>
+	      						提交：<span class="c_green">1230</span>
+	      						</p>
+	      						<h2 class="mt10">协同平台使用调查  <span class="c_green">(草稿)</span></h2>
+	      					</div>
+      						<div class="fr question_list_right">
+      							<i class="handle_icon edit"></i>
+      							<i class="handle_icon public"></i>
+      							<i class="handle_icon del"></i>
+      							<div class="fr">
+      								<p>
+      									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+      								</p>
+      								<p>
+      									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+      								</p>
+      							</div>
+      						</div>
+      					</div>
+      				</li>
+      				<li>
+      					<div>
+	      					<div class="fl">
+	      						<p> 
+	      						<i class="v4_star on"></i>
+	      						浏览：<span class="c_green">1230</span>
+	      						提交：<span class="c_green">1230</span>
+	      						</p>
+	      						<h2 class="mt10">协同平台使用调查</h2>
+	      					</div>
+      						<div class="fr question_list_right">
+      							<i class="handle_icon statistics"></i>
+      							<i class="handle_icon downloads"></i>
+      							<i class="handle_icon del"></i>
+      							<div class="fr">
+      								<p>
+      									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+      								</p>
+      								<p>
+      									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+      								</p>
+      							</div>
+      						</div>
+      					</div>
+      				</li>
+              <li>
+                <div>
+                  <div class="fl">
+                    <p> 
+                    <i class="v4_star"></i>
+                    浏览：<span class="c_green">1230</span>
+                    提交：<span class="c_green">1230</span>
+                    </p>
+                    <h2 class="mt10">协同平台使用调查</h2>
+                  </div>
+                  <div class="fr question_list_right">
+                    <div class="fr">
+                      <p>
+                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                      <p>
+                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div class="fl">
+                    <p> 
+                    <i class="v4_star"></i>
+                    浏览：<span class="c_green">1230</span>
+                    提交：<span class="c_green">1230</span>
+                    </p>
+                    <h2 class="mt10">协同平台使用调查</h2>
+                  </div>
+                  <div class="fr question_list_right">
+                    <div class="fr">
+                      <p>
+                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                      <p>
+                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div class="fl">
+                    <p> 
+                    <i class="v4_star"></i>
+                    浏览：<span class="c_green">1230</span>
+                    提交：<span class="c_green">1230</span>
+                    </p>
+                    <h2 class="mt10">协同平台使用调查</h2>
+                  </div>
+                  <div class="fr question_list_right">
+                    <div class="fr">
+                      <p>
+                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                      <p>
+                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+      			</ul>
+      		</div>
+        	<div class="pageBox bottompageBox_mar fr">
+                <li class="sum">共<span>216</span>个</li>
+                <li class="pageCut"><span>1</span>/  9</li>
+                <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+            </div>
+      	</div>
+      </div>
+    </div>
+</div>
+
+<!--尾部开始-->
+<div class="footer">
+    ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+</div>
+<!--尾部结束-->
+</div>
+<script>//左侧菜单调出js
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+}
+$('.question_list').find('li').click(function() {
+  if($(this).hasClass('clickOn')) {
+    $(this).removeClass('clickOn');
+  } else {
+    $(this).addClass('clickOn');
+  }
+});
+$('.question_list').find('li').hover(function() {
+  if($(this).hasClass('clickOn')) {
+    $(this).removeClass('clickOn');
+  } else {
+    $(this).addClass('clickOn');
+  }
+});
+
+</script>
+</body>
+</html>

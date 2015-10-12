@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+	<title>后台测试</title>
+	<link type="text/css" rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="{{STATIC_URL}}css/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="{{STATIC_URL}}css/reset.css" />
+	<link type="text/css" rel="stylesheet" href="{{STATIC_URL}}css/study.css" />
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.serializejson.min.js"></script>
+
+</head>
+<body>
+<h1>Backend Test</h1>
+<p>{{ message }}</p>
+<br/>
+<hr/>
+<h1>用户登录</h1>
+<hr/>
+<div id="userinfo">
+
+</div>
+<br/>
+<hr/>
+<h1>专题列表</h1>
+<hr/>
+<div>
+<form id="filterform">
+<input name="keyword" type="text"/>
+<input name="flag" type="radio" value="0" checked/>全部专题
+<input name="flag" type="radio" value="1"/>我的专题 
+<input name="flag" type="radio" value="2"/>我参与的专题
+&nbsp;&nbsp;<button onclick="queryTopics();return false;">筛选专题</button>
+</form>
+</div>
+<br/>
+<hr/>
+<button onclick='newTopic();'>添加专题</button>
+<hr/>
+<div id="topics">
+
+</div>
+
+<script type="text/javascript">
+	
+	// 这是一个后台测试页面
+	// 请前端参照该页面，对 edit.html、statistics.html、survey.html、topic.html、topics.html 进行更新
+	
+	// 后台有以下8个对象（缩进表示层级关系），并提供了通过ajax进行增删改查的接口（详见下面的增删改查函数）：
+	// UserInfo（用户）
+	// 	Topic（专题）
+	// 		Survey（问卷，问卷也有自己对应的创建用户，可能与专题对应的用户不同）
+	// 			Question（问题）
+	// 				Option（选项）
+	// 			Commit（提交）  --未测试，待验证
+	//				Answer（答案，同时对应一个Option） --未测试，待验证
+	//
+	// Visit（访问，可从属于一个Survey，也可从属于一个Topic） --未做完。待更新
+	
+	// 在下面的ajax函数中，返回的data都是一个json对象，其基本格式为：
+	// {
+	// 	"success": true, // 或 false 表示成功或者失败
+	// 	"message": "",   // 表示错误描述，如果success字段为false，通常会有错误描述
+	// 	"content":{}		 // 返回的内容json，具体解析过程详见下面各ajax函数；如果success为false，通常没有该字段
+	// }
+
+	// 函数名encodeURIComponent过长，重命名一下；在提交的json数据中字符串要是用该函数处理一下，保证中文不出问题
+	var UTF8 = encodeURIComponent;
+	
+	// 用来保存当前登陆的用户信息的json对象
+	// 建议在每个页面维护各个需要用到的json对象（比如topic、survey、question、option、commit、answer或statistics）
+	var userinfo = null;
+
+	// 各种json对象的HTML模板
+	var userinfoInTemplate = "<label>用户{0}: {1} </label> <button onclick='if(confirm(\"确定登出？\")){logout();}'>登出</button>";
+	var userinfoOutTemplate = "<form id='loginform'><input name='userName' type='text' placeholder='用户名'/><input name='password' type='password' placeholder='密码'/><button onclick='login();'>登陆</button></form>";
+	var topicTemplate = "<div id='T{0}' style='padding-left:10px;'><h1><button id='Tex{0}' onclick='expandTopic(\"{0}\");'>+</button>专题{0}: {1}. <button onclick='editTopic(\"{0}\");'>编辑</button> <button onclick='if(confirm(\"确定删除专题？\")){delTopic(\"{0}\");}'>删除</button></h1><hr/><div id='T{0}S'></div></div>";
+	var surveyTemplate = "<div id='S{0}' style='padding-left:20px;'><h2><button id='Sex{0}' onclick='expandSurvey(\"{0}\");'>+</button>问卷{0}: {1}. <button onclick='editSurvey(\"{0}\");'>编辑</button> <button onclick='if(confirm(\"确定删除问卷？\")){delSurvey(\"{0}\");}'>删除</button></h2><hr/><div id='S{0}Q'></div></div>";
+	var questionTemplate = "<div id='Q{0}' style='padding-left:30px;'><h3><button id='Qex{0}' disabled>+</button>{2}{0}: {1}. <button onclick='editQuestion(\"{0}\");'>编辑</button> <button onclick='if(confirm(\"确定删除问题？\")){delQuestion(\"{0}\");}'>删除</button></h3><hr/><div id='Q{0}O'></div></div>";
+	var optionTemplate = "<div id='O{0}' style='padding-left:40px;'><h4><button id='Oex{0}' disabled>+</button>选项{0}: {1}. <button onclick='editOption(\"{0}\");'>编辑</button> <button onclick='if(confirm(\"确定删除选项？\")){delOption(\"{0}\");}'>删除</button></h4><hr/></div>";
+	var commitTemplate = "";
+	var answerTemplate = "";
+	
+	// 向服务器发送的各种指令
+	// 分别代表 增、查、查（带子节）、改、删
+	var CMD_NEW = 0;
+	var CMD_QUERY = 1;
+	var CMD_QUERY_CHILDREN = 2;
+	var CMD_UPDATE = 3;
+	var CMD_DELETE = 4;
+	
+	// 题目类型，按照edit页面的顺序
+	var Q_CHOICE = 0;
+	var Q_MULTIPLY = 1;
+	var Q_FILL = 2;
+	var Q_PICTURE = 3;
+	var Q_CORRECT = 4;
+	var Q_VOTE = 5;
+	var Q_SUGGEST = 6;
+	
+	// 题目类型字符串
+	Q_TYPE_STR = [
+	    '单选题',
+	    '多选题',
+	    '填写提',
+	    '选图题',
+	    '文档纠错题',
+	    '投票',
+	    '建议',
+		];
+
+	// 自定义格式化字符串函数
+	String.format = function() {
+
+    if (arguments.length == 0)
+
+        return null;
+
+    var str = arguments[0];
+
+    for ( var i = 1; i < arguments.length; i++) {
+
+        var re = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+
+        str = str.replace(re, arguments[i]);
+
+    }
+
+    return str;
+
+	};
+	
+	// 生成长度为len的随机字符串
+	function randomString(len) {
+		　　len = len || 32;
+		　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+		　　var maxPos = $chars.length;
+		　　var pwd = '';
+		　　for (i = 0; i < len; i++) {
+		　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+		　　}
+		　　return pwd;
+	}
+	
+	// 根据筛选条件查询专题
+	function queryTopics()
+	{
+		/*
+		 *	ajax_topics/{FLAG}/
+		 *	全部专题： FLAG_ALL = 0 
+		 *	自己的专题： FLAG_MY = 1
+		 *	参与的专题：FLAG_PAR = 2
+		 *
+		 */
+		
+		var jsondata = $("#filterform").serializeJSON();
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_topics/",
+			async:false,
+			data: UTF8(JSON.stringify(jsondata)),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#topics").html("");
+					
+					topics = data['content'];
+					
+					for (var i=0; i<topics.length; ++i)
+					{
+						topic = topics[i];
+						s = String.format(topicTemplate, topic['id'], JSON.stringify(topic));
+						$("#topics").append(s);
+					}
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+
+	// 新建专题（新建时，提交的json中一定不要提供id，但是其他字段即使没有用也必须提供全，下同）
+	function newTopic()
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jtopic =  {"description":randomString(20), "title":"Topic"+randomString(3), "isPublic":true,"imgUrl":randomString(16), "userinfoId":userinfo['id']};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_topic/" + CMD_NEW + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jtopic),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					topic = data['content'];
+					s = String.format(topicTemplate, topic['id'], JSON.stringify(topic));
+					$("#topics").append(s);
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	// 编辑专题（没有编辑框，只是随机修改，必须提供id，可只提供需要更新的字段）
+	function editTopic(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jtopic =  {"id":id, "description":randomString(20), "title":UTF8("专题") + randomString(3), "isPublic":true,"imgUrl":randomString(16)};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_topic/" + CMD_UPDATE + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jtopic),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					topic = data['content'];
+					s = String.format(topicTemplate, topic['id'], JSON.stringify(topic));
+					
+					old = $("#T" + id);
+					old.before(s);
+					old.remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	// 展开专题（只须提供id，显示专题下的所有问卷）
+	function expandTopic(id)
+	{
+		sign = $("#Tex" + id).html();
+		
+		if (sign == "-")
+		{
+			$("#T" + id + "S").html("");
+			$("#Tex" + id).html("+");
+			return;
+		}
+		else if (sign == "+")
+		{
+			$.ajax({
+				cache: false,
+				url: "/ajax_topic/" + CMD_QUERY_CHILDREN + "/",
+				async:false,
+				datatype: "json",
+				data: "{\"id\":\"" + id + "\"}",
+				error: function(request){
+					
+				},
+				success: function(data){
+					data = JSON.parse(data);
+					
+					if (data['success'])
+					{
+						$("#T" + id + "S").prepend("<button onclick='newSurvey(" + id + ");'>添加问卷</button><hr/>");
+						
+						surveys = data['content']['surveys'];
+						
+						for (var i=0; i<surveys.length; ++i)
+						{
+							survey = surveys[i];
+							s = String.format(surveyTemplate, survey['id'], JSON.stringify(survey));
+							$("#T" + id + "S").append(s);
+						}
+						
+						$("#Tex" + id).html("-");
+					}
+					else
+					{
+						alert('失败: ' + data['message'] + '!!');
+					}
+				}
+			});
+		}
+		else
+		{
+			//???
+		}
+	}
+	
+	// 删除专题（只须提供id）
+	function delTopic(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_topic/" + CMD_DELETE + "/",
+			async:false,
+			datatype: "json",
+			data: "{\"id\":\"" + id + "\"}",
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#T" + id).remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function newSurvey(topicId)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jsurvey =  {"description":randomString(20), "title":"Survey"+randomString(3), "isPublic":true,"imgUrl":randomString(16),
+				"userinfoId":userinfo['id'], "status":1, "topicId":topicId, "emailInput":false, "star":false, "ipRecord":false, "publishTime":"2015-10-07 21:52:29",
+				"closeTime":null, "allowAnonymous":true, "mobileInput":false, "realNameInput":true, "userNameRecord":true};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_survey/" + CMD_NEW + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jsurvey),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					survey = data['content'];
+					s = String.format(surveyTemplate, survey['id'], JSON.stringify(survey));
+					$("#T" + topicId + "S").append(s);
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function editSurvey(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jsurvey =  {"id":id, "description":randomString(20), "title":UTF8("问卷")+randomString(3), "isPublic":true,"imgUrl":randomString(16),
+				"status":2, "emailInput":true, "star":true, "ipRecord":true, "publishTime":"2015-12-12 21:52:29",
+				"closeTime":"2015-12-16 21:52:29", "allowAnonymous":false, "mobileInput":true, "realNameInput":false, "userNameRecord":false};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_survey/" + CMD_UPDATE + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jsurvey),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					survey = data['content'];
+					s = String.format(surveyTemplate, survey['id'], JSON.stringify(survey));
+					
+					old = $("#S" + id);
+					old.before(s);
+					old.remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	// 展开问卷时，将把所有问题带着选项一并展开（也就是说，对问卷进行带子节点查询时，选项会跟随问题一并返回）
+	function expandSurvey(id)
+	{
+		sign = $("#Sex" + id).html();
+		
+		if (sign == "-")
+		{
+			$("#S" + id + "Q").html("");
+			$("#Sex" + id).html("+");
+			return;
+		}
+		else if (sign == "+")
+		{
+			$.ajax({
+				cache: false,
+				url: "/ajax_survey/" + CMD_QUERY_CHILDREN + "/",
+				async:false,
+				datatype: "json",
+				data: "{\"id\":\"" + id + "\"}",
+				error: function(request){
+					
+				},
+				success: function(data){
+					data = JSON.parse(data);
+					
+					if (data['success'])
+					{
+						newQuestionButtonsHtml = "";
+						
+						for (var i=0; i<Q_TYPE_STR.length; ++i)
+						{
+							newQuestionButtonsHtml += "<button onclick='newQuestion(\"" + id + "\", " + i + ");'>添加" + Q_TYPE_STR[i] + "</button> ";
+						}
+						
+						newQuestionButtonsHtml += "<hr/>";
+						
+						$("#S" + id + "Q").prepend(newQuestionButtonsHtml);
+						
+						questions = data['content']['questions'];
+						
+						for (var i=0; i<questions.length; ++i)
+						{
+							question = questions[i];
+							options = JSON.parse(JSON.stringify(question['options']));
+							delete question['options'];
+							
+							s = String.format(questionTemplate, question['id'], JSON.stringify(question), Q_TYPE_STR[question['type']]);
+							$("#S" + id + "Q").append(s);
+							
+							$("#Q" + question['id'] + "O").prepend("<button onclick='newOption(\"" + question['id'] + "\");'>添加选项</button><hr/>");
+							
+							for (var j=0; j<options.length; ++j)
+							{
+								option = options[j];
+								s = String.format(optionTemplate, option['id'], JSON.stringify(option));
+								$("#Q" + question['id'] + "O").append(s);
+							}
+						}
+						
+						$("#Sex" + id).html("-");
+					}
+					else
+					{
+						alert('失败: ' + data['message'] + '!!');
+					}
+				}
+			});
+		}
+		else
+		{
+			//???
+		}
+	}
+	
+	function delSurvey(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_survey/" + CMD_DELETE + "/",
+			async:false,
+			datatype: "json",
+			data: "{\"id\":\"" + id + "\"}",
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#S" + id).remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	// var Q_CHOICE = 0;
+	// var Q_MULTIPLY = 1;
+	// var Q_FILL = 2;
+	// var Q_PICTURE = 3;
+	// var Q_CORRECT = 4;
+	// var Q_VOTE = 5;
+	// var Q_SUGGEST = 6;
+	
+	// 每个问题至少要有一个Option，否则无法创建
+	// 删除Option时，不能删除最后一个
+	//
+	// 填空题、纠错题、建议 应当只有一个选项
+	// 该选项的title字段可以用来保存textarea文本框的placeholder,
+	// 所有答案都会对应这一个选项（目前后台没做校验，待更新）
+	//
+	// 返回的题目中，投票将提供rate字段，代表投票比例（rate%, 即 rate 取值范围为 0~100）
+	
+	function newQuestion(surveyId, type)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jquestion = {"description":UTF8("这是一道" + Q_TYPE_STR[type]),"notEmpty":true,"title":UTF8(Q_TYPE_STR[type])+randomString(3), "maxValue":1, "minValue":1, "surveyId":surveyId, "orderIndex":0, "randomOrder":false, "type":type};
+		
+		if (type == Q_CHOICE)
+		{
+			var options = [
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":1, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":2, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("其他"), "orderIndex":3, "allowInput":true},
+				];
+			
+			jquestion['options'] = options;
+		}
+		else if (type == Q_MULTIPLY)
+		{
+			jquestion['minValue'] = 1;
+			jquestion['maxValue'] = 2;
+			
+			var options = [
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":1, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":2, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":3, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("其他"), "orderIndex":4, "allowInput":true},
+				];
+			
+			jquestion['options'] = options;
+			
+		}
+		else if (type == Q_FILL)
+		{
+			var minCount = 10;
+			var maxCount = 100;
+			
+			jquestion['minValue'] = minCount;
+			jquestion['maxValue'] = maxCount;
+			
+			var options = [
+				{"description":UTF8("填写题必须要有一个选项，除title字段外，其他字段都没用"),"title":UTF8("在这里填写你的答案（" + minCount + "~" + maxCount + "字）"), "orderIndex":0, "allowInput":false}
+				];
+			
+			jquestion['options'] = options;
+		}
+		else if (type == Q_PICTURE)
+		{
+			jquestion['minValue'] = 1;
+			jquestion['maxValue'] = 2;
+			
+			var options = [
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":"images/Tulips.jpg", "orderIndex":1, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":"images/Tulips.jpg", "orderIndex":2, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":"images/Tulips.jpg", "orderIndex":3, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":"images/Tulips.jpg", "orderIndex":4, "allowInput":false},
+				];
+			
+			jquestion['options'] = options;
+		}
+		else if (type == Q_CORRECT)
+		{
+			var minCount = 10;
+			var maxCount = 100;
+			
+			jquestion['minValue'] = minCount;
+			jquestion['maxValue'] = maxCount;
+			
+			var options = [
+				{"description":UTF8("挑错题必须要有一个选项，除title字段外，其他字段都没用"),"title":UTF8("在这里填写你的纠正批注（" + minCount + "~" + maxCount + "字）"), "orderIndex":0, "allowInput":false}
+				];
+			
+			jquestion['options'] = options;
+		}
+		else if (type == Q_VOTE)
+		{
+			var options = [
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":1, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":2, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("选项") + randomString(3), "orderIndex":3, "allowInput":false},
+			    {"description":UTF8("这是一个" + Q_TYPE_STR[type] + "的选项"),"title":UTF8("其他"), "orderIndex":4, "allowInput":true},
+				];
+			
+			jquestion['options'] = options;
+		}
+		else if (type == Q_SUGGEST)
+		{
+			var minCount = 10;
+			var maxCount = 100;
+			
+			jquestion['minValue'] = minCount;
+			jquestion['maxValue'] = maxCount;
+			
+			var options = [
+				{"description":UTF8("建议必须要有一个选项，除title字段外，其他字段都没用"),"title":UTF8("在这里填写你的建议（" + minCount + "~" + maxCount + "字）"), "orderIndex":0, "allowInput":false}
+				];
+			
+			jquestion['options'] = options;
+		}
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_question/" + CMD_NEW + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jquestion),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					question = data['content'];
+					options = JSON.parse(JSON.stringify(question['options']));
+					delete question['options'];
+					
+					s = String.format(questionTemplate, question['id'], JSON.stringify(question), Q_TYPE_STR[question['type']]);
+					$("#S" + surveyId + "Q").append(s);
+					
+					$("#Q" + question['id'] + "O").prepend("<button onclick='newOption(\"" + question['id'] + "\");'>添加选项</button><hr/>");
+					
+					for (var j=0; j<options.length; ++j)
+					{
+						option = options[j];
+						s = String.format(optionTemplate, option['id'], JSON.stringify(option));
+						$("#Q" + question['id'] + "O").append(s);
+					}
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function editQuestion(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var jquestion = {"id":id, "description":UTF8("编辑一下"),"notEmpty":true,"title":UTF8("编辑一下")+randomString(3)};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_question/" + CMD_UPDATE + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(jquestion),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					question = data['content'];
+					options = JSON.parse(JSON.stringify(question['options']));
+					delete question['options'];
+					
+					s = String.format(questionTemplate, id, JSON.stringify(question), Q_TYPE_STR[question['type']]);
+					
+					old = $("#Q" + id);
+					old.before(s);
+					old.remove();
+					
+					$("#Q" + id + "O").prepend("<button onclick='newOption(\"" + id + "\");'>添加选项</button><hr/>");
+					
+					for (var j=0; j<options.length; ++j)
+					{
+						option = options[j];
+						s = String.format(optionTemplate, option['id'], JSON.stringify(option));
+						$("#Q" + id + "O").append(s);
+					}
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function delQuestion(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_question/" + CMD_DELETE + "/",
+			async:false,
+			datatype: "json",
+			data: "{\"id\":\"" + id + "\"}",
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#Q" + id).remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function newOption(questionId)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var joption = {"questionId":questionId, "description":UTF8("新建选项的描述信息"), "title":UTF8("新建的选项"), "orderIndex":0, "allowInput":false};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_option/" + CMD_NEW + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(joption),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					option = data['content'];
+					s = String.format(optionTemplate, option['id'], JSON.stringify(option));
+					$("#Q" + questionId + "O").append(s);
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function editOption(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		var joption = {"id":id, "description":UTF8("编辑过的选项的描述信息"), "title":UTF8("编辑过的选项"), "orderIndex":1, "allowInput":false};
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_option/" + CMD_UPDATE + "/",
+			async:false,
+			datatype: "json",
+			data: JSON.stringify(joption),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					option = data['content'];
+					s = String.format(optionTemplate, option['id'], JSON.stringify(option));
+					
+					old = $("#O" + id);
+					old.before(s);
+					old.remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function delOption(id)
+	{
+		if (userinfo == null)
+		{
+			alert("请先登陆！！");
+			return;
+		}
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_option/" + CMD_DELETE + "/",
+			async:false,
+			datatype: "json",
+			data: "{\"id\":\"" + id + "\"}",
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#O" + id).remove();
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function login()
+	{
+		var jlogin = $("#loginform").serializeJSON();
+		// serializeJSON 函数用到 jquery.serializejson.min.js
+		// 用法详见 —— http://blog.csdn.net/joyhen/article/details/44490051
+		
+		$.ajax({
+			cache: false,
+			url: "/ajax_login/",
+			async:false,
+			datatype: "json",
+			data: UTF8(JSON.stringify(jlogin)),
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					userinfo = data['content'];
+					
+					s = String.format(userinfoInTemplate, userinfo['id'], JSON.stringify(userinfo));
+					
+					$("#userinfo").html(s);
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+			}
+		});
+	}
+	
+	function logout()
+	{		
+		$.ajax({
+			cache: false,
+			url: "/ajax_logout/",
+			async:false,
+			error: function(request){
+				
+			},
+			success: function(data){
+				data = JSON.parse(data);
+				
+				if (data['success'])
+				{
+					$("#userinfo").html(userinfoOutTemplate);
+					userinfo = null;
+				}
+				else
+				{
+					alert('失败: ' + data['message'] + '!!');
+				}
+
+			}
+		});
+	}
+	
+	{% if request.user.is_authenticated %}
+	login();
+	{% else %}
+	$("#userinfo").html(userinfoOutTemplate);
+	{% endif %}
+	
+	queryTopics();
+
+</script>
+</body>
+</html>

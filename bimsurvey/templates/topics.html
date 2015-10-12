@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>01</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/reset.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/study.css"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/font-awesome.css">
+    <script src="{{STATIC_URL}}js/jquery.1.7.2.js"></script>
+    <script src="{{STATIC_URL}}js/public.js"></script>
+    <script src="{{STATIC_URL}}data.js"></script>
+    <script type="text/javascript">
+    
+    // 页面加载时，双花括号部分将被后台赋值为一个json对象，其值相当于backend_test.html页面中相应ajax接收到的Response
+    var jtopics = {{ jtopics | safe }};
+    
+    
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部开始-->
+    <header>
+        <div class="v4-width clearfix">
+            <div class="logo"></div>
+            <div class="m-nav">
+                <ul>
+                    <li><a href="#"><span>首页</span> Homepage</a></li>
+                    <li><a href="#"><span>设置</span> Set up</a></li>
+                    <li><a href="#"><span>统计</span> Statistics</a></li>
+                </ul>
+            </div>
+            <div class="userbox">
+               <div class="m-nav">
+                <ul>
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <div class="clearfix v4-container">
+        <!--路径导航开始-->
+        <div class="clearfix v4-header">
+            <div class="v4-width clearfix">
+            	<ol class="breadcrumb fl">
+    	            <li><a href="#">首页</a></li>
+    	        </ol>
+                <div class="fr">
+                    <span class="icon file green2 mt10">1261 <i class="hoverTips">专题数量</i></span>
+                    <span class="number green2 mt10">1261  <i class="hoverTips">浏览数量</i></span>
+                    <input class="form-control headSearchInput fr" type="text" placeholder="搜索">
+                </div>
+            </div>
+        </div>
+        <!--路径导航结束-->
+	    <!--左侧菜单开始-->
+        <div class="v4-width clearfix">
+    	    <div class="leftNav"></div>
+    	    <!--左侧菜单结束-->
+          	<div class="rightContent">
+          		<div class="tbox v4">
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                     	<div class="inbox_toplike">
+                     		2015/09/27   15:30
+                     	</div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_no_img.jpg"></div>
+                            <h3>新建的专题</h3>
+                            <div class="bt tc">新建的专题，里边的内容是空的哦！</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <div class="inbox addnew">
+                             <img src="{{STATIC_URL}}img/v4_add_icon.png">
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conone">
+                        <i class="inbox_heart"></i>
+                        <div class="inbox_toplike">
+                            2015/09/27   15:30
+                        </div>
+                        <div class="inbox">
+                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
+                            <h3>专题一的标题</h3>
+                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
+                            <div class="clear"></div>
+                            <div class="tubiao">
+                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
+                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
+                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                            </div>
+                        </div>
+                       <div class="timeBox">
+                            <ul>
+                                <li class="edit">编辑</li>
+                                <li>删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="pageBox bottompageBox_mar clearfix fr">
+    	            <li class="sum">共<span>216</span>个</li>
+    	            <li class="pageCut"><span>1</span>/  9</li>
+    	            <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+    	            <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+    	        </div>
+          	</div>
+        </div>
+    </div>
+</div>
+
+<!--尾部开始-->
+<div class="footer">
+    ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+</div>
+<!--尾部结束-->
+</div>
+<script>//左侧菜单调出js
+window.onload = function(){
+    public.createLeftNavi(leftNavCode);
+}
+
+</script>
+<script>
+    $(function(){
+        $('.inbox.addnew').hover(function(){
+            $(this).children('img').attr('src','{{STATIC_URL}}img/v4_add_icon_new.png')
+        },function(){
+             $(this).children('img').attr('src','{{STATIC_URL}}img/v4_add_icon.png')
+        })
+
+        $('.inbox_heart').click(function(){
+            if($(this).hasClass('fullheart')){
+                $(this).removeClass('fullheart')
+            }else{
+                 $(this).addClass('fullheart')
+            }
+        })
+    })
+</script>
+</body>
+</html>

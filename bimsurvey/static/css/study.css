@@ -391,7 +391,7 @@ img.hauto{height: auto}
 .createTitle-reply-content textarea{font-size: 14px;border: 0;width: 100%;}
 
 /* v4_07 */
-.createQuestion-item{width: 1000px;border: 1px solid #d6d6d6;margin-top: 20px;position: relative;background-color: #fff;display: none;}
+.createQuestion-item{width: 1000px;border: 1px solid #d6d6d6;margin-top: 20px;position: relative;background-color: #fff;}
 .createQuestion-item-title{height: 40px;width: 100%;background-color: #d6d6d6;} 
 .createQuestion-item-title .title-suggest{line-height: 40px;margin-left: 30px;}
 .createQuestion-item-title .title-input{margin:7px;padding: 0;border: 0;float: none;width: 45px;text-align: center;color: #000;}

@@ -25,21 +25,37 @@
     QuestionApp.controller('QuestionEdit', function($scope) {
       $scope.quesMain = jsurvey.content;
       $scope.questions = jsurvey.content.questions;
-      console.log($scope.quesMain)
+      console.log($scope.questions)
       $scope.addQuestion =  function(type){
         var obj = {};
-        switch(type){
-          case 0:
-          $scope.questions.map(function(item){
-            if(item.type===0){
-                obj = item;
-                obj.orderIndex=$scope.questions.length+1;
-                obj.id = 100;
-                obj.surveyId=200;
-               $scope.questions.push(obj);
-            }
-          })
+        var len = $scope.questions.length;
+        $scope.questions.map(function(item){
+          if(item.type===type){
+              obj = item;
+              obj.id = $scope.questions[len-1].id +1;
+              obj.orderIndex=len+1;
+             $scope.questions.push(obj);
+          }
+        })
+      };
+      $scope.sortQuestion = function(index, num){
+        var temp = null;
+        if(num==1){
+          $scope.questions[index].orderIndex++;
+          $scope.questions[index+1].orderIndex--;
+          temp = $scope.questions[index];
+          $scope.questions[index] =$scope.questions[index+1];
+          $scope.questions[index+1] = temp;
+        }else{
+          $scope.questions[index].orderIndex--;
+          $scope.questions[index-1].orderIndex ++;
+          temp = $scope.questions[index];
+          $scope.questions[index] =$scope.questions[index-1];
+          $scope.questions[index-1] = temp;
         }
+      };
+      $scope.delQuestion = function(index){
+         $scope.questions.splice(index,1);
       };
       $scope.sortChange = function(options, index, num){
         var temp = null;
@@ -58,9 +74,12 @@
         } 
       };
       $scope.addOptions = function(options){
-        var obj = {};
+        var obj = options[0];
         var len = options.length; 
-        obj={$$hashKey: "", allowInput: false,description: "这是一个单选题的选项",id: options[len-1].id+1, orderIndex:len, questionId:null, title:""};
+        obj.id = options[len-1].id;
+        obj.orderIndex = len;
+        obj.allowInput = false;
+        obj.title = '';
         options.push(obj);
       };
       $scope.removeOptions = function(options, index){ 
@@ -225,13 +244,13 @@
               </div>
             </div>
           </div>
-          <div ng-repeat="quesItem in questions">
+          <div ng-repeat="quesItem in questions track by $index | orderBy: 'orderIndex'">
           <!-- 单选题 -->
           <div class="createQuestion-item" id="oneChoice" ng-if="quesItem.type===0">
               <div class="createQuestion-item-icon">
-                <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-                <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-                <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+                <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+                <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+                <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
               </div>
               <div class="createQuestion-item-title">
                 <div class="checkbox">
@@ -249,9 +268,9 @@
                 <div class="createQuestion-item-content-title">
                   <input type="text" class="form-control" ng-model="quesItem.title">
                 </div>
-                <div class="createQuestion-item-content-option clearfix" ng-repeat="item in quesItem.options | orderBy: 'orderIndex'" >
+                <div class="createQuestion-item-content-option clearfix" ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'" >
                   <div class="option-arrow">
-                   <i class="arrow-down" ng-show="$index<quesItem.options.length-1" ng-click="sortChange(quesItem.options, $index, 1)"></i>
+                    <i class="arrow-down" ng-show="$index<quesItem.options.length-1" ng-click="sortChange(quesItem.options, $index, 1)"></i>
                     <i class="arrow-up" ng-show="$index>0" ng-click="sortChange(quesItem.options, $index, -1)"></i>
                   </div>
                   <div class="option-input fl">
@@ -281,9 +300,9 @@
           <!-- 多选题 -->
           <div class="createQuestion-item" id="multipleChoice" ng-if="quesItem.type===1">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+               <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+                <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+                <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <div class="checkbox">
@@ -301,7 +320,7 @@
               <div class="createQuestion-item-content-title">
                 <input type="text" class="form-control" ng-model="quesItem.title">
               </div>
-              <div class="createQuestion-item-content-option clearfix" ng-repeat="item in quesItem.options | orderBy: 'orderIndex'">
+              <div class="createQuestion-item-content-option clearfix" ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'">
                 <div class="option-arrow">
                   <i class="arrow-down" ng-show="[$index]<quesItem.options.length-1"  ng-click="sortChange(quesItem.options, $index, 1)"></i>
                   <i class="arrow-up"  ng-show="[$index]>0"  ng-click="sortChange(quesItem.options, $index, -1)"></i>
@@ -310,7 +329,7 @@
                   <input type="text" class="form-control" ng-model="item.title">
                 </div>
                 <div class="option-op fl">
-                  <i class="op-add" ng-click="addOptions(quesItem.options,0)"></i>
+                  <i class="op-add" ng-click="addOptions(quesItem.options)"></i>
                   <i class="op-reduce" ng-click="removeOptions(quesItem.options,$index)"></i>
                   <i class="op-link"></i>
                 </div>
@@ -333,9 +352,9 @@
           <!-- 填写题 -->
           <div class="createQuestion-item" id="fillIn" ng-if="quesItem.type===2">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+              <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+              <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+              <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <span class="ml30">设置：至少</span>
@@ -349,7 +368,7 @@
               <div class="createQuestion-item-content-title">
                 <input type="text" class="form-control" ng-model="quesItem.title">
               </div>
-              <div class="createQuestion-item-content-textarea" ng-repeat="item in quesItem.options">
+              <div class="createQuestion-item-content-textarea" ng-repeat="item in quesItem.options track by $index">
                 <textarea class="form-control" cols="30" rows="5" placeholder="填写题在此处填写答案" ng-model="item.title"></textarea>
               </div>
               <div class="clearfix">
@@ -363,9 +382,9 @@
           <!-- 图片选择 -->
           <div class="createQuestion-item" id="choiceImg" ng-if="quesItem.type===3">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+              <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+              <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+              <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <div class="checkbox">
@@ -384,13 +403,13 @@
                 <input type="text" class="form-control" ng-model="quesItem.title">
               </div>
               <ul class="createQuestion-item-content-img clearfix">
-                <li ng-repeat="item in quesItem.options | orderBy: 'orderIndex'">
+                <li ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'">
                   <img src="{{STATIC_URL}}img/v4_test_img.png" ng-alt="item.title">
                   <div class="img-btn">
                     <button type="button" class="btn btn-default">浏览</button>
-                    <button type="button" class="btn btn-default">添加</button>
+                    <button type="button" class="btn btn-default" ng-click="addOptions(quesItem.options)">添加</button>
                     <button type="button" class="btn btn-default mt10">确定</button>
-                    <button type="button" class="btn btn-default mt10">删除</button>
+                    <button type="button" class="btn btn-default mt10" ng-click="removeOptions(quesItem.options,$index)">删除</button>
                   </div>
                 </li>
               </ul>
@@ -405,9 +424,9 @@
           <!-- 纠错题 -->
           <div class="createQuestion-item" id="errorCorrection" ng-if="quesItem.type===4">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+              <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+              <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+              <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <div class="checkbox">
@@ -425,7 +444,7 @@
               <div class="createQuestion-item-content-title">
                 <input type="text" class="form-control"  ng-model="quesItem.title">
               </div>
-              <div class="createTitle-reply" ng-repeat="item in quesItem.options | orderBy: orderIndex">
+              <div class="createTitle-reply" ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'">
                 <!-- <div class="createTitle-reply-title clearfix">
                   <div class="title-box">
                     <button type="button" class="btn btn-default menusel" aria-label="Left Align">
@@ -511,9 +530,9 @@
           <!-- 投票 -->
           <div class="createQuestion-item" id="vote" ng-if="quesItem.type===5">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+              <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+              <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+              <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <div class="checkbox">
@@ -531,7 +550,7 @@
               <div class="createQuestion-item-content-title">
                 <input type="text" class="form-control" ng-model="quesItem.title">
               </div>
-              <div ng-repeat="item in quesItem.options | orderBy: orderIndex">
+              <div ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'">
                 <div class="createQuestion-item-content-option clearfix">
                   <div class="option-input fl noset">
                     <input type="text" class="form-control" ng-model="item.title">
@@ -557,17 +576,18 @@
               </div>
             </div>
           </div>
+          <!-- 建议 -->
           <div class="createQuestion-item" id="suggest" ng-if="quesItem.type===6">
             <div class="createQuestion-item-icon">
-              <i class="createQuestion-item-up" onclick="itemUp(this)"></i>
-              <i class="createQuestion-item-down" onclick="itemDown(this)"></i>
-              <i class="createQuestion-item-del" onclick="itemDel(this)"></i>
+              <i class="createQuestion-item-up" ng-click="sortQuestion($index, -1)" ng-show="$index>0"></i>
+              <i class="createQuestion-item-down" ng-click="sortQuestion($index, 1)" ng-show="$index<questions.length-1" ></i>
+              <i class="createQuestion-item-del" ng-click="delQuestion($index)"></i>
             </div>
             <div class="createQuestion-item-title">
               <span class="title-suggest">建议：</span>
             </div>
             <div class="createQuestion-item-content">
-              <div class="createQuestion-item-content-textarea" ng-repeat="item in quesItem.options | orderBy: orderIndex">
+              <div class="createQuestion-item-content-textarea" ng-repeat="item in quesItem.options track by $index | orderBy: 'orderIndex'">
                 <textarea class="form-control" cols="30" rows="5" ng-model="item.title"></textarea>
               </div>
               <div class="clearfix">
@@ -612,33 +632,33 @@
     //   checkArrow();
     // });
     
-    function checkArrow() {
-      $('.createQuestion-item-up').show();
-      $('.createQuestion-item-down').show();
+    // function checkArrow() {
+    //   $('.createQuestion-item-up').show();
+    //   $('.createQuestion-item-down').show();
         
-      var showList = $('.createQuestion-item').filter(function(index, item) {
-        return $(item).css('display') != 'none';
-      });
-      $(showList[0]).find('.createQuestion-item-up').hide();
-      $(showList[showList.length-1]).find('.createQuestion-item-down').hide();
-    }
+    //   var showList = $('.createQuestion-item').filter(function(index, item) {
+    //     return $(item).css('display') != 'none';
+    //   });
+    //   $(showList[0]).find('.createQuestion-item-up').hide();
+    //   $(showList[showList.length-1]).find('.createQuestion-item-down').hide();
+    // }
   
-    function itemDown(e) {
-      var $nextNode = $(e).parents('.createQuestion-item').next();
-      var $parentNode = $(e).parents('.createQuestion-item').remove();
-      $nextNode.after($parentNode);
-      checkArrow();
-    }
-    function itemUp(e) {
-      var $prevNode = $(e).parents('.createQuestion-item').prev();
-      var $parentNode = $(e).parents('.createQuestion-item').remove();
-      $prevNode.before($parentNode);
-      checkArrow();
-    }
-    function itemDel(e) {
-      $(e).parents('.createQuestion-item').remove();
-      checkArrow();
-    }
+    // function itemDown(e) {
+    //   var $nextNode = $(e).parents('.createQuestion-item').next();
+    //   var $parentNode = $(e).parents('.createQuestion-item').remove();
+    //   $nextNode.after($parentNode);
+    //   checkArrow();
+    // }
+    // function itemUp(e) {
+    //   var $prevNode = $(e).parents('.createQuestion-item').prev();
+    //   var $parentNode = $(e).parents('.createQuestion-item').remove();
+    //   $prevNode.before($parentNode);
+    //   checkArrow();
+    // }
+    // function itemDel(e) {
+    //   $(e).parents('.createQuestion-item').remove();
+    //   checkArrow();
+    // }
   </script>
 </body>
 </html>

@@ -36,7 +36,10 @@
             obj.surveyCount = 0;
             obj.visitCount = 0;
             $scope.topicMain.splice(len,0,obj);
-          };
+        };
+        $scope.removeOptions = function(index){ 
+            $scope.topicMain.splice(index,1);
+        };
     })
     </script>
 </head>
@@ -105,7 +108,7 @@
                            <div class="timeBox">
                                 <ul>
                                     <li class="edit">编辑</li>
-                                    <li>删除</li>
+                                    <li ng-click="removeOptions($index)">删除</li>
                                 </ul>
                             </div>
                         </div>
@@ -128,7 +131,7 @@
                            <div class="timeBox">
                                 <ul>
                                     <li class="edit">编辑</li>
-                                    <li>删除</li>
+                                    <li ng-click="removeOptions($index)">删除</li>
                                 </ul>
                             </div>
                         </div>

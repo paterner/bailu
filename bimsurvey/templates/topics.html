@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="TopicApp">
 <head>
     <meta charset="utf-8"/>
     <title>01</title>
@@ -15,15 +15,19 @@
     <script src="{{STATIC_URL}}js/jquery.1.7.2.js"></script>
     <script src="{{STATIC_URL}}js/public.js"></script>
     <script src="{{STATIC_URL}}data.js"></script>
+    <script src="{{STATIC_URL}}js/angular.min.js"></script>
     <script type="text/javascript">
     
     // 页面加载时，双花括号部分将被后台赋值为一个json对象，其值相当于backend_test.html页面中相应ajax接收到的Response
     var jtopics = {{ jtopics | safe }};
-    
-    
+    var TopicApp = angular.module('TopicApp', []);
+    TopicApp.controller('Topics', function($scope) {
+        $scope.topicMain = jtopics.content;
+        console.log($scope.topicMain)
+    })
     </script>
 </head>
-<body>
+<body ng-controller="Topics">
 <div class="container-fluid">
     <!--头部开始-->
     <header>
@@ -67,173 +71,60 @@
     	    <div class="leftNav"></div>
     	    <!--左侧菜单结束-->
           	<div class="rightContent">
-          		<div class="tbox v4">
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                     	<div class="inbox_toplike">
-                     		2015/09/27   15:30
-                     	</div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+          		<div class="tbox v4" >
+                    <div ng-repeat="item in topicMain">
+                        <div class="conone" ng-if="ng-src!==null">
+                            <i class="inbox_heart"></i>
+                            <div class="inbox_toplike">
+                                {% templatetag openvariable %}item.createTime{% templatetag closevariable %}
+                            </div>
+                            <div class="inbox">
+                                <div class="zwtp"><img ng-src="item.imgUrl"></div>
+                                <h3>{% templatetag openvariable %}item.title{% templatetag closevariable %}</h3>
+                                <div class="bt">{% templatetag openvariable %}item.description{% templatetag closevariable %}</div>
+                                <div class="clear"></div>
+                                <div class="tubiao">
+                                    <span class="text green2">{% templatetag openvariable %}item.surveyCount{% templatetag closevariable %}<i class="hoverTips">问卷数量</i></span>
+                                    <span class="number green2">{% templatetag openvariable %}item.visitCount{% templatetag closevariable %}<i class="hoverTips">浏览量</i></span>
+                                    <span class="download green2">{% templatetag openvariable %}item.commitCount{% templatetag closevariable %}<i class="hoverTips">回复量</i></span>
+                                </div>
+                            </div>
+                           <div class="timeBox">
+                                <ul>
+                                    <li class="edit">编辑</li>
+                                    <li>删除</li>
+                                </ul>
                             </div>
                         </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_no_img.jpg"></div>
-                            <h3>新建的专题</h3>
-                            <div class="bt tc">新建的专题，里边的内容是空的哦！</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                        <div class="conone" ng-if="ng-src==null">
+                            <i class="inbox_heart"></i>
+                            <div class="inbox_toplike">
+                                2015/09/27   15:30
+                            </div>
+                            <div class="inbox">
+                                <div class="zwtp"><img src="{{STATIC_URL}}img/v4_no_img.jpg"></div>
+                                <h3>新建的专题</h3>
+                                <div class="bt tc">新建的专题，里边的内容是空的哦！</div>
+                                <div class="clear"></div>
+                                <div class="tubiao">
+                                    <span class="text green2">0 <i class="hoverTips">问卷数量</i></span>
+                                    <span class="number green2">0 <i class="hoverTips">浏览量</i></span>
+                                    <span class="download green2">0 <i class="hoverTips">回复量</i></span>
+                                </div>
+                            </div>
+                           <div class="timeBox">
+                                <ul>
+                                    <li class="edit">编辑</li>
+                                    <li>删除</li>
+                                </ul>
                             </div>
                         </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <div class="inbox addnew">
-                             <img src="{{STATIC_URL}}img/v4_add_icon.png">
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
+                        <div class="conone" ng-if="$index==topicMain.length-1">
+                            <div class="inbox addnew">
+                                 <img src="{{STATIC_URL}}img/v4_add_icon.png">
                             </div>
                         </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
-                            </div>
-                        </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
-                            </div>
-                        </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
-                            </div>
-                        </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="conone">
-                        <i class="inbox_heart"></i>
-                        <div class="inbox_toplike">
-                            2015/09/27   15:30
-                        </div>
-                        <div class="inbox">
-                            <div class="zwtp"><img src="{{STATIC_URL}}img/v4_temp01.jpg"></div>
-                            <h3>专题一的标题</h3>
-                            <div class="bt">呼市移动数据中心室内设计名字可以更长可以更长长长长</div>
-                            <div class="clear"></div>
-                            <div class="tubiao">
-                                <span class="text green2">1261 <i class="hoverTips">问卷数量</i></span>
-                                <span class="number green2">1261 <i class="hoverTips">浏览量</i></span>
-                                <span class="download green2">1261 <i class="hoverTips">回复量</i></span>
-                            </div>
-                        </div>
-                       <div class="timeBox">
-                            <ul>
-                                <li class="edit">编辑</li>
-                                <li>删除</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="clear"></div>
                 <div class="pageBox bottompageBox_mar clearfix fr">

@@ -24,6 +24,22 @@
     TopicApp.controller('Topics', function($scope) {
         $scope.topicMain = jtopics.content;
         console.log($scope.topicMain)
+        $scope.addTopics = function(){
+            var obj = $scope.topicMain[0];
+            var len = $scope.topicMain.length; 
+            obj.id = $scope.topicMain[len-1].id;
+            obj.allowInput = false;
+            obj.createTime = new Date();
+            obj.title = '新建的专题';
+            obj.description = '新建的专题，里边的内容是空的哦！';
+            obj.commitCount = 0;
+            obj.surveyCount = 0;
+            obj.visitCount = 0;
+            $scope.topicMain.splice(len,0,obj);
+        };
+        $scope.removeOptions = function(index){ 
+            $scope.topicMain.splice(index,1);
+        };
     })
     </script>
 </head>
@@ -72,7 +88,7 @@
     	    <!--左侧菜单结束-->
           	<div class="rightContent">
           		<div class="tbox v4" >
-                    <div ng-repeat="item in topicMain">
+                    <div ng-repeat="item in topicMain track by $index">
                         <div class="conone" ng-if="ng-src!==null">
                             <i class="inbox_heart"></i>
                             <div class="inbox_toplike">
@@ -92,7 +108,7 @@
                            <div class="timeBox">
                                 <ul>
                                     <li class="edit">编辑</li>
-                                    <li>删除</li>
+                                    <li ng-click="removeOptions($index)">删除</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,11 +131,11 @@
                            <div class="timeBox">
                                 <ul>
                                     <li class="edit">编辑</li>
-                                    <li>删除</li>
+                                    <li ng-click="removeOptions($index)">删除</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="conone" ng-if="$index==topicMain.length-1">
+                        <div class="conone" ng-if="$index==topicMain.length-1" ng-click="addTopics()">
                             <div class="inbox addnew">
                                  <img src="{{STATIC_URL}}img/v4_add_icon.png">
                             </div>

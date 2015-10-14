@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="TopicApp">
 <head>
     <meta charset="utf-8"/>
     <title>02</title>
@@ -16,200 +16,185 @@
     <script src="{{STATIC_URL}}js/public.js"></script>
     <script src="{{STATIC_URL}}js/Chart.min.js"></script>
     <script src="{{STATIC_URL}}data.js"></script>
+    <script src="{{STATIC_URL}}js/angular.min.js"></script>
     <script type="text/javascript">
     
     // 页面加载时，双花括号部分将被后台赋值为一个json对象，其值相当于backend_test.html页面中相应ajax接收到的Response
     var jtopic = {{ jtopic | safe }};
-    
+    // 向服务器发送的各种指令
+    // 分别代表 增、查、查（带子节）、改、删
+    var CMD_NEW = 0;
+    var CMD_QUERY = 1;
+    var CMD_QUERY_CHILDREN = 2;
+    var CMD_UPDATE = 3;
+    var CMD_DELETE = 4;
+
+    console.log(jtopic.content);
+
+    var TopicApp = angular.module('TopicApp', []);
+    TopicApp.controller('TopicController', function($scope, $http) {
+      $scope.query = jtopic.content;
+      $scope.delTopic = function(index) {
+        var id = $scope.query.surveys[index].id;
+        $http({
+          method:'GET',
+          url: "/ajax_topic/" + CMD_DELETE + "/",
+          params:{
+            'id': id
+          }
+        }).success(function(response) {
+          $scope.query.surveys.splice(index,1);
+          alert("删除成功")
+        });
+      }
+    });
     </script>
 </head>
-<body>
-<div class="container-fluid">
-    <!--头部开始-->
-    <header>
-      <div class="v4-width clearfix">
-        <div class="logo"></div>
-        <div class="m-nav">
-            <ul>
-                <li><a href="#"><span>首页</span> Homepage</a></li>
-                <li><a href="#"><span>设置</span> Set up</a></li>
-                <li><a href="#"><span>统计</span> Statistics</a></li>
-            </ul>
+<body ng-controller="TopicController">
+  <div class="container-fluid">
+      <!--头部开始-->
+      <header>
+        <div class="v4-width clearfix">
+          <div class="logo"></div>
+          <div class="m-nav">
+              <ul>
+                  <li><a href="#"><span>首页</span> Homepage</a></li>
+                  <li><a href="#"><span>设置</span> Set up</a></li>
+                  <li><a href="#"><span>统计</span> Statistics</a></li>
+              </ul>
+          </div>
+          <div class="userbox">
+             <div class="m-nav">
+              <ul>
+                  <li><a href="#">登陆</a></li>
+                  <li><a href="#">退出</a></li>
+              </ul>
+          </div>
+          </div>
         </div>
-        <div class="userbox">
-           <div class="m-nav">
-            <ul>
-                <li><a href="#">登陆</a></li>
-                <li><a href="#">退出</a></li>
-            </ul>
-        </div>
+      </header>
+      <!--头部结束-->
+      <div class="clearfix v4-container">
+          <!--路径导航开始-->
+          <div class="clearfix v4-header">
+            <div class="v4-width clearfix">
+            	<ol class="breadcrumb fl">
+            		<li><a href="#">首页</a></li>
+                <li><a href="#">专题--名称</a></li>
+                <li class="active">问卷列表</li>
+    	        </ol>
+    	       <input class="form-control headSearchInput fr" type="text" placeholder="搜索">
+           </div>
+          </div>
+          <!--路径导航结束-->
+        <div class="v4-width clearfix">
+  	    <!--左侧菜单开始-->
+  	    <div class="leftNav"></div>
+  	    <!--左侧菜单结束-->
+        	<div class="rightContent">
+        		<div class="rightContent_head  clearfix">
+        			<h1 class="fl" ng-bind="query.title"></h1>
+        			<div class="tubiao fr">
+                  <span class="text green2" ng-bind="query.surveyCount"></span>
+                  <span class="number green2" ng-bind="query.visitCount"></span>
+                  <span class="download green2" ng-bind="query.commitCount"></span>
+              </div>
+        		</div>
+        		<div class="question_list">
+        			<ul>
+        				<li>
+        					<div>
+  	      					<div class="fl">
+  	      						<p> 
+  	      						<i class="v4_star"></i>
+  	      						浏览：<span class="c_green">1230</span>
+  	      						提交：<span class="c_green">1230</span>
+  	      						</p>
+  	      						<h2 class="mt10">协同平台使用调查  <span class="c_green">(草稿)</span></h2>
+  	      					</div>
+        						<div class="fr question_list_right">
+        							<i class="handle_icon edit"></i>
+        							<i class="handle_icon public"></i>
+        							<i class="handle_icon del"></i>
+        							<div class="fr">
+        								<p>
+        									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+        								</p>
+        								<p>
+        									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+        								</p>
+        							</div>
+        						</div>
+        					</div>
+        				</li>
+        				<li>
+        					<div>
+  	      					<div class="fl">
+  	      						<p> 
+  	      						<i class="v4_star on"></i>
+  	      						浏览：<span class="c_green">1230</span>
+  	      						提交：<span class="c_green">1230</span>
+  	      						</p>
+  	      						<h2 class="mt10">协同平台使用调查</h2>
+  	      					</div>
+        						<div class="fr question_list_right">
+        							<i class="handle_icon statistics"></i>
+        							<i class="handle_icon downloads"></i>
+        							<i class="handle_icon del"></i>
+        							<div class="fr">
+        								<p>
+        									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+        								</p>
+        								<p>
+        									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
+        								</p>
+        							</div>
+        						</div>
+        					</div>
+        				</li>
+                <li ng-repeat="item in query.surveys">
+                  <div>
+                    <div class="fl">
+                      <p> 
+                      <i ng-class="{'v4_star': true, 'on': item.star}"></i>
+                      浏览：<span class="c_green" ng-bind="item.visitCount"></span>
+                      提交：<span class="c_green" ng-bind="item.commitCount"></span>
+                      </p>
+                      <h2 class="mt10" ng-bind="item.title"></h2>
+                    </div>
+                    <div class="fr question_list_right">
+                      <i class="handle_icon edit"></i>
+                      <i class="handle_icon public"></i>
+                      <i class="handle_icon del" ng-click="delTopic($index)"></i>
+                      <div class="fr">
+                        <p>
+                          创建时间：<span class="c_green" ng-bind="item.createTime"></span>
+                        </p>
+                        <p>
+                          发布时间：<span class="c_green" ng-bind="item.publishTime"></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+        			</ul>
+        		</div>
+          	<div class="pageBox bottompageBox_mar fr">
+                  <li class="sum">共<span>216</span>个</li>
+                  <li class="pageCut"><span>1</span>/  9</li>
+                  <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
+                  <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
+              </div>
+        	</div>
         </div>
       </div>
-    </header>
-    <!--头部结束-->
-    <div class="clearfix v4-container">
-        <!--路径导航开始-->
-        <div class="clearfix v4-header">
-          <div class="v4-width clearfix">
-          	<ol class="breadcrumb fl">
-          		<li><a href="#">首页</a></li>
-              <li><a href="#">专题--名称</a></li>
-              <li class="active">问卷列表</li>
-  	        </ol>
-  	       <input class="form-control headSearchInput fr" type="text" placeholder="搜索">
-         </div>
-        </div>
-        <!--路径导航结束-->
-      <div class="v4-width clearfix">
-	    <!--左侧菜单开始-->
-	    <div class="leftNav"></div>
-	    <!--左侧菜单结束-->
-      	<div class="rightContent">
-      		<div class="rightContent_head  clearfix">
-      			<h1 class="fl">协同平台使用调查专题</h1>
-      			<div class="tubiao fr">
-                <span class="text green2">1261</span>
-                <span class="number green2">1261</span>
-                <span class="download green2">1261</span>
-            </div>
-      		</div>
-      		<div class="question_list">
-      			<ul>
-      				<li class="">
-      					<div>
-	      					<div class="fl">
-	      						<p> 
-	      						<i class="v4_star"></i>
-	      						浏览：<span class="c_green">1230</span>
-	      						提交：<span class="c_green">1230</span>
-	      						</p>
-	      						<h2 class="mt10">协同平台使用调查  <span class="c_green">(草稿)</span></h2>
-	      					</div>
-      						<div class="fr question_list_right">
-      							<i class="handle_icon edit"></i>
-      							<i class="handle_icon public"></i>
-      							<i class="handle_icon del"></i>
-      							<div class="fr">
-      								<p>
-      									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-      								</p>
-      								<p>
-      									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-      								</p>
-      							</div>
-      						</div>
-      					</div>
-      				</li>
-      				<li>
-      					<div>
-	      					<div class="fl">
-	      						<p> 
-	      						<i class="v4_star on"></i>
-	      						浏览：<span class="c_green">1230</span>
-	      						提交：<span class="c_green">1230</span>
-	      						</p>
-	      						<h2 class="mt10">协同平台使用调查</h2>
-	      					</div>
-      						<div class="fr question_list_right">
-      							<i class="handle_icon statistics"></i>
-      							<i class="handle_icon downloads"></i>
-      							<i class="handle_icon del"></i>
-      							<div class="fr">
-      								<p>
-      									发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-      								</p>
-      								<p>
-      									提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-      								</p>
-      							</div>
-      						</div>
-      					</div>
-      				</li>
-              <li>
-                <div>
-                  <div class="fl">
-                    <p> 
-                    <i class="v4_star"></i>
-                    浏览：<span class="c_green">1230</span>
-                    提交：<span class="c_green">1230</span>
-                    </p>
-                    <h2 class="mt10">协同平台使用调查</h2>
-                  </div>
-                  <div class="fr question_list_right">
-                    <div class="fr">
-                      <p>
-                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                      <p>
-                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="fl">
-                    <p> 
-                    <i class="v4_star"></i>
-                    浏览：<span class="c_green">1230</span>
-                    提交：<span class="c_green">1230</span>
-                    </p>
-                    <h2 class="mt10">协同平台使用调查</h2>
-                  </div>
-                  <div class="fr question_list_right">
-                    <div class="fr">
-                      <p>
-                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                      <p>
-                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="fl">
-                    <p> 
-                    <i class="v4_star"></i>
-                    浏览：<span class="c_green">1230</span>
-                    提交：<span class="c_green">1230</span>
-                    </p>
-                    <h2 class="mt10">协同平台使用调查</h2>
-                  </div>
-                  <div class="fr question_list_right">
-                    <div class="fr">
-                      <p>
-                        发布时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                      <p>
-                        提交时间：<span class="c_green">2015 / 08 / 06      15 ： 30</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-      			</ul>
-      		</div>
-        	<div class="pageBox bottompageBox_mar fr">
-                <li class="sum">共<span>216</span>个</li>
-                <li class="pageCut"><span>1</span>/  9</li>
-                <li class="turnLeft"><span class="fa fa-angle-left fa-lg"></span></li>
-                <li class="turnRight"><span class="fa fa-angle-right fa-lg"></span></li>
-            </div>
-      	</div>
-      </div>
-    </div>
-</div>
+  </div>
 
-<!--尾部开始-->
-<div class="footer">
-    ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
-</div>
-<!--尾部结束-->
-</div>
+  <!--尾部开始-->
+  <div class="footer">
+      ICP备案号 0000-33号 CopyRight 中国建筑设计院有限公司 版权所有
+  </div>
+  <!--尾部结束-->
 <script>//左侧菜单调出js
 window.onload = function(){
     public.createLeftNavi(leftNavCode);
